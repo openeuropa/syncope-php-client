@@ -1,0 +1,12 @@
+{
+  "packagePath": ".",
+  "apiPackage": "SyncopePhpClient\\Api",
+  "modelPackage": "Model",
+  "invokerPackage": "SyncopePhpClient",
+  "variableNamingConvention": "camelCase",
+  "comopserVendorName": "openeuropa",
+  "composerProjectName": "syncope-php-client",
+  "gitUserId": "openeuropa",
+  "gitRepoId": "syncope-php-client",
+  "srcBasePath": "src"
+}

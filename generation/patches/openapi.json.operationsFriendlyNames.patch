@@ -1,0 +1,562 @@
+diff --git a/openapi.json b/openapi.json
+index 5f86003..613f0cb 100644
+--- a/openapi.json
++++ b/openapi.json
+@@ -394,7 +394,7 @@
+       "get" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Reads the any object matching the provided key.",
+-        "operationId" : "read_1",
++        "operationId" : "readAnyObject",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -472,7 +472,7 @@
+       "put" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Updates any object matching the provided key.",
+-        "operationId" : "update",
++        "operationId" : "updateAnyObject",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -620,7 +620,7 @@
+       "delete" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Deletes any object matching provided key.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteAnyObject",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -747,7 +747,7 @@
+       "patch" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Updates any object matching the provided key.",
+-        "operationId" : "update_1",
++        "operationId" : "updateAnyObjectPartial",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -897,7 +897,7 @@
+       "get" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Returns a paged list of any objects matching the given query.",
+-        "operationId" : "search",
++        "operationId" : "searchAnyObject",
+         "parameters" : [ {
+           "name" : "page",
+           "in" : "query",
+@@ -998,7 +998,7 @@
+       "post" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Creates a new any object.",
+-        "operationId" : "create",
++        "operationId" : "createAnyObject",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -1140,7 +1140,7 @@
+       "post" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Executes resource-related operations on given entity.",
+-        "operationId" : "associate",
++        "operationId" : "associateAnyObject",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -1272,7 +1272,7 @@
+       "post" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Executes resource-related operations on given entity.",
+-        "operationId" : "deassociate",
++        "operationId" : "deassociateAnyObject",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -1404,7 +1404,7 @@
+       "get" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Reads the attribute, owned by the given any object, for the given schema type and schema.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
+-        "operationId" : "read",
++        "operationId" : "readAnyObjectAttribute",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -1487,7 +1487,7 @@
+       "put" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Adds or replaces the attribute, owned by the given any object, for the given schema type and schema.",
+-        "operationId" : "update",
++        "operationId" : "updateAnyObjectAttribute",
+         "parameters" : [ {
+           "name" : "schema",
+           "in" : "path",
+@@ -1590,7 +1590,7 @@
+       "delete" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Deletes the attribute, owned by the given any object, for the given schema type and schema.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteAnyObjectAttribute",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -1679,7 +1679,7 @@
+       "get" : {
+         "tags" : [ "AnyObjects" ],
+         "summary" : "Reads the list of attributes owned by the given any object for the given schema type.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
+-        "operationId" : "read_2",
++        "operationId" : "readAnyObjectAttributeForSchema",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -1756,7 +1756,7 @@
+       "get" : {
+         "tags" : [ "AnyTypeClasses" ],
+         "summary" : "Returns anyTypeClass with matching key.",
+-        "operationId" : "read_3",
++        "operationId" : "readAnyTypeClass",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -1822,7 +1822,7 @@
+       "put" : {
+         "tags" : [ "AnyTypeClasses" ],
+         "summary" : "Updates the anyTypeClass matching the provided key.",
+-        "operationId" : "update",
++        "operationId" : "updateAnyTypeClass",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -1912,7 +1912,7 @@
+       "delete" : {
+         "tags" : [ "AnyTypeClasses" ],
+         "summary" : "Deletes the anyTypeClass matching the provided key.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteAnyTypeClass",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -1983,7 +1983,7 @@
+       "get" : {
+         "tags" : [ "AnyTypeClasses" ],
+         "summary" : "Returns a list of all anyTypeClasss.",
+-        "operationId" : "list_1",
++        "operationId" : "listAnyTypeClass",
+         "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -2041,7 +2041,7 @@
+       "post" : {
+         "tags" : [ "AnyTypeClasses" ],
+         "summary" : "Creates a new anyTypeClass.",
+-        "operationId" : "create",
++        "operationId" : "createAnyTypeClass",
+         "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -2141,7 +2141,7 @@
+       "get" : {
+         "tags" : [ "AnyTypes" ],
+         "summary" : "Returns anyType with matching key.",
+-        "operationId" : "read_4",
++        "operationId" : "readAnyType",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -2207,7 +2207,7 @@
+       "put" : {
+         "tags" : [ "AnyTypes" ],
+         "summary" : "Updates the anyType matching the provided key.",
+-        "operationId" : "update",
++        "operationId" : "updateAnyType",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -2287,7 +2287,7 @@
+       "delete" : {
+         "tags" : [ "AnyTypes" ],
+         "summary" : "Deletes the anyType matching the provided key.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteAnyType",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -2358,7 +2358,7 @@
+       "get" : {
+         "tags" : [ "AnyTypes" ],
+         "summary" : "Returns a list of all anyTypes.",
+-        "operationId" : "list_2",
++        "operationId" : "listAnyType",
+         "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -2416,7 +2416,7 @@
+       "post" : {
+         "tags" : [ "AnyTypes" ],
+         "summary" : "Creates a new anyType.",
+-        "operationId" : "create",
++        "operationId" : "createAnyType",
+         "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -5564,7 +5564,7 @@
+       "get" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Reads the any object matching the provided key.",
+-        "operationId" : "read_11",
++        "operationId" : "readGroup",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -5642,7 +5642,7 @@
+       "put" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Updates group matching the provided key.",
+-        "operationId" : "update_1",
++        "operationId" : "updateGroup",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -5790,7 +5790,7 @@
+       "delete" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Deletes any object matching provided key.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteGroup",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -5917,7 +5917,7 @@
+       "patch" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Updates group matching the provided key.",
+-        "operationId" : "update",
++        "operationId" : "updateGroup",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -6067,7 +6067,7 @@
+       "get" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Returns a paged list of any objects matching the given query.",
+-        "operationId" : "search_1",
++        "operationId" : "searchGroup",
+         "parameters" : [ {
+           "name" : "page",
+           "in" : "query",
+@@ -6168,7 +6168,7 @@
+       "post" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Creates a new group.",
+-        "operationId" : "create",
++        "operationId" : "createGroup",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -6310,7 +6310,7 @@
+       "post" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Executes resource-related operations on given entity.",
+-        "operationId" : "associate_1",
++        "operationId" : "associateGroup",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -6442,7 +6442,7 @@
+       "post" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Executes resource-related operations on given entity.",
+-        "operationId" : "deassociate_1",
++        "operationId" : "deassociateGroup",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -6574,7 +6574,7 @@
+       "get" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Reads the attribute, owned by the given any object, for the given schema type and schema.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
+-        "operationId" : "read_10",
++        "operationId" : "readGroupAttribute",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -6657,7 +6657,7 @@
+       "put" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Adds or replaces the attribute, owned by the given any object, for the given schema type and schema.",
+-        "operationId" : "update",
++        "operationId" : "updateGroupAttribute",
+         "parameters" : [ {
+           "name" : "schema",
+           "in" : "path",
+@@ -6760,7 +6760,7 @@
+       "delete" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Deletes the attribute, owned by the given any object, for the given schema type and schema.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteGroupAttribute",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -6849,7 +6849,7 @@
+       "get" : {
+         "tags" : [ "Groups" ],
+         "summary" : "Reads the list of attributes owned by the given any object for the given schema type.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
+-        "operationId" : "read_12",
++        "operationId" : "readGroupAttributeForSchema",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -10080,7 +10080,7 @@
+       "get" : {
+         "tags" : [ "Realms" ],
+         "summary" : "Returns realms rooted at the given path.",
+-        "operationId" : "list_16",
++        "operationId" : "listRealm",
+         "parameters" : [ {
+           "name" : "fullPath",
+           "in" : "path",
+@@ -10146,7 +10146,7 @@
+       "put" : {
+         "tags" : [ "Realms" ],
+         "summary" : "Updates the realm under the given path.",
+-        "operationId" : "update_1",
++        "operationId" : "updateRealm",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -10283,7 +10283,7 @@
+       "delete" : {
+         "tags" : [ "Realms" ],
+         "summary" : "Deletes the realm under the given path.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteRealm",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -10401,7 +10401,7 @@
+       "post" : {
+         "tags" : [ "Realms" ],
+         "summary" : "Creates a new realm under the given path.",
+-        "operationId" : "create",
++        "operationId" : "createRootedRealm",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -10550,7 +10550,7 @@
+       "get" : {
+         "tags" : [ "Realms" ],
+         "summary" : "Returns a list of all realms.",
+-        "operationId" : "list_17",
++        "operationId" : "listRealm",
+         "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -14731,7 +14731,7 @@
+       "get" : {
+         "tags" : [ "Roles" ],
+         "summary" : "Returns role with matching key.",
+-        "operationId" : "read_24",
++        "operationId" : "readRole",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -14797,7 +14797,7 @@
+       "put" : {
+         "tags" : [ "Roles" ],
+         "summary" : "Updates the role matching the provided key.",
+-        "operationId" : "update_1",
++        "operationId" : "updateRole",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -14887,7 +14887,7 @@
+       "delete" : {
+         "tags" : [ "Roles" ],
+         "summary" : "Deletes the role matching the provided key.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteRole",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -14959,7 +14959,7 @@
+       "get" : {
+         "tags" : [ "Roles" ],
+         "summary" : "Returns a list of all roles.",
+-        "operationId" : "list_24",
++        "operationId" : "listRoles",
+         "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -15017,7 +15017,7 @@
+       "post" : {
+         "tags" : [ "Roles" ],
+         "summary" : "Creates a new role.",
+-        "operationId" : "create_1",
++        "operationId" : "createRole",
+         "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -16033,7 +16033,7 @@
+       "get" : {
+         "tags" : [ "Schemas" ],
+         "summary" : "Returns schema matching the given type and key.",
+-        "operationId" : "read_26",
++        "operationId" : "readSchema",
+         "parameters" : [ {
+           "name" : "type",
+           "in" : "path",
+@@ -16109,7 +16109,7 @@
+       "put" : {
+         "tags" : [ "Schemas" ],
+         "summary" : "Updates the schema matching the given type and key.",
+-        "operationId" : "update_1",
++        "operationId" : "updateSchema",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -16208,7 +16208,7 @@
+       "delete" : {
+         "tags" : [ "Schemas" ],
+         "summary" : "Deletes the schema matching the given type and key.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteSchema",
+         "parameters" : [ {
+           "name" : "type",
+           "in" : "path",
+@@ -16288,7 +16288,7 @@
+       "get" : {
+         "tags" : [ "Schemas" ],
+         "summary" : "Returns a list of schemas matching the given query.",
+-        "operationId" : "search_2",
++        "operationId" : "searchSchema",
+         "parameters" : [ {
+           "name" : "type",
+           "in" : "path",
+@@ -16371,7 +16371,7 @@
+       "post" : {
+         "tags" : [ "Schemas" ],
+         "summary" : "Creates a new schema.",
+-        "operationId" : "create_1",
++        "operationId" : "createSchema",
+         "parameters" : [ {
+           "name" : "type",
+           "in" : "path",
+@@ -19425,7 +19425,7 @@
+       "get" : {
+         "tags" : [ "Users" ],
+         "summary" : "Reads the any object matching the provided key.",
+-        "operationId" : "read_31",
++        "operationId" : "readUser",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -19503,7 +19503,7 @@
+       "put" : {
+         "tags" : [ "Users" ],
+         "summary" : "Updates user matching the provided key.",
+-        "operationId" : "update_2",
++        "operationId" : "updateUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -19651,7 +19651,7 @@
+       "delete" : {
+         "tags" : [ "Users" ],
+         "summary" : "Deletes any object matching provided key.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -19778,7 +19778,7 @@
+       "patch" : {
+         "tags" : [ "Users" ],
+         "summary" : "Updates user matching the provided key.",
+-        "operationId" : "update_3",
++        "operationId" : "updateUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -19928,7 +19928,7 @@
+       "get" : {
+         "tags" : [ "Users" ],
+         "summary" : "Returns a paged list of any objects matching the given query.",
+-        "operationId" : "search_4",
++        "operationId" : "searchUser",
+         "parameters" : [ {
+           "name" : "page",
+           "in" : "query",
+@@ -20029,7 +20029,7 @@
+       "post" : {
+         "tags" : [ "Users" ],
+         "summary" : "Creates a new user.",
+-        "operationId" : "create_1",
++        "operationId" : "createUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -20178,7 +20178,7 @@
+       "post" : {
+         "tags" : [ "Users" ],
+         "summary" : "Performs a status update on given user.",
+-        "operationId" : "status_2",
++        "operationId" : "statusUpdate",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -20328,7 +20328,7 @@
+       "post" : {
+         "tags" : [ "Users" ],
+         "summary" : "Executes resource-related operations on given entity.",
+-        "operationId" : "associate_2",
++        "operationId" : "associateUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -20460,7 +20460,7 @@
+       "post" : {
+         "tags" : [ "Users" ],
+         "summary" : "Executes resource-related operations on given entity.",
+-        "operationId" : "deassociate_2",
++        "operationId" : "deassociateUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -20592,7 +20592,7 @@
+       "get" : {
+         "tags" : [ "Users" ],
+         "summary" : "Reads the attribute, owned by the given any object, for the given schema type and schema.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
+-        "operationId" : "read_30",
++        "operationId" : "readUserAttribute",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -20675,7 +20675,7 @@
+       "put" : {
+         "tags" : [ "Users" ],
+         "summary" : "Adds or replaces the attribute, owned by the given any object, for the given schema type and schema.",
+-        "operationId" : "update_2",
++        "operationId" : "updateUserAttribute",
+         "parameters" : [ {
+           "name" : "schema",
+           "in" : "path",
+@@ -20778,7 +20778,7 @@
+       "delete" : {
+         "tags" : [ "Users" ],
+         "summary" : "Deletes the attribute, owned by the given any object, for the given schema type and schema.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteUserAttribute",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -20867,7 +20867,7 @@
+       "get" : {
+         "tags" : [ "Users" ],
+         "summary" : "Reads the list of attributes owned by the given any object for the given schema type.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
+-        "operationId" : "read_32",
++        "operationId" : "readUserAttributes",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
