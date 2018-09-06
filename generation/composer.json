@@ -27,5 +27,8 @@
                 "Change operationIds to friendly names": "patches/openapi.json.operationsFriendlyNames.patch"
             }
         }
+    },
+    "config": {
+        "secure-http": false
     }
 }
