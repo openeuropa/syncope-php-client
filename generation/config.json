@@ -1,5 +1,6 @@
 {
   "packagePath": ".",
+  "packageName": "Syncope PHP Client",
   "apiPackage": "SyncopePhpClient\\Api",
   "modelPackage": "Model",
   "invokerPackage": "SyncopePhpClient",
