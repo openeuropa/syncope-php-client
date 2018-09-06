@@ -1,12 +1,12 @@
 <?php
 /**
- * {{classname}}Test
+ * {{classname}}Test.
  * PHP version 5
  *
  * @category Class
- * @package  {{invokerPackage}}
- * @author   OpenAPI Generator team
- * @link     https://openapi-generator.tech
+ * @package {{invokerPackage}}
+ * @author OpenAPI Generator team
+ * @link https://openapi-generator.tech
  */
 
 {{>partial_header}}
@@ -23,53 +23,48 @@ use \{{invokerPackage}}\ApiException;
 use \{{invokerPackage}}\ObjectSerializer;
 
 /**
- * {{classname}}Test Class Doc Comment
+ * {{classname}}Test Class Doc Comment.
  *
- * @category Class
- * @package  {{invokerPackage}}
- * @author   OpenAPI Generator team
- * @link     https://openapi-generator.tech
+ * @category Class.
+ * @package {{invokerPackage}}
+ * @author OpenAPI Generator team
+ * @link https://openapi-generator.tech
  */
 {{#operations}}class {{classname}}Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Setup before running any test cases
+     * Setup before running any test cases.
      */
-    public static function setUpBeforeClass()
-    {
+    public static function setUpBeforeClass()  {
     }
 
     /**
-     * Setup before running each test case
+     * Setup before running each test case.
      */
-    public function setUp()
-    {
+    public function setUp()  {
     }
 
     /**
-     * Clean up after running each test case
+     * Clean up after running each test case.
      */
-    public function tearDown()
-    {
+    public function tearDown()  {
     }
 
     /**
-     * Clean up after running all test cases
+     * Clean up after running all test cases.
      */
-    public static function tearDownAfterClass()
-    {
+    public static function tearDownAfterClass()  {
     }
     {{#operation}}
 
     /**
-     * Test case for {{{operationId}}}
+     * Test case for {{{operationId}}}.
      *
      * {{{summary}}}.
      *
      */
-    public function test{{vendorExtensions.x-testOperationId}}()
-    {
+    public function test{{vendorExtensions.x-testOperationId}}()  {
     }
     {{/operation}}
 }
