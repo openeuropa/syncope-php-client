@@ -1,0 +1,34 @@
+{
+    "require": {
+        "oomphinc/composer-installers-extender": "^1.1",
+        "cweagans/composer-patches": "~1.0",
+        "syncope/openapi": "3.3.0"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "syncope/openapi",
+                "version": "3.3.0",
+                "dist": {
+                    "type": "file",
+                    "url": "http://syncope-vm.apache.org:9080/syncope/rest/openapi.json"
+                }
+            }
+        }
+    ],
+    "extra": {
+        "installer-types": ["library"],
+        "installer-paths": {
+            "assets": ["vendor:syncope"]
+        },
+        "patches": {
+            "syncope/openapi": {
+                "Change operationIds to friendly names": "patches/openapi.json.operationsFriendlyNames.patch"
+            }
+        }
+    },
+    "config": {
+        "secure-http": false
+    }
+}

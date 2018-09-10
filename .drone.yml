@@ -1,0 +1,30 @@
+workspace:
+  base: /test
+  path: syncope-php-client
+
+services:
+  web:
+    image: fpfis/httpd-php-dev:7.1
+    environment:
+     - DOCUMENT_ROOT=/test/syncope-php-client
+
+pipeline:
+  composer-install:
+    group: prepare
+    image: fpfis/httpd-php-dev:7.1
+    volumes:
+      - /cache:/cache
+    commands:
+      - composer install
+
+  grumphp:
+    group: test
+    image: fpfis/httpd-php-dev:7.1
+    commands:
+      - ./vendor/bin/grumphp run
+
+  phpunit:
+    group: test
+    image: fpfis/httpd-php-dev:7.1
+    commands:
+      - ./vendor/bin/phpunit
