@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ApplicationsApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -75,9 +75,9 @@ class ApplicationsApi {
    * Creates a new application.
    *
    * @param  string $xSyncopeDomain application to be created (required)
-   * @param  \SyncopePhpClient\Model\ApplicationTO $applicationTO applicationTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ApplicationTO $applicationTO applicationTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -121,7 +121,7 @@ class ApplicationsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -135,7 +135,7 @@ class ApplicationsApi {
    * Create request for operation 'create'
    *
    * @param  string $xSyncopeDomain application to be created (required)
-   * @param  \SyncopePhpClient\Model\ApplicationTO $applicationTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ApplicationTO $applicationTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -251,7 +251,7 @@ class ApplicationsApi {
    * @param  string $key application key to be deleted (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -295,7 +295,7 @@ class ApplicationsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -429,7 +429,7 @@ class ApplicationsApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -473,7 +473,7 @@ class ApplicationsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class ApplicationsApi {
    * @param  string $key application key to be read (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -637,7 +637,7 @@ class ApplicationsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -772,7 +772,7 @@ class ApplicationsApi {
    * @param  string $key privilege key to be read (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -816,7 +816,7 @@ class ApplicationsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -950,9 +950,9 @@ class ApplicationsApi {
    *
    * @param  string $key Application&#39;s key (required)
    * @param  string $xSyncopeDomain application key to be deleted (required)
-   * @param  \SyncopePhpClient\Model\ApplicationTO $applicationTO applicationTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ApplicationTO $applicationTO applicationTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -996,7 +996,7 @@ class ApplicationsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1011,7 +1011,7 @@ class ApplicationsApi {
    *
    * @param  string $key Application&#39;s key (required)
    * @param  string $xSyncopeDomain application key to be deleted (required)
-   * @param  \SyncopePhpClient\Model\ApplicationTO $applicationTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ApplicationTO $applicationTO (required)
    *
    * @throws \InvalidArgumentException
    *

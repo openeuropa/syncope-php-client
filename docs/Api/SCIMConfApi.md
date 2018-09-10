@@ -1,4 +1,4 @@
-# SyncopePhpClient\SCIMConfApi
+# OpenEuropa\SyncopePhpClient\SCIMConfApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -19,17 +19,17 @@ Reads SCIM configuration, generates empty if missing.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SCIMConfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SCIMConfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -77,24 +77,24 @@ Sets SCIM configuration.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SCIMConfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SCIMConfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | SCIM configuration
-$sCIMConf = new \SyncopePhpClient\Model\SCIMConf(); // \SyncopePhpClient\Model\SCIMConf | 
+$sCIMConf = new \OpenEuropa\SyncopePhpClient\Model\SCIMConf(); // \OpenEuropa\SyncopePhpClient\Model\SCIMConf | 
 
 try {
     $apiInstance->set($xSyncopeDomain, $sCIMConf);
@@ -109,7 +109,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| SCIM configuration | [default to &#39;Master&#39;]
- **sCIMConf** | [**\SyncopePhpClient\Model\SCIMConf**](../Model/SCIMConf.md)|  |
+ **sCIMConf** | [**\OpenEuropa\SyncopePhpClient\Model\SCIMConf**](../Model/SCIMConf.md)|  |
 
 ### Return type
 

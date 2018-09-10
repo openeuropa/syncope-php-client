@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient\Model
+ * @package  OpenEuropa\SyncopePhpClient\Model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 /**
  * Interface abstracting model access.
  *
- * @package SyncopePhpClient\Model
+ * @package OpenEuropa\SyncopePhpClient\Model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * AttrTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,7 +57,7 @@ class AttrTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schemaInfo' => '\SyncopePhpClient\Model\SchemaTO',
+        'schemaInfo' => '\OpenEuropa\SyncopePhpClient\Model\SchemaTO',
         'schema' => 'string',
         'values' => 'string[]'
     ];
@@ -225,7 +225,7 @@ class AttrTO implements ModelInterface, ArrayAccess
     /**
      * Gets schemaInfo
      *
-     * @return \SyncopePhpClient\Model\SchemaTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SchemaTO|null
      */
     public function getSchemaInfo()
     {
@@ -235,7 +235,7 @@ class AttrTO implements ModelInterface, ArrayAccess
     /**
      * Sets schemaInfo
      *
-     * @param \SyncopePhpClient\Model\SchemaTO|null $schemaInfo schemaInfo
+     * @param \OpenEuropa\SyncopePhpClient\Model\SchemaTO|null $schemaInfo schemaInfo
      *
      * @return $this
      */

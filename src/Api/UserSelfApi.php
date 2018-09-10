@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * UserSelfApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -78,7 +78,7 @@ class UserSelfApi {
    * @param  string $xSyncopeDomain new password to be set (required)
    * @param  string $body body (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -122,7 +122,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -247,13 +247,13 @@ class UserSelfApi {
    * Self-registration for new user.
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\UserTO $userTO userTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UserTO $userTO userTO (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  bool $storePassword whether password shall be stored internally (optional, default to true)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\ProvisioningResult
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult
    */
   public function create1($xSyncopeDomain, $userTO, $prefer = 'return-content', $storePassword = true) {
     $request = $this->create1Request($xSyncopeDomain, $userTO, $prefer, $storePassword);
@@ -290,38 +290,38 @@ class UserSelfApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 201:
-          if ('\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ProvisioningResult', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\ProvisioningResult';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -344,7 +344,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -352,7 +352,7 @@ class UserSelfApi {
         case 201:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ProvisioningResult',
+            '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -366,7 +366,7 @@ class UserSelfApi {
    * Create request for operation 'create1'
    *
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\UserTO $userTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UserTO $userTO (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  bool $storePassword whether password shall be stored internally (optional, default to true)
    *
@@ -483,7 +483,7 @@ class UserSelfApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -527,7 +527,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -647,7 +647,7 @@ class UserSelfApi {
    * @param  string $xSyncopeDomain the password value to update (required)
    * @param  string $body body (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -691,7 +691,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -814,9 +814,9 @@ class UserSelfApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\UserTO
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\UserTO
    */
   public function read29($xSyncopeDomain) {
     $request = $this->read29Request($xSyncopeDomain);
@@ -853,38 +853,38 @@ class UserSelfApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 200:
-          if ('\SyncopePhpClient\Model\UserTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\UserTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\UserTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\UserTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\UserTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\UserTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\UserTO';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\UserTO';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -907,7 +907,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -915,7 +915,7 @@ class UserSelfApi {
         case 200:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\UserTO',
+            '\OpenEuropa\SyncopePhpClient\Model\UserTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1036,7 +1036,7 @@ class UserSelfApi {
    * @param  string $xSyncopeDomain actual answer text (required)
    * @param  string $body body (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1080,7 +1080,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1206,12 +1206,12 @@ class UserSelfApi {
    *
    * @param  string $key User&#39;s key (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\StatusPatch $statusPatch statusPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\StatusPatch $statusPatch statusPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\ProvisioningResult
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult
    */
   public function status1($key, $xSyncopeDomain, $statusPatch, $prefer = 'return-content') {
     $request = $this->status1Request($key, $xSyncopeDomain, $statusPatch, $prefer);
@@ -1248,38 +1248,38 @@ class UserSelfApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 200:
-          if ('\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ProvisioningResult', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\ProvisioningResult';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -1302,7 +1302,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1310,7 +1310,7 @@ class UserSelfApi {
         case 200:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ProvisioningResult',
+            '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1325,7 +1325,7 @@ class UserSelfApi {
    *
    * @param  string $key User&#39;s key (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\StatusPatch $statusPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\StatusPatch $statusPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    *
    * @throws \InvalidArgumentException
@@ -1459,12 +1459,12 @@ class UserSelfApi {
    *
    * @param  string $key User&#39;s key (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\UserTO $userTO userTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UserTO $userTO userTO (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\ProvisioningResult
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult
    */
   public function update1($key, $xSyncopeDomain, $userTO, $prefer = 'return-content') {
     $request = $this->update1Request($key, $xSyncopeDomain, $userTO, $prefer);
@@ -1501,38 +1501,38 @@ class UserSelfApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 200:
-          if ('\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ProvisioningResult', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\ProvisioningResult';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -1555,7 +1555,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1563,7 +1563,7 @@ class UserSelfApi {
         case 200:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ProvisioningResult',
+            '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1578,7 +1578,7 @@ class UserSelfApi {
    *
    * @param  string $key User&#39;s key (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\UserTO $userTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UserTO $userTO (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    *
    * @throws \InvalidArgumentException
@@ -1712,12 +1712,12 @@ class UserSelfApi {
    *
    * @param  string $key User&#39;s key (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\UserPatch $userPatch userPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UserPatch $userPatch userPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\ProvisioningResult
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult
    */
   public function update2($key, $xSyncopeDomain, $userPatch, $prefer = 'return-content') {
     $request = $this->update2Request($key, $xSyncopeDomain, $userPatch, $prefer);
@@ -1754,38 +1754,38 @@ class UserSelfApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 200:
-          if ('\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ProvisioningResult', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\ProvisioningResult';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -1808,7 +1808,7 @@ class UserSelfApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1816,7 +1816,7 @@ class UserSelfApi {
         case 200:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ProvisioningResult',
+            '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1831,7 +1831,7 @@ class UserSelfApi {
    *
    * @param  string $key User&#39;s key (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\UserPatch $userPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UserPatch $userPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    *
    * @throws \InvalidArgumentException

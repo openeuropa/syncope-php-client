@@ -1,4 +1,4 @@
-# SyncopePhpClient\UsersApi
+# OpenEuropa\SyncopePhpClient\UsersApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -30,17 +30,17 @@ Executes resource-related operations on given entity.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -49,7 +49,7 @@ $apiInstance = new SyncopePhpClient\Api\UsersApi(
 $key = 'key_example'; // string | Entity's key
 $action = 'action_example'; // string | Association action
 $xSyncopeDomain = 'Master'; // string | 
-$associationPatch = new \SyncopePhpClient\Model\AssociationPatch(); // \SyncopePhpClient\Model\AssociationPatch | 
+$associationPatch = new \OpenEuropa\SyncopePhpClient\Model\AssociationPatch(); // \OpenEuropa\SyncopePhpClient\Model\AssociationPatch | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $ifMatch = 'ifMatch_example'; // string | When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed.
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Entity&#39;s key |
  **action** | **string**| Association action |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **associationPatch** | [**\SyncopePhpClient\Model\AssociationPatch**](../Model/AssociationPatch.md)|  |
+ **associationPatch** | [**\OpenEuropa\SyncopePhpClient\Model\AssociationPatch**](../Model/AssociationPatch.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **ifMatch** | **string**| When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. | [optional]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
@@ -90,7 +90,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createUser**
-> \SyncopePhpClient\Model\ProvisioningResult createUser($xSyncopeDomain, $userTO, $prefer, $xSyncopeNullPriorityAsync, $storePassword)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult createUser($xSyncopeDomain, $userTO, $prefer, $xSyncopeNullPriorityAsync, $storePassword)
 
 Creates a new user.
 
@@ -100,24 +100,24 @@ Creates a new user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | 
-$userTO = new \SyncopePhpClient\Model\UserTO(); // \SyncopePhpClient\Model\UserTO | 
+$userTO = new \OpenEuropa\SyncopePhpClient\Model\UserTO(); // \OpenEuropa\SyncopePhpClient\Model\UserTO | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
 $storePassword = true; // bool | 
@@ -136,14 +136,14 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **userTO** | [**\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
+ **userTO** | [**\OpenEuropa\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
  **storePassword** | **bool**|  | [optional] [default to true]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -167,17 +167,17 @@ Executes resource-related operations on given entity.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -186,7 +186,7 @@ $apiInstance = new SyncopePhpClient\Api\UsersApi(
 $key = 'key_example'; // string | Entity's key
 $action = 'action_example'; // string | Deassociation action
 $xSyncopeDomain = 'Master'; // string | 
-$deassociationPatch = new \SyncopePhpClient\Model\DeassociationPatch(); // \SyncopePhpClient\Model\DeassociationPatch | 
+$deassociationPatch = new \OpenEuropa\SyncopePhpClient\Model\DeassociationPatch(); // \OpenEuropa\SyncopePhpClient\Model\DeassociationPatch | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $ifMatch = 'ifMatch_example'; // string | When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed.
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Entity&#39;s key |
  **action** | **string**| Deassociation action |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **deassociationPatch** | [**\SyncopePhpClient\Model\DeassociationPatch**](../Model/DeassociationPatch.md)|  |
+ **deassociationPatch** | [**\OpenEuropa\SyncopePhpClient\Model\DeassociationPatch**](../Model/DeassociationPatch.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **ifMatch** | **string**| When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. | [optional]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
@@ -227,7 +227,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteUser**
-> \SyncopePhpClient\Model\ProvisioningResult deleteUser($key, $xSyncopeDomain, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult deleteUser($key, $xSyncopeDomain, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
 
 Deletes any object matching provided key.
 
@@ -237,17 +237,17 @@ Deletes any object matching provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -304,17 +304,17 @@ Deletes the attribute, owned by the given any object, for the given schema type 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -368,17 +368,17 @@ Reads the any object matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -428,17 +428,17 @@ Reads the attribute, owned by the given any object, for the given schema type an
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -492,17 +492,17 @@ Reads the list of attributes owned by the given any object for the given schema 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -554,17 +554,17 @@ Returns a paged list of any objects matching the given query.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -614,7 +614,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **statusUpdate**
-> \SyncopePhpClient\Model\ProvisioningResult statusUpdate($key, $xSyncopeDomain, $statusPatch, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult statusUpdate($key, $xSyncopeDomain, $statusPatch, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
 
 Performs a status update on given user.
 
@@ -624,17 +624,17 @@ Performs a status update on given user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -642,7 +642,7 @@ $apiInstance = new SyncopePhpClient\Api\UsersApi(
 );
 $key = 'key_example'; // string | User's key
 $xSyncopeDomain = 'Master'; // string | 
-$statusPatch = new \SyncopePhpClient\Model\StatusPatch(); // \SyncopePhpClient\Model\StatusPatch | 
+$statusPatch = new \OpenEuropa\SyncopePhpClient\Model\StatusPatch(); // \OpenEuropa\SyncopePhpClient\Model\StatusPatch | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $ifMatch = 'ifMatch_example'; // string | When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed.
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
@@ -662,14 +662,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| User&#39;s key |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **statusPatch** | [**\SyncopePhpClient\Model\StatusPatch**](../Model/StatusPatch.md)|  |
+ **statusPatch** | [**\OpenEuropa\SyncopePhpClient\Model\StatusPatch**](../Model/StatusPatch.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **ifMatch** | **string**| When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. | [optional]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -683,7 +683,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUser**
-> \SyncopePhpClient\Model\ProvisioningResult updateUser($key, $xSyncopeDomain, $userTO, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult updateUser($key, $xSyncopeDomain, $userTO, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
 
 Updates user matching the provided key.
 
@@ -693,17 +693,17 @@ Updates user matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -711,7 +711,7 @@ $apiInstance = new SyncopePhpClient\Api\UsersApi(
 );
 $key = 'key_example'; // string | User's key
 $xSyncopeDomain = 'Master'; // string | 
-$userTO = new \SyncopePhpClient\Model\UserTO(); // \SyncopePhpClient\Model\UserTO | 
+$userTO = new \OpenEuropa\SyncopePhpClient\Model\UserTO(); // \OpenEuropa\SyncopePhpClient\Model\UserTO | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $ifMatch = 'ifMatch_example'; // string | When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed.
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
@@ -731,14 +731,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| User&#39;s key |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **userTO** | [**\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
+ **userTO** | [**\OpenEuropa\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **ifMatch** | **string**| When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. | [optional]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -762,17 +762,17 @@ Adds or replaces the attribute, owned by the given any object, for the given sch
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -782,7 +782,7 @@ $schema = 'schema_example'; // string | Attribute schema's key
 $key = 'key_example'; // string | schema type
 $schemaType = 'schemaType_example'; // string | attribute
 $xSyncopeDomain = 'Master'; // string | 
-$attrTO = new \SyncopePhpClient\Model\AttrTO(); // \SyncopePhpClient\Model\AttrTO | 
+$attrTO = new \OpenEuropa\SyncopePhpClient\Model\AttrTO(); // \OpenEuropa\SyncopePhpClient\Model\AttrTO | 
 
 try {
     $apiInstance->updateUserAttribute($schema, $key, $schemaType, $xSyncopeDomain, $attrTO);
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
  **key** | **string**| schema type |
  **schemaType** | **string**| attribute |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **attrTO** | [**\SyncopePhpClient\Model\AttrTO**](../Model/AttrTO.md)|  |
+ **attrTO** | [**\OpenEuropa\SyncopePhpClient\Model\AttrTO**](../Model/AttrTO.md)|  |
 
 ### Return type
 
@@ -818,7 +818,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateUser_0**
-> \SyncopePhpClient\Model\ProvisioningResult updateUser_0($key, $xSyncopeDomain, $userPatch, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult updateUser_0($key, $xSyncopeDomain, $userPatch, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
 
 Updates user matching the provided key.
 
@@ -828,17 +828,17 @@ Updates user matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UsersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -846,7 +846,7 @@ $apiInstance = new SyncopePhpClient\Api\UsersApi(
 );
 $key = 'key_example'; // string | User's key
 $xSyncopeDomain = 'Master'; // string | 
-$userPatch = new \SyncopePhpClient\Model\UserPatch(); // \SyncopePhpClient\Model\UserPatch | 
+$userPatch = new \OpenEuropa\SyncopePhpClient\Model\UserPatch(); // \OpenEuropa\SyncopePhpClient\Model\UserPatch | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $ifMatch = 'ifMatch_example'; // string | When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed.
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
@@ -866,14 +866,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| User&#39;s key |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **userPatch** | [**\SyncopePhpClient\Model\UserPatch**](../Model/UserPatch.md)|  |
+ **userPatch** | [**\OpenEuropa\SyncopePhpClient\Model\UserPatch**](../Model/UserPatch.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **ifMatch** | **string**| When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. | [optional]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 

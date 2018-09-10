@@ -1,4 +1,4 @@
-# SyncopePhpClient\SecurityQuestionsApi
+# OpenEuropa\SyncopePhpClient\SecurityQuestionsApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -23,24 +23,24 @@ Creates a new security question.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SecurityQuestionsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SecurityQuestionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | security question to be created
-$securityQuestionTO = new \SyncopePhpClient\Model\SecurityQuestionTO(); // \SyncopePhpClient\Model\SecurityQuestionTO | 
+$securityQuestionTO = new \OpenEuropa\SyncopePhpClient\Model\SecurityQuestionTO(); // \OpenEuropa\SyncopePhpClient\Model\SecurityQuestionTO | 
 
 try {
     $apiInstance->create1($xSyncopeDomain, $securityQuestionTO);
@@ -55,7 +55,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| security question to be created | [default to &#39;Master&#39;]
- **securityQuestionTO** | [**\SyncopePhpClient\Model\SecurityQuestionTO**](../Model/SecurityQuestionTO.md)|  |
+ **securityQuestionTO** | [**\OpenEuropa\SyncopePhpClient\Model\SecurityQuestionTO**](../Model/SecurityQuestionTO.md)|  |
 
 ### Return type
 
@@ -83,17 +83,17 @@ Deletes the security question matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SecurityQuestionsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SecurityQuestionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -143,17 +143,17 @@ Returns a list of all security questions.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SecurityQuestionsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SecurityQuestionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,17 +201,17 @@ Returns security question with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SecurityQuestionsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SecurityQuestionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -261,17 +261,17 @@ Ask for security question configured for the user matching the given username, i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SecurityQuestionsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SecurityQuestionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -321,17 +321,17 @@ Updates the security question matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SecurityQuestionsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SecurityQuestionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -339,7 +339,7 @@ $apiInstance = new SyncopePhpClient\Api\SecurityQuestionsApi(
 );
 $key = 'key_example'; // string | SecurityQuestion's key
 $xSyncopeDomain = 'Master'; // string | security question key to be deleted
-$securityQuestionTO = new \SyncopePhpClient\Model\SecurityQuestionTO(); // \SyncopePhpClient\Model\SecurityQuestionTO | 
+$securityQuestionTO = new \OpenEuropa\SyncopePhpClient\Model\SecurityQuestionTO(); // \OpenEuropa\SyncopePhpClient\Model\SecurityQuestionTO | 
 
 try {
     $apiInstance->update1($key, $xSyncopeDomain, $securityQuestionTO);
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| SecurityQuestion&#39;s key |
  **xSyncopeDomain** | **string**| security question key to be deleted | [default to &#39;Master&#39;]
- **securityQuestionTO** | [**\SyncopePhpClient\Model\SecurityQuestionTO**](../Model/SecurityQuestionTO.md)|  |
+ **securityQuestionTO** | [**\OpenEuropa\SyncopePhpClient\Model\SecurityQuestionTO**](../Model/SecurityQuestionTO.md)|  |
 
 ### Return type
 

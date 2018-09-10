@@ -1,4 +1,4 @@
-# SyncopePhpClient\CamelRoutesApi
+# OpenEuropa\SyncopePhpClient\CamelRoutesApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -22,17 +22,17 @@ List all routes for the given any type kind.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\CamelRoutesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\CamelRoutesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -82,17 +82,17 @@ Provides Camel metrics.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\CamelRoutesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\CamelRoutesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -140,17 +140,17 @@ Read the route with the given key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\CamelRoutesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\CamelRoutesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -202,17 +202,17 @@ Restart the underlying Apache Camel context.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\CamelRoutesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\CamelRoutesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,17 +260,17 @@ Update the given route.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\CamelRoutesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\CamelRoutesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -279,7 +279,7 @@ $apiInstance = new SyncopePhpClient\Api\CamelRoutesApi(
 $key = 'key_example'; // string | Camel route's key
 $anyTypeKind = 'anyTypeKind_example'; // string | to be updated
 $xSyncopeDomain = 'Master'; // string | 
-$camelRouteTO = new \SyncopePhpClient\Model\CamelRouteTO(); // \SyncopePhpClient\Model\CamelRouteTO | 
+$camelRouteTO = new \OpenEuropa\SyncopePhpClient\Model\CamelRouteTO(); // \OpenEuropa\SyncopePhpClient\Model\CamelRouteTO | 
 
 try {
     $apiInstance->update($key, $anyTypeKind, $xSyncopeDomain, $camelRouteTO);
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Camel route&#39;s key |
  **anyTypeKind** | **string**| to be updated |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **camelRouteTO** | [**\SyncopePhpClient\Model\CamelRouteTO**](../Model/CamelRouteTO.md)|  |
+ **camelRouteTO** | [**\OpenEuropa\SyncopePhpClient\Model\CamelRouteTO**](../Model/CamelRouteTO.md)|  |
 
 ### Return type
 

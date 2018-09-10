@@ -1,4 +1,4 @@
-# SyncopePhpClient\DynamicRealmsApi
+# OpenEuropa\SyncopePhpClient\DynamicRealmsApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -22,24 +22,24 @@ Creates a new dynamic realm.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DynamicRealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DynamicRealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | dynamic realm to be created
-$dynRealmTO = new \SyncopePhpClient\Model\DynRealmTO(); // \SyncopePhpClient\Model\DynRealmTO | 
+$dynRealmTO = new \OpenEuropa\SyncopePhpClient\Model\DynRealmTO(); // \OpenEuropa\SyncopePhpClient\Model\DynRealmTO | 
 
 try {
     $apiInstance->create($xSyncopeDomain, $dynRealmTO);
@@ -54,7 +54,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| dynamic realm to be created | [default to &#39;Master&#39;]
- **dynRealmTO** | [**\SyncopePhpClient\Model\DynRealmTO**](../Model/DynRealmTO.md)|  |
+ **dynRealmTO** | [**\OpenEuropa\SyncopePhpClient\Model\DynRealmTO**](../Model/DynRealmTO.md)|  |
 
 ### Return type
 
@@ -82,17 +82,17 @@ Deletes the dynamic realm matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DynamicRealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DynamicRealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -142,17 +142,17 @@ Returns a list of all dynamic realms.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DynamicRealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DynamicRealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -200,17 +200,17 @@ Returns dynamic realm with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DynamicRealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DynamicRealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,17 +260,17 @@ Updates the dynamic realm matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DynamicRealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DynamicRealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -278,7 +278,7 @@ $apiInstance = new SyncopePhpClient\Api\DynamicRealmsApi(
 );
 $key = 'key_example'; // string | DynRealm's key
 $xSyncopeDomain = 'Master'; // string | dynamic realm key to be deleted
-$dynRealmTO = new \SyncopePhpClient\Model\DynRealmTO(); // \SyncopePhpClient\Model\DynRealmTO | 
+$dynRealmTO = new \OpenEuropa\SyncopePhpClient\Model\DynRealmTO(); // \OpenEuropa\SyncopePhpClient\Model\DynRealmTO | 
 
 try {
     $apiInstance->update($key, $xSyncopeDomain, $dynRealmTO);
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| DynRealm&#39;s key |
  **xSyncopeDomain** | **string**| dynamic realm key to be deleted | [default to &#39;Master&#39;]
- **dynRealmTO** | [**\SyncopePhpClient\Model\DynRealmTO**](../Model/DynRealmTO.md)|  |
+ **dynRealmTO** | [**\OpenEuropa\SyncopePhpClient\Model\DynRealmTO**](../Model/DynRealmTO.md)|  |
 
 ### Return type
 

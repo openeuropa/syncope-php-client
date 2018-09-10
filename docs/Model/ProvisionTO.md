@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **syncToken** | **string** |  | [optional] 
 **ignoreCaseMatch** | **bool** |  | [optional] 
 **uidOnCreate** | **string** |  | [optional] 
-**mapping** | [**\SyncopePhpClient\Model\MappingTO**](MappingTO.md) |  | [optional] 
+**mapping** | [**\OpenEuropa\SyncopePhpClient\Model\MappingTO**](MappingTO.md) |  | [optional] 
 **auxClasses** | **string[]** |  | [optional] 
 **virSchemas** | **string[]** |  | [optional] 
 

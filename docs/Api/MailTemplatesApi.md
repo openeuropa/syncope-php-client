@@ -1,4 +1,4 @@
-# SyncopePhpClient\MailTemplatesApi
+# OpenEuropa\SyncopePhpClient\MailTemplatesApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -24,24 +24,24 @@ Creates a new mail template.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\MailTemplatesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\MailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | Creates a new mail template.
-$mailTemplateTO = new \SyncopePhpClient\Model\MailTemplateTO(); // \SyncopePhpClient\Model\MailTemplateTO | 
+$mailTemplateTO = new \OpenEuropa\SyncopePhpClient\Model\MailTemplateTO(); // \OpenEuropa\SyncopePhpClient\Model\MailTemplateTO | 
 
 try {
     $apiInstance->create($xSyncopeDomain, $mailTemplateTO);
@@ -56,7 +56,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| Creates a new mail template. | [default to &#39;Master&#39;]
- **mailTemplateTO** | [**\SyncopePhpClient\Model\MailTemplateTO**](../Model/MailTemplateTO.md)|  |
+ **mailTemplateTO** | [**\OpenEuropa\SyncopePhpClient\Model\MailTemplateTO**](../Model/MailTemplateTO.md)|  |
 
 ### Return type
 
@@ -84,17 +84,17 @@ Deletes the mail template matching the given key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\MailTemplatesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\MailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,17 +144,17 @@ Gets the template for the given key and format, if available.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\MailTemplatesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\MailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -206,17 +206,17 @@ Returns a list of all mail templates.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\MailTemplatesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\MailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -264,17 +264,17 @@ Returns mail template with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\MailTemplatesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\MailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -324,17 +324,17 @@ Removes the template for the given key and format, if available.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\MailTemplatesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\MailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -386,17 +386,17 @@ Sets the template for the given key and format, if available.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\MailTemplatesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\MailTemplatesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -405,7 +405,7 @@ $apiInstance = new SyncopePhpClient\Api\MailTemplatesApi(
 $key = 'key_example'; // string | mail template
 $format = 'format_example'; // string | template format
 $xSyncopeDomain = 'Master'; // string | template to be set
-$uNKNOWNBASETYPE = new \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE(); // \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE | 
+$uNKNOWNBASETYPE = new \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE(); // \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE | 
 
 try {
     $apiInstance->setFormat($key, $format, $xSyncopeDomain, $uNKNOWNBASETYPE);
@@ -422,7 +422,7 @@ Name | Type | Description  | Notes
  **key** | **string**| mail template |
  **format** | **string**| template format |
  **xSyncopeDomain** | **string**| template to be set | [default to &#39;Master&#39;]
- **uNKNOWNBASETYPE** | [**\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  | [optional]
+ **uNKNOWNBASETYPE** | [**\OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  | [optional]
 
 ### Return type
 

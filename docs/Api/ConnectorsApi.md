@@ -1,4 +1,4 @@
-# SyncopePhpClient\ConnectorsApi
+# OpenEuropa\SyncopePhpClient\ConnectorsApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -27,17 +27,17 @@ Builds the list of ConnId object classes information for the connector bundle ma
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -45,7 +45,7 @@ $apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
 );
 $key = 'key_example'; // string | Connector instance's key
 $xSyncopeDomain = 'Master'; // string | 
-$connInstanceTO = new \SyncopePhpClient\Model\ConnInstanceTO(); // \SyncopePhpClient\Model\ConnInstanceTO | 
+$connInstanceTO = new \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO(); // \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO | 
 $includeSpecial = false; // bool | if set to true, special schema names (like '__PASSWORD__') will be included;  default is false
 
 try {
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Connector instance&#39;s key |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **connInstanceTO** | [**\SyncopePhpClient\Model\ConnInstanceTO**](../Model/ConnInstanceTO.md)|  |
+ **connInstanceTO** | [**\OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO**](../Model/ConnInstanceTO.md)|  |
  **includeSpecial** | **bool**| if set to true, special schema names (like &#39;__PASSWORD__&#39;) will be included;  default is false | [optional] [default to false]
 
 ### Return type
@@ -91,24 +91,24 @@ Checks whether the connection to resource could be established.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | connector instance to be used for connection check
-$connInstanceTO = new \SyncopePhpClient\Model\ConnInstanceTO(); // \SyncopePhpClient\Model\ConnInstanceTO | 
+$connInstanceTO = new \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO(); // \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO | 
 
 try {
     $apiInstance->check($xSyncopeDomain, $connInstanceTO);
@@ -123,7 +123,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| connector instance to be used for connection check | [default to &#39;Master&#39;]
- **connInstanceTO** | [**\SyncopePhpClient\Model\ConnInstanceTO**](../Model/ConnInstanceTO.md)|  |
+ **connInstanceTO** | [**\OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO**](../Model/ConnInstanceTO.md)|  |
 
 ### Return type
 
@@ -151,24 +151,24 @@ Creates a new connector instance.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | connector instance to be created
-$connInstanceTO = new \SyncopePhpClient\Model\ConnInstanceTO(); // \SyncopePhpClient\Model\ConnInstanceTO | 
+$connInstanceTO = new \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO(); // \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO | 
 
 try {
     $apiInstance->create($xSyncopeDomain, $connInstanceTO);
@@ -183,7 +183,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| connector instance to be created | [default to &#39;Master&#39;]
- **connInstanceTO** | [**\SyncopePhpClient\Model\ConnInstanceTO**](../Model/ConnInstanceTO.md)|  |
+ **connInstanceTO** | [**\OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO**](../Model/ConnInstanceTO.md)|  |
 
 ### Return type
 
@@ -211,17 +211,17 @@ Deletes the connector instance matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -271,17 +271,17 @@ Returns available connector bundles with property keys in selected language.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -331,17 +331,17 @@ Returns a list of all connector instances with property keys in the matching lan
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -391,17 +391,17 @@ Returns connector instance with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -453,17 +453,17 @@ Returns connector instance for matching resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -515,17 +515,17 @@ Reload all connector bundles and instances.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -573,17 +573,17 @@ Updates the connector instance matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -591,7 +591,7 @@ $apiInstance = new SyncopePhpClient\Api\ConnectorsApi(
 );
 $key = 'key_example'; // string | Connector instance's key
 $xSyncopeDomain = 'Master'; // string | connector instance key to be deleted
-$connInstanceTO = new \SyncopePhpClient\Model\ConnInstanceTO(); // \SyncopePhpClient\Model\ConnInstanceTO | 
+$connInstanceTO = new \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO(); // \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO | 
 
 try {
     $apiInstance->update($key, $xSyncopeDomain, $connInstanceTO);
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Connector instance&#39;s key |
  **xSyncopeDomain** | **string**| connector instance key to be deleted | [default to &#39;Master&#39;]
- **connInstanceTO** | [**\SyncopePhpClient\Model\ConnInstanceTO**](../Model/ConnInstanceTO.md)|  |
+ **connInstanceTO** | [**\OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO**](../Model/ConnInstanceTO.md)|  |
 
 ### Return type
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,13 +27,13 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient;
+namespace OpenEuropa\SyncopePhpClient;
 
 /**
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -293,7 +293,7 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\SyncopePhpClient\Model\\' . $data->{$discriminator};
+                $subclass = '\OpenEuropa\SyncopePhpClient\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

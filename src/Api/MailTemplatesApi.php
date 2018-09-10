@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * MailTemplatesApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -75,9 +75,9 @@ class MailTemplatesApi {
    * Creates a new mail template.
    *
    * @param  string $xSyncopeDomain Creates a new mail template. (required)
-   * @param  \SyncopePhpClient\Model\MailTemplateTO $mailTemplateTO mailTemplateTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\MailTemplateTO $mailTemplateTO mailTemplateTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -121,7 +121,7 @@ class MailTemplatesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -135,7 +135,7 @@ class MailTemplatesApi {
    * Create request for operation 'create'
    *
    * @param  string $xSyncopeDomain Creates a new mail template. (required)
-   * @param  \SyncopePhpClient\Model\MailTemplateTO $mailTemplateTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\MailTemplateTO $mailTemplateTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -251,7 +251,7 @@ class MailTemplatesApi {
    * @param  string $key key for mail template to be deleted (required)
    * @param  string $xSyncopeDomain mail template (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -295,7 +295,7 @@ class MailTemplatesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -431,7 +431,7 @@ class MailTemplatesApi {
    * @param  string $format template format (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -475,7 +475,7 @@ class MailTemplatesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -624,7 +624,7 @@ class MailTemplatesApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -668,7 +668,7 @@ class MailTemplatesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -788,7 +788,7 @@ class MailTemplatesApi {
    * @param  string $key key of mail template to be read (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -832,7 +832,7 @@ class MailTemplatesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -968,7 +968,7 @@ class MailTemplatesApi {
    * @param  string $format template format (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1012,7 +1012,7 @@ class MailTemplatesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1162,9 +1162,9 @@ class MailTemplatesApi {
    * @param  string $key mail template (required)
    * @param  string $format template format (required)
    * @param  string $xSyncopeDomain template to be set (required)
-   * @param  \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE $uNKNOWNBASETYPE uNKNOWNBASETYPE (optional)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE $uNKNOWNBASETYPE uNKNOWNBASETYPE (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1208,7 +1208,7 @@ class MailTemplatesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1224,7 +1224,7 @@ class MailTemplatesApi {
    * @param  string $key mail template (required)
    * @param  string $format template format (required)
    * @param  string $xSyncopeDomain template to be set (required)
-   * @param  \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE $uNKNOWNBASETYPE (optional)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE $uNKNOWNBASETYPE (optional)
    *
    * @throws \InvalidArgumentException
    *

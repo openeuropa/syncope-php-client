@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * CamelMetrics Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,7 +57,7 @@ class CamelMetrics implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'responseMeanRates' => '\SyncopePhpClient\Model\MeanRate[]'
+        'responseMeanRates' => '\OpenEuropa\SyncopePhpClient\Model\MeanRate[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class CamelMetrics implements ModelInterface, ArrayAccess
     /**
      * Gets responseMeanRates
      *
-     * @return \SyncopePhpClient\Model\MeanRate[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\MeanRate[]|null
      */
     public function getResponseMeanRates()
     {
@@ -217,7 +217,7 @@ class CamelMetrics implements ModelInterface, ArrayAccess
     /**
      * Sets responseMeanRates
      *
-     * @param \SyncopePhpClient\Model\MeanRate[]|null $responseMeanRates responseMeanRates
+     * @param \OpenEuropa\SyncopePhpClient\Model\MeanRate[]|null $responseMeanRates responseMeanRates
      *
      * @return $this
      */

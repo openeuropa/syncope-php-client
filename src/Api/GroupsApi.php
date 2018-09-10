@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * GroupsApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -77,12 +77,12 @@ class GroupsApi {
    * @param  string $key Entity&#39;s key (required)
    * @param  string $action Association action (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\AssociationPatch $associationPatch associationPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\AssociationPatch $associationPatch associationPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -126,7 +126,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -142,7 +142,7 @@ class GroupsApi {
    * @param  string $key Entity&#39;s key (required)
    * @param  string $action Association action (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\AssociationPatch $associationPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\AssociationPatch $associationPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
@@ -299,13 +299,13 @@ class GroupsApi {
    * Creates a new group.
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\GroupTO $groupTO groupTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\GroupTO $groupTO groupTO (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\ProvisioningResult
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult
    */
   public function createGroup($xSyncopeDomain, $groupTO, $prefer = 'return-content', $xSyncopeNullPriorityAsync = false) {
     $request = $this->createGroupRequest($xSyncopeDomain, $groupTO, $prefer, $xSyncopeNullPriorityAsync);
@@ -342,38 +342,38 @@ class GroupsApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 201:
-          if ('\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ProvisioningResult', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\ProvisioningResult';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -396,7 +396,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -404,7 +404,7 @@ class GroupsApi {
         case 201:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ProvisioningResult',
+            '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -418,7 +418,7 @@ class GroupsApi {
    * Create request for operation 'createGroup'
    *
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\GroupTO $groupTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\GroupTO $groupTO (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
    *
@@ -544,12 +544,12 @@ class GroupsApi {
    * @param  string $key Entity&#39;s key (required)
    * @param  string $action Deassociation action (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\DeassociationPatch $deassociationPatch deassociationPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\DeassociationPatch $deassociationPatch deassociationPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -593,7 +593,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -609,7 +609,7 @@ class GroupsApi {
    * @param  string $key Entity&#39;s key (required)
    * @param  string $action Deassociation action (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\DeassociationPatch $deassociationPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\DeassociationPatch $deassociationPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
@@ -771,9 +771,9 @@ class GroupsApi {
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\ProvisioningResult
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult
    */
   public function deleteGroup($key, $xSyncopeDomain, $prefer = 'return-content', $ifMatch = null, $xSyncopeNullPriorityAsync = false) {
     $request = $this->deleteGroupRequest($key, $xSyncopeDomain, $prefer, $ifMatch, $xSyncopeNullPriorityAsync);
@@ -810,38 +810,38 @@ class GroupsApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 200:
-          if ('\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ProvisioningResult', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\ProvisioningResult';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -864,7 +864,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -872,7 +872,7 @@ class GroupsApi {
         case 200:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ProvisioningResult',
+            '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1024,7 +1024,7 @@ class GroupsApi {
    * @param  string $schema schema (required)
    * @param  string $xSyncopeDomain any object key or name (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1068,7 +1068,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1232,7 +1232,7 @@ class GroupsApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1276,7 +1276,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1397,7 +1397,7 @@ class GroupsApi {
    * @param  string $action action type to perform on all group members (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1441,7 +1441,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1591,7 +1591,7 @@ class GroupsApi {
    * @param  string $key if value looks like a UUID then it is interpreted as key, otherwise as a (user)name (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1635,7 +1635,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1772,7 +1772,7 @@ class GroupsApi {
    * @param  string $schema schema (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1816,7 +1816,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1982,7 +1982,7 @@ class GroupsApi {
    * @param  string $schemaType schema type (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -2026,7 +2026,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -2181,7 +2181,7 @@ class GroupsApi {
    * @param  bool $details details (optional, default to true)
    * @param  string $fiql fiql (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -2225,7 +2225,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -2374,14 +2374,14 @@ class GroupsApi {
    *
    * @param  string $key Group&#39;s key (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\GroupTO $groupTO groupTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\GroupTO $groupTO groupTO (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\ProvisioningResult
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult
    */
   public function updateGroup($key, $xSyncopeDomain, $groupTO, $prefer = 'return-content', $ifMatch = null, $xSyncopeNullPriorityAsync = false) {
     $request = $this->updateGroupRequest($key, $xSyncopeDomain, $groupTO, $prefer, $ifMatch, $xSyncopeNullPriorityAsync);
@@ -2418,38 +2418,38 @@ class GroupsApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 200:
-          if ('\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ProvisioningResult', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\ProvisioningResult';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -2472,7 +2472,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -2480,7 +2480,7 @@ class GroupsApi {
         case 200:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ProvisioningResult',
+            '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -2495,7 +2495,7 @@ class GroupsApi {
    *
    * @param  string $key Group&#39;s key (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\GroupTO $groupTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\GroupTO $groupTO (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
@@ -2641,9 +2641,9 @@ class GroupsApi {
    * @param  string $key schema type (required)
    * @param  string $schemaType attribute (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\AttrTO $attrTO attrTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\AttrTO $attrTO attrTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -2687,7 +2687,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -2704,7 +2704,7 @@ class GroupsApi {
    * @param  string $key schema type (required)
    * @param  string $schemaType attribute (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\AttrTO $attrTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\AttrTO $attrTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -2861,14 +2861,14 @@ class GroupsApi {
    *
    * @param  string $key Group&#39;s key (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\GroupPatch $groupPatch groupPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\GroupPatch $groupPatch groupPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return \SyncopePhpClient\Model\ErrorTO|\SyncopePhpClient\Model\ProvisioningResult
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult
    */
   public function updateGroup_0($key, $xSyncopeDomain, $groupPatch, $prefer = 'return-content', $ifMatch = null, $xSyncopeNullPriorityAsync = false) {
     $request = $this->updateGroup_0Request($key, $xSyncopeDomain, $groupPatch, $prefer, $ifMatch, $xSyncopeNullPriorityAsync);
@@ -2905,38 +2905,38 @@ class GroupsApi {
       $responseBody = $response->getBody();
       switch($statusCode) {
         case 400:
-          if ('\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ErrorTO', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
         case 200:
-          if ('\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
+          if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
           } else {
             $content = $responseBody->getContents();
-            if ('\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
+            if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' !== 'string') {
                 $content = json_decode($content);
             }
           }
 
           return [
-            ObjectSerializer::deserialize($content, '\SyncopePhpClient\Model\ProvisioningResult', []),
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
       }
 
-      $returnType = '\SyncopePhpClient\Model\ProvisioningResult';
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
       $responseBody = $response->getBody();
       if ($returnType === '\SplFileObject') {
         $content = $responseBody; //stream goes to serializer
@@ -2959,7 +2959,7 @@ class GroupsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -2967,7 +2967,7 @@ class GroupsApi {
         case 200:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ProvisioningResult',
+            '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -2982,7 +2982,7 @@ class GroupsApi {
    *
    * @param  string $key Group&#39;s key (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\GroupPatch $groupPatch (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\GroupPatch $groupPatch (required)
    * @param  string $prefer Allows client to specify a preference for the result to be returned from the server (optional, default to 'return-content')
    * @param  string $ifMatch When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. (optional)
    * @param  bool $xSyncopeNullPriorityAsync If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set (optional, default to false)

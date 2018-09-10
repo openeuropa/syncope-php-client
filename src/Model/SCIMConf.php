@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * SCIMConf Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,9 +57,9 @@ class SCIMConf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'generalConf' => '\SyncopePhpClient\Model\SCIMGeneralConf',
-        'userConf' => '\SyncopePhpClient\Model\SCIMUserConf',
-        'enterpriseUserConf' => '\SyncopePhpClient\Model\SCIMEnterpriseUserConf'
+        'generalConf' => '\OpenEuropa\SyncopePhpClient\Model\SCIMGeneralConf',
+        'userConf' => '\OpenEuropa\SyncopePhpClient\Model\SCIMUserConf',
+        'enterpriseUserConf' => '\OpenEuropa\SyncopePhpClient\Model\SCIMEnterpriseUserConf'
     ];
 
     /**
@@ -219,7 +219,7 @@ class SCIMConf implements ModelInterface, ArrayAccess
     /**
      * Gets generalConf
      *
-     * @return \SyncopePhpClient\Model\SCIMGeneralConf|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMGeneralConf|null
      */
     public function getGeneralConf()
     {
@@ -229,7 +229,7 @@ class SCIMConf implements ModelInterface, ArrayAccess
     /**
      * Sets generalConf
      *
-     * @param \SyncopePhpClient\Model\SCIMGeneralConf|null $generalConf generalConf
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMGeneralConf|null $generalConf generalConf
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class SCIMConf implements ModelInterface, ArrayAccess
     /**
      * Gets userConf
      *
-     * @return \SyncopePhpClient\Model\SCIMUserConf|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMUserConf|null
      */
     public function getUserConf()
     {
@@ -253,7 +253,7 @@ class SCIMConf implements ModelInterface, ArrayAccess
     /**
      * Sets userConf
      *
-     * @param \SyncopePhpClient\Model\SCIMUserConf|null $userConf userConf
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMUserConf|null $userConf userConf
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class SCIMConf implements ModelInterface, ArrayAccess
     /**
      * Gets enterpriseUserConf
      *
-     * @return \SyncopePhpClient\Model\SCIMEnterpriseUserConf|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMEnterpriseUserConf|null
      */
     public function getEnterpriseUserConf()
     {
@@ -277,7 +277,7 @@ class SCIMConf implements ModelInterface, ArrayAccess
     /**
      * Sets enterpriseUserConf
      *
-     * @param \SyncopePhpClient\Model\SCIMEnterpriseUserConf|null $enterpriseUserConf enterpriseUserConf
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMEnterpriseUserConf|null $enterpriseUserConf enterpriseUserConf
      *
      * @return $this
      */

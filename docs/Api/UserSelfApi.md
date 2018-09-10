@@ -1,4 +1,4 @@
-# SyncopePhpClient\UserSelfApi
+# OpenEuropa\SyncopePhpClient\UserSelfApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -25,7 +25,7 @@ Reset the password value for the user matching the provided token, if available 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -66,7 +66,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **create1**
-> \SyncopePhpClient\Model\ProvisioningResult create1($xSyncopeDomain, $userTO, $prefer, $storePassword)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult create1($xSyncopeDomain, $userTO, $prefer, $storePassword)
 
 Self-registration for new user.
 
@@ -75,13 +75,13 @@ Self-registration for new user.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $xSyncopeDomain = 'Master'; // string | 
-$userTO = new \SyncopePhpClient\Model\UserTO(); // \SyncopePhpClient\Model\UserTO | 
+$userTO = new \OpenEuropa\SyncopePhpClient\Model\UserTO(); // \OpenEuropa\SyncopePhpClient\Model\UserTO | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $storePassword = true; // bool | whether password shall be stored internally
 
@@ -99,13 +99,13 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **userTO** | [**\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
+ **userTO** | [**\OpenEuropa\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **storePassword** | **bool**| whether password shall be stored internally | [optional] [default to true]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -129,17 +129,17 @@ Self-deletes user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,17 +187,17 @@ Changes own password when change was forced by an administrator.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -237,7 +237,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **read29**
-> \SyncopePhpClient\Model\UserTO read29($xSyncopeDomain)
+> \OpenEuropa\SyncopePhpClient\Model\UserTO read29($xSyncopeDomain)
 
 Returns the user making the service call.
 
@@ -247,17 +247,17 @@ Returns the user making the service call.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)
+[**\OpenEuropa\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)
 
 ### Authorization
 
@@ -305,7 +305,7 @@ Provides answer for the security question configured for user matching the given
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -346,7 +346,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **status1**
-> \SyncopePhpClient\Model\ProvisioningResult status1($key, $xSyncopeDomain, $statusPatch, $prefer)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult status1($key, $xSyncopeDomain, $statusPatch, $prefer)
 
 Self-perform a status update.
 
@@ -356,17 +356,17 @@ Self-perform a status update.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -374,7 +374,7 @@ $apiInstance = new SyncopePhpClient\Api\UserSelfApi(
 );
 $key = 'key_example'; // string | User's key
 $xSyncopeDomain = 'Master'; // string | 
-$statusPatch = new \SyncopePhpClient\Model\StatusPatch(); // \SyncopePhpClient\Model\StatusPatch | 
+$statusPatch = new \OpenEuropa\SyncopePhpClient\Model\StatusPatch(); // \OpenEuropa\SyncopePhpClient\Model\StatusPatch | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 
 try {
@@ -392,12 +392,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| User&#39;s key |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **statusPatch** | [**\SyncopePhpClient\Model\StatusPatch**](../Model/StatusPatch.md)|  |
+ **statusPatch** | [**\OpenEuropa\SyncopePhpClient\Model\StatusPatch**](../Model/StatusPatch.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **update1**
-> \SyncopePhpClient\Model\ProvisioningResult update1($key, $xSyncopeDomain, $userTO, $prefer)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult update1($key, $xSyncopeDomain, $userTO, $prefer)
 
 Self-updates user.
 
@@ -421,17 +421,17 @@ Self-updates user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -439,7 +439,7 @@ $apiInstance = new SyncopePhpClient\Api\UserSelfApi(
 );
 $key = 'key_example'; // string | User's key
 $xSyncopeDomain = 'Master'; // string | 
-$userTO = new \SyncopePhpClient\Model\UserTO(); // \SyncopePhpClient\Model\UserTO | 
+$userTO = new \OpenEuropa\SyncopePhpClient\Model\UserTO(); // \OpenEuropa\SyncopePhpClient\Model\UserTO | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 
 try {
@@ -457,12 +457,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| User&#39;s key |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **userTO** | [**\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
+ **userTO** | [**\OpenEuropa\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **update2**
-> \SyncopePhpClient\Model\ProvisioningResult update2($key, $xSyncopeDomain, $userPatch, $prefer)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult update2($key, $xSyncopeDomain, $userPatch, $prefer)
 
 Self-updates user.
 
@@ -486,17 +486,17 @@ Self-updates user.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserSelfApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserSelfApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -504,7 +504,7 @@ $apiInstance = new SyncopePhpClient\Api\UserSelfApi(
 );
 $key = 'key_example'; // string | User's key
 $xSyncopeDomain = 'Master'; // string | 
-$userPatch = new \SyncopePhpClient\Model\UserPatch(); // \SyncopePhpClient\Model\UserPatch | 
+$userPatch = new \OpenEuropa\SyncopePhpClient\Model\UserPatch(); // \OpenEuropa\SyncopePhpClient\Model\UserPatch | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 
 try {
@@ -522,12 +522,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| User&#39;s key |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **userPatch** | [**\SyncopePhpClient\Model\UserPatch**](../Model/UserPatch.md)|  |
+ **userPatch** | [**\OpenEuropa\SyncopePhpClient\Model\UserPatch**](../Model/UserPatch.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 

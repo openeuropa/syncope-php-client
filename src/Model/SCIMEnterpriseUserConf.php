@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * SCIMEnterpriseUserConf Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -62,7 +62,7 @@ class SCIMEnterpriseUserConf implements ModelInterface, ArrayAccess
         'organization' => 'string',
         'division' => 'string',
         'department' => 'string',
-        'manager' => '\SyncopePhpClient\Model\SCIMManagerConf'
+        'manager' => '\OpenEuropa\SyncopePhpClient\Model\SCIMManagerConf'
     ];
 
     /**
@@ -357,7 +357,7 @@ class SCIMEnterpriseUserConf implements ModelInterface, ArrayAccess
     /**
      * Gets manager
      *
-     * @return \SyncopePhpClient\Model\SCIMManagerConf|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMManagerConf|null
      */
     public function getManager()
     {
@@ -367,7 +367,7 @@ class SCIMEnterpriseUserConf implements ModelInterface, ArrayAccess
     /**
      * Sets manager
      *
-     * @param \SyncopePhpClient\Model\SCIMManagerConf|null $manager manager
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMManagerConf|null $manager manager
      *
      * @return $this
      */

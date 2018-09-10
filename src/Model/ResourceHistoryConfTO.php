@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ResourceHistoryConfTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,7 +60,7 @@ class ResourceHistoryConfTO implements ModelInterface, ArrayAccess
         'key' => 'string',
         'creator' => 'string',
         'creation' => '\DateTime',
-        'resourceTO' => '\SyncopePhpClient\Model\ResourceTO'
+        'resourceTO' => '\OpenEuropa\SyncopePhpClient\Model\ResourceTO'
     ];
 
     /**
@@ -297,7 +297,7 @@ class ResourceHistoryConfTO implements ModelInterface, ArrayAccess
     /**
      * Gets resourceTO
      *
-     * @return \SyncopePhpClient\Model\ResourceTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ResourceTO|null
      */
     public function getResourceTO()
     {
@@ -307,7 +307,7 @@ class ResourceHistoryConfTO implements ModelInterface, ArrayAccess
     /**
      * Sets resourceTO
      *
-     * @param \SyncopePhpClient\Model\ResourceTO|null $resourceTO resourceTO
+     * @param \OpenEuropa\SyncopePhpClient\Model\ResourceTO|null $resourceTO resourceTO
      *
      * @return $this
      */

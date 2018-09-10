@@ -1,4 +1,4 @@
-# SyncopePhpClient\OIDCProvidersApi
+# OpenEuropa\SyncopePhpClient\OIDCProvidersApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -24,24 +24,24 @@ Creates a new OIDC Provider.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\OIDCProvidersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\OIDCProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | OpenID Connect Provider configuration to be stored
-$oIDCProviderTO = new \SyncopePhpClient\Model\OIDCProviderTO(); // \SyncopePhpClient\Model\OIDCProviderTO | 
+$oIDCProviderTO = new \OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO(); // \OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO | 
 
 try {
     $apiInstance->create($xSyncopeDomain, $oIDCProviderTO);
@@ -56,7 +56,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| OpenID Connect Provider configuration to be stored | [default to &#39;Master&#39;]
- **oIDCProviderTO** | [**\SyncopePhpClient\Model\OIDCProviderTO**](../Model/OIDCProviderTO.md)|  | [optional]
+ **oIDCProviderTO** | [**\OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO**](../Model/OIDCProviderTO.md)|  | [optional]
 
 ### Return type
 
@@ -84,24 +84,24 @@ Creates a new OIDC Provider by using its Discovery Document.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\OIDCProvidersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\OIDCProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | OpenID Connect Provider configuration to be stored
-$oIDCProviderTO = new \SyncopePhpClient\Model\OIDCProviderTO(); // \SyncopePhpClient\Model\OIDCProviderTO | 
+$oIDCProviderTO = new \OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO(); // \OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO | 
 
 try {
     $apiInstance->createFromDiscovery($xSyncopeDomain, $oIDCProviderTO);
@@ -116,7 +116,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| OpenID Connect Provider configuration to be stored | [default to &#39;Master&#39;]
- **oIDCProviderTO** | [**\SyncopePhpClient\Model\OIDCProviderTO**](../Model/OIDCProviderTO.md)|  | [optional]
+ **oIDCProviderTO** | [**\OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO**](../Model/OIDCProviderTO.md)|  | [optional]
 
 ### Return type
 
@@ -144,17 +144,17 @@ Deletes the OIDC Provider with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\OIDCProvidersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\OIDCProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -204,17 +204,17 @@ Returns the list of available OIDCProviderActions implementations.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\OIDCProvidersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\OIDCProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -262,17 +262,17 @@ Returns a list of all defined OIDC Providers.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\OIDCProvidersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\OIDCProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,17 +320,17 @@ Returns the OIDC Provider with matching key, if available.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\OIDCProvidersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\OIDCProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -380,17 +380,17 @@ Updates the OIDC Provider with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\OIDCProvidersApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\OIDCProvidersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -398,7 +398,7 @@ $apiInstance = new SyncopePhpClient\Api\OIDCProvidersApi(
 );
 $key = 'key_example'; // string | OIDC Provider's key
 $xSyncopeDomain = 'Master'; // string | OIDC Provider key
-$oIDCProviderTO = new \SyncopePhpClient\Model\OIDCProviderTO(); // \SyncopePhpClient\Model\OIDCProviderTO | 
+$oIDCProviderTO = new \OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO(); // \OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO | 
 
 try {
     $apiInstance->update1($key, $xSyncopeDomain, $oIDCProviderTO);
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| OIDC Provider&#39;s key |
  **xSyncopeDomain** | **string**| OIDC Provider key | [default to &#39;Master&#39;]
- **oIDCProviderTO** | [**\SyncopePhpClient\Model\OIDCProviderTO**](../Model/OIDCProviderTO.md)|  |
+ **oIDCProviderTO** | [**\OpenEuropa\SyncopePhpClient\Model\OIDCProviderTO**](../Model/OIDCProviderTO.md)|  |
 
 ### Return type
 

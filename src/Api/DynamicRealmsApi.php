@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * DynamicRealmsApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -75,9 +75,9 @@ class DynamicRealmsApi {
    * Creates a new dynamic realm.
    *
    * @param  string $xSyncopeDomain dynamic realm to be created (required)
-   * @param  \SyncopePhpClient\Model\DynRealmTO $dynRealmTO dynRealmTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\DynRealmTO $dynRealmTO dynRealmTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -121,7 +121,7 @@ class DynamicRealmsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -135,7 +135,7 @@ class DynamicRealmsApi {
    * Create request for operation 'create'
    *
    * @param  string $xSyncopeDomain dynamic realm to be created (required)
-   * @param  \SyncopePhpClient\Model\DynRealmTO $dynRealmTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\DynRealmTO $dynRealmTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -251,7 +251,7 @@ class DynamicRealmsApi {
    * @param  string $key dynamic realm key to be deleted (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -295,7 +295,7 @@ class DynamicRealmsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -429,7 +429,7 @@ class DynamicRealmsApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -473,7 +473,7 @@ class DynamicRealmsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class DynamicRealmsApi {
    * @param  string $key dynamic realm key to be read (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -637,7 +637,7 @@ class DynamicRealmsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -771,9 +771,9 @@ class DynamicRealmsApi {
    *
    * @param  string $key DynRealm&#39;s key (required)
    * @param  string $xSyncopeDomain dynamic realm key to be deleted (required)
-   * @param  \SyncopePhpClient\Model\DynRealmTO $dynRealmTO dynRealmTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\DynRealmTO $dynRealmTO dynRealmTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -817,7 +817,7 @@ class DynamicRealmsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -832,7 +832,7 @@ class DynamicRealmsApi {
    *
    * @param  string $key DynRealm&#39;s key (required)
    * @param  string $xSyncopeDomain dynamic realm key to be deleted (required)
-   * @param  \SyncopePhpClient\Model\DynRealmTO $dynRealmTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\DynRealmTO $dynRealmTO (required)
    *
    * @throws \InvalidArgumentException
    *

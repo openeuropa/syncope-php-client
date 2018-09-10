@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **page** | **int** |  | [optional] 
 **size** | **int** |  | [optional] 
 **totalCount** | **int** |  | [optional] 
-**result** | [**\SyncopePhpClient\Model\AccessTokenTO[]**](AccessTokenTO.md) |  | [optional] 
+**result** | [**\OpenEuropa\SyncopePhpClient\Model\AccessTokenTO[]**](AccessTokenTO.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

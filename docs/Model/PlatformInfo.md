@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **anyTypeClasses** | **string[]** |  | [optional] 
 **resources** | **string[]** |  | [optional] 
 **entitlements** | **string[]** |  | [optional] 
-**javaImplInfos** | [**\SyncopePhpClient\Model\JavaImplInfo[]**](JavaImplInfo.md) |  | [optional] 
+**javaImplInfos** | [**\OpenEuropa\SyncopePhpClient\Model\JavaImplInfo[]**](JavaImplInfo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * RemediationTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,8 +60,8 @@ class RemediationTO implements ModelInterface, ArrayAccess
         'key' => 'string',
         'anyType' => 'string',
         'operation' => 'string',
-        'anyTOPayload' => '\SyncopePhpClient\Model\AnyTO',
-        'anyPatchPayload' => '\SyncopePhpClient\Model\AnyPatch',
+        'anyTOPayload' => '\OpenEuropa\SyncopePhpClient\Model\AnyTO',
+        'anyPatchPayload' => '\OpenEuropa\SyncopePhpClient\Model\AnyPatch',
         'keyPayload' => 'string',
         'error' => 'string',
         'instant' => '\DateTime',
@@ -375,7 +375,7 @@ class RemediationTO implements ModelInterface, ArrayAccess
     /**
      * Gets anyTOPayload
      *
-     * @return \SyncopePhpClient\Model\AnyTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AnyTO|null
      */
     public function getAnyTOPayload()
     {
@@ -385,7 +385,7 @@ class RemediationTO implements ModelInterface, ArrayAccess
     /**
      * Sets anyTOPayload
      *
-     * @param \SyncopePhpClient\Model\AnyTO|null $anyTOPayload anyTOPayload
+     * @param \OpenEuropa\SyncopePhpClient\Model\AnyTO|null $anyTOPayload anyTOPayload
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class RemediationTO implements ModelInterface, ArrayAccess
     /**
      * Gets anyPatchPayload
      *
-     * @return \SyncopePhpClient\Model\AnyPatch|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AnyPatch|null
      */
     public function getAnyPatchPayload()
     {
@@ -409,7 +409,7 @@ class RemediationTO implements ModelInterface, ArrayAccess
     /**
      * Sets anyPatchPayload
      *
-     * @param \SyncopePhpClient\Model\AnyPatch|null $anyPatchPayload anyPatchPayload
+     * @param \OpenEuropa\SyncopePhpClient\Model\AnyPatch|null $anyPatchPayload anyPatchPayload
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * OIDCLoginResponseTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -62,7 +62,7 @@ class OIDCLoginResponseTO implements ModelInterface, ArrayAccess
         'selfReg' => 'bool',
         'accessToken' => 'string',
         'accessTokenExpiryTime' => '\DateTime',
-        'attrs' => '\SyncopePhpClient\Model\AttrTO[]'
+        'attrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO[]'
     ];
 
     /**
@@ -357,7 +357,7 @@ class OIDCLoginResponseTO implements ModelInterface, ArrayAccess
     /**
      * Gets attrs
      *
-     * @return \SyncopePhpClient\Model\AttrTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null
      */
     public function getAttrs()
     {
@@ -367,7 +367,7 @@ class OIDCLoginResponseTO implements ModelInterface, ArrayAccess
     /**
      * Sets attrs
      *
-     * @param \SyncopePhpClient\Model\AttrTO[]|null $attrs attrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null $attrs attrs
      *
      * @return $this
      */

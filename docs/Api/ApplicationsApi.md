@@ -1,4 +1,4 @@
-# SyncopePhpClient\ApplicationsApi
+# OpenEuropa\SyncopePhpClient\ApplicationsApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -23,24 +23,24 @@ Creates a new application.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ApplicationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ApplicationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | application to be created
-$applicationTO = new \SyncopePhpClient\Model\ApplicationTO(); // \SyncopePhpClient\Model\ApplicationTO | 
+$applicationTO = new \OpenEuropa\SyncopePhpClient\Model\ApplicationTO(); // \OpenEuropa\SyncopePhpClient\Model\ApplicationTO | 
 
 try {
     $apiInstance->create($xSyncopeDomain, $applicationTO);
@@ -55,7 +55,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| application to be created | [default to &#39;Master&#39;]
- **applicationTO** | [**\SyncopePhpClient\Model\ApplicationTO**](../Model/ApplicationTO.md)|  |
+ **applicationTO** | [**\OpenEuropa\SyncopePhpClient\Model\ApplicationTO**](../Model/ApplicationTO.md)|  |
 
 ### Return type
 
@@ -83,17 +83,17 @@ Deletes the application matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ApplicationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ApplicationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -143,17 +143,17 @@ Returns a list of all applications.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ApplicationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ApplicationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,17 +201,17 @@ Returns application with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ApplicationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ApplicationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -261,17 +261,17 @@ Returns privilege with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ApplicationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ApplicationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -321,17 +321,17 @@ Updates the application matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ApplicationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ApplicationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -339,7 +339,7 @@ $apiInstance = new SyncopePhpClient\Api\ApplicationsApi(
 );
 $key = 'key_example'; // string | Application's key
 $xSyncopeDomain = 'Master'; // string | application key to be deleted
-$applicationTO = new \SyncopePhpClient\Model\ApplicationTO(); // \SyncopePhpClient\Model\ApplicationTO | 
+$applicationTO = new \OpenEuropa\SyncopePhpClient\Model\ApplicationTO(); // \OpenEuropa\SyncopePhpClient\Model\ApplicationTO | 
 
 try {
     $apiInstance->update($key, $xSyncopeDomain, $applicationTO);
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Application&#39;s key |
  **xSyncopeDomain** | **string**| application key to be deleted | [default to &#39;Master&#39;]
- **applicationTO** | [**\SyncopePhpClient\Model\ApplicationTO**](../Model/ApplicationTO.md)|  |
+ **applicationTO** | [**\OpenEuropa\SyncopePhpClient\Model\ApplicationTO**](../Model/ApplicationTO.md)|  |
 
 ### Return type
 

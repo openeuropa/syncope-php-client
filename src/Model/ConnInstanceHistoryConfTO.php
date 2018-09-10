@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ConnInstanceHistoryConfTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,7 +60,7 @@ class ConnInstanceHistoryConfTO implements ModelInterface, ArrayAccess
         'key' => 'string',
         'creator' => 'string',
         'creation' => '\DateTime',
-        'connInstanceTO' => '\SyncopePhpClient\Model\ConnInstanceTO'
+        'connInstanceTO' => '\OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO'
     ];
 
     /**
@@ -297,7 +297,7 @@ class ConnInstanceHistoryConfTO implements ModelInterface, ArrayAccess
     /**
      * Gets connInstanceTO
      *
-     * @return \SyncopePhpClient\Model\ConnInstanceTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO|null
      */
     public function getConnInstanceTO()
     {
@@ -307,7 +307,7 @@ class ConnInstanceHistoryConfTO implements ModelInterface, ArrayAccess
     /**
      * Sets connInstanceTO
      *
-     * @param \SyncopePhpClient\Model\ConnInstanceTO|null $connInstanceTO connInstanceTO
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO|null $connInstanceTO connInstanceTO
      *
      * @return $this
      */

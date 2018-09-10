@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **version** | **string** |  | [optional] 
 **displayName** | **string** |  | [optional] 
 **connRequestTimeout** | **int** |  | [optional] 
-**poolConf** | [**\SyncopePhpClient\Model\ConnPoolConfTO**](ConnPoolConfTO.md) |  | [optional] 
-**conf** | [**\SyncopePhpClient\Model\ConnConfProperty[]**](ConnConfProperty.md) |  | [optional] 
+**poolConf** | [**\OpenEuropa\SyncopePhpClient\Model\ConnPoolConfTO**](ConnPoolConfTO.md) |  | [optional] 
+**conf** | [**\OpenEuropa\SyncopePhpClient\Model\ConnConfProperty[]**](ConnConfProperty.md) |  | [optional] 
 **capabilities** | **string[]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

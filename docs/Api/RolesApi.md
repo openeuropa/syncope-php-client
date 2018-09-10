@@ -1,4 +1,4 @@
-# SyncopePhpClient\RolesApi
+# OpenEuropa\SyncopePhpClient\RolesApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -25,24 +25,24 @@ Creates a new role.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RolesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | role to be created
-$roleTO = new \SyncopePhpClient\Model\RoleTO(); // \SyncopePhpClient\Model\RoleTO | 
+$roleTO = new \OpenEuropa\SyncopePhpClient\Model\RoleTO(); // \OpenEuropa\SyncopePhpClient\Model\RoleTO | 
 
 try {
     $apiInstance->createRole($xSyncopeDomain, $roleTO);
@@ -57,7 +57,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| role to be created | [default to &#39;Master&#39;]
- **roleTO** | [**\SyncopePhpClient\Model\RoleTO**](../Model/RoleTO.md)|  |
+ **roleTO** | [**\OpenEuropa\SyncopePhpClient\Model\RoleTO**](../Model/RoleTO.md)|  |
 
 ### Return type
 
@@ -85,17 +85,17 @@ Deletes the role matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RolesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -145,17 +145,17 @@ Gets the console layout information as JSON string for the role with the given k
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RolesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -205,17 +205,17 @@ Returns a list of all roles.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RolesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -263,17 +263,17 @@ Returns role with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RolesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,17 +323,17 @@ Removes the console layout information for the role with the given key, if avail
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RolesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -383,17 +383,17 @@ Sets the console layout information as JSON string for the role with the given k
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RolesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -401,7 +401,7 @@ $apiInstance = new SyncopePhpClient\Api\RolesApi(
 );
 $key = 'key_example'; // string | role key
 $xSyncopeDomain = 'Master'; // string | console layout information to be set
-$uNKNOWNBASETYPE = new \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE(); // \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE | 
+$uNKNOWNBASETYPE = new \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE(); // \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE | 
 
 try {
     $apiInstance->setConsoleLayoutInfo($key, $xSyncopeDomain, $uNKNOWNBASETYPE);
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| role key |
  **xSyncopeDomain** | **string**| console layout information to be set | [default to &#39;Master&#39;]
- **uNKNOWNBASETYPE** | [**\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  | [optional]
+ **uNKNOWNBASETYPE** | [**\OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  | [optional]
 
 ### Return type
 
@@ -445,17 +445,17 @@ Updates the role matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RolesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -463,7 +463,7 @@ $apiInstance = new SyncopePhpClient\Api\RolesApi(
 );
 $key = 'key_example'; // string | Role's key
 $xSyncopeDomain = 'Master'; // string | role key to be deleted
-$roleTO = new \SyncopePhpClient\Model\RoleTO(); // \SyncopePhpClient\Model\RoleTO | 
+$roleTO = new \OpenEuropa\SyncopePhpClient\Model\RoleTO(); // \OpenEuropa\SyncopePhpClient\Model\RoleTO | 
 
 try {
     $apiInstance->updateRole($key, $xSyncopeDomain, $roleTO);
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Role&#39;s key |
  **xSyncopeDomain** | **string**| role key to be deleted | [default to &#39;Master&#39;]
- **roleTO** | [**\SyncopePhpClient\Model\RoleTO**](../Model/RoleTO.md)|  |
+ **roleTO** | [**\OpenEuropa\SyncopePhpClient\Model\RoleTO**](../Model/RoleTO.md)|  |
 
 ### Return type
 

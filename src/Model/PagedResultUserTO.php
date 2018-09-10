@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * PagedResultUserTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -62,7 +62,7 @@ class PagedResultUserTO implements ModelInterface, ArrayAccess
         'page' => 'int',
         'size' => 'int',
         'totalCount' => 'int',
-        'result' => '\SyncopePhpClient\Model\UserTO[]'
+        'result' => '\OpenEuropa\SyncopePhpClient\Model\UserTO[]'
     ];
 
     /**
@@ -357,7 +357,7 @@ class PagedResultUserTO implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \SyncopePhpClient\Model\UserTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\UserTO[]|null
      */
     public function getResult()
     {
@@ -367,7 +367,7 @@ class PagedResultUserTO implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \SyncopePhpClient\Model\UserTO[]|null $result result
+     * @param \OpenEuropa\SyncopePhpClient\Model\UserTO[]|null $result result
      *
      * @return $this
      */

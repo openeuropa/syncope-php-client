@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * PlatformInfo Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -78,7 +78,7 @@ class PlatformInfo implements ModelInterface, ArrayAccess
         'anyTypeClasses' => 'string[]',
         'resources' => 'string[]',
         'entitlements' => 'string[]',
-        'javaImplInfos' => '\SyncopePhpClient\Model\JavaImplInfo[]'
+        'javaImplInfos' => '\OpenEuropa\SyncopePhpClient\Model\JavaImplInfo[]'
     ];
 
     /**
@@ -837,7 +837,7 @@ class PlatformInfo implements ModelInterface, ArrayAccess
     /**
      * Gets javaImplInfos
      *
-     * @return \SyncopePhpClient\Model\JavaImplInfo[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\JavaImplInfo[]|null
      */
     public function getJavaImplInfos()
     {
@@ -847,7 +847,7 @@ class PlatformInfo implements ModelInterface, ArrayAccess
     /**
      * Sets javaImplInfos
      *
-     * @param \SyncopePhpClient\Model\JavaImplInfo[]|null $javaImplInfos javaImplInfos
+     * @param \OpenEuropa\SyncopePhpClient\Model\JavaImplInfo[]|null $javaImplInfos javaImplInfos
      *
      * @return $this
      */

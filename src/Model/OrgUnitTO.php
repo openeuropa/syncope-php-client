@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * OrgUnitTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -62,8 +62,8 @@ class OrgUnitTO implements ModelInterface, ArrayAccess
         'syncToken' => 'string',
         'ignoreCaseMatch' => 'bool',
         'connObjectLink' => 'string',
-        'connObjectKeyItem' => '\SyncopePhpClient\Model\ItemTO',
-        'items' => '\SyncopePhpClient\Model\ItemTO[]'
+        'connObjectKeyItem' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO',
+        'items' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO[]'
     ];
 
     /**
@@ -363,7 +363,7 @@ class OrgUnitTO implements ModelInterface, ArrayAccess
     /**
      * Gets connObjectKeyItem
      *
-     * @return \SyncopePhpClient\Model\ItemTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO|null
      */
     public function getConnObjectKeyItem()
     {
@@ -373,7 +373,7 @@ class OrgUnitTO implements ModelInterface, ArrayAccess
     /**
      * Sets connObjectKeyItem
      *
-     * @param \SyncopePhpClient\Model\ItemTO|null $connObjectKeyItem connObjectKeyItem
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO|null $connObjectKeyItem connObjectKeyItem
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class OrgUnitTO implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \SyncopePhpClient\Model\ItemTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null
      */
     public function getItems()
     {
@@ -397,7 +397,7 @@ class OrgUnitTO implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \SyncopePhpClient\Model\ItemTO[]|null $items items
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null $items items
      *
      * @return $this
      */

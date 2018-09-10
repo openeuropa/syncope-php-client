@@ -1,4 +1,4 @@
-# SyncopePhpClient\SAML2IdPApi
+# OpenEuropa\SyncopePhpClient\SAML2IdPApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -23,17 +23,17 @@ Deletes the SAML 2.0 Identity Provider with matching entityID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2IdPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2IdPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -83,17 +83,17 @@ Returns the list of available SAML2IdPActions implementations.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2IdPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2IdPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -141,24 +141,24 @@ Imports the SAML 2.0 Identity Provider definitions available in the provided XML
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2IdPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2IdPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | XML metadata
-$uNKNOWNBASETYPE = new \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE(); // \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE | 
+$uNKNOWNBASETYPE = new \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE(); // \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE | 
 
 try {
     $apiInstance->importFromMetadata($xSyncopeDomain, $uNKNOWNBASETYPE);
@@ -173,7 +173,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| XML metadata | [default to &#39;Master&#39;]
- **uNKNOWNBASETYPE** | [**\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  |
+ **uNKNOWNBASETYPE** | [**\OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  |
 
 ### Return type
 
@@ -201,17 +201,17 @@ Returns a list of all defined SAML 2.0 Identity Providers.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2IdPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2IdPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -259,17 +259,17 @@ Returns the SAML 2.0 Identity Provider with matching entityID, if available.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2IdPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2IdPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -319,17 +319,17 @@ Updates the SAML 2.0 Identity Provider with matching entityID.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2IdPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2IdPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -337,7 +337,7 @@ $apiInstance = new SyncopePhpClient\Api\SAML2IdPApi(
 );
 $key = 'key_example'; // string | IdP's key
 $xSyncopeDomain = 'Master'; // string | SAML 2.0 Identity Provider's entityID
-$sAML2IdPTO = new \SyncopePhpClient\Model\SAML2IdPTO(); // \SyncopePhpClient\Model\SAML2IdPTO | 
+$sAML2IdPTO = new \OpenEuropa\SyncopePhpClient\Model\SAML2IdPTO(); // \OpenEuropa\SyncopePhpClient\Model\SAML2IdPTO | 
 
 try {
     $apiInstance->update1($key, $xSyncopeDomain, $sAML2IdPTO);
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| IdP&#39;s key |
  **xSyncopeDomain** | **string**| SAML 2.0 Identity Provider&#39;s entityID | [default to &#39;Master&#39;]
- **sAML2IdPTO** | [**\SyncopePhpClient\Model\SAML2IdPTO**](../Model/SAML2IdPTO.md)|  |
+ **sAML2IdPTO** | [**\OpenEuropa\SyncopePhpClient\Model\SAML2IdPTO**](../Model/SAML2IdPTO.md)|  |
 
 ### Return type
 

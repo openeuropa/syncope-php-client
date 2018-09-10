@@ -1,4 +1,4 @@
-# SyncopePhpClient\RelationshipTypesApi
+# OpenEuropa\SyncopePhpClient\RelationshipTypesApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -22,24 +22,24 @@ Creates a new relationshipType.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RelationshipTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RelationshipTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | relationshipType to be created
-$relationshipTypeTO = new \SyncopePhpClient\Model\RelationshipTypeTO(); // \SyncopePhpClient\Model\RelationshipTypeTO | 
+$relationshipTypeTO = new \OpenEuropa\SyncopePhpClient\Model\RelationshipTypeTO(); // \OpenEuropa\SyncopePhpClient\Model\RelationshipTypeTO | 
 
 try {
     $apiInstance->create1($xSyncopeDomain, $relationshipTypeTO);
@@ -54,7 +54,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| relationshipType to be created | [default to &#39;Master&#39;]
- **relationshipTypeTO** | [**\SyncopePhpClient\Model\RelationshipTypeTO**](../Model/RelationshipTypeTO.md)|  |
+ **relationshipTypeTO** | [**\OpenEuropa\SyncopePhpClient\Model\RelationshipTypeTO**](../Model/RelationshipTypeTO.md)|  |
 
 ### Return type
 
@@ -82,17 +82,17 @@ Deletes the relationshipType matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RelationshipTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RelationshipTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -142,17 +142,17 @@ Returns a list of all relationshipTypes.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RelationshipTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RelationshipTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -200,17 +200,17 @@ Returns relationshipType with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RelationshipTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RelationshipTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,17 +260,17 @@ Updates the relationshipType matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RelationshipTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RelationshipTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -278,7 +278,7 @@ $apiInstance = new SyncopePhpClient\Api\RelationshipTypesApi(
 );
 $key = 'key_example'; // string | RelationshipType's key
 $xSyncopeDomain = 'Master'; // string | relationshipType key to be deleted
-$relationshipTypeTO = new \SyncopePhpClient\Model\RelationshipTypeTO(); // \SyncopePhpClient\Model\RelationshipTypeTO | 
+$relationshipTypeTO = new \OpenEuropa\SyncopePhpClient\Model\RelationshipTypeTO(); // \OpenEuropa\SyncopePhpClient\Model\RelationshipTypeTO | 
 
 try {
     $apiInstance->update1($key, $xSyncopeDomain, $relationshipTypeTO);
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| RelationshipType&#39;s key |
  **xSyncopeDomain** | **string**| relationshipType key to be deleted | [default to &#39;Master&#39;]
- **relationshipTypeTO** | [**\SyncopePhpClient\Model\RelationshipTypeTO**](../Model/RelationshipTypeTO.md)|  |
+ **relationshipTypeTO** | [**\OpenEuropa\SyncopePhpClient\Model\RelationshipTypeTO**](../Model/RelationshipTypeTO.md)|  |
 
 ### Return type
 

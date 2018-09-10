@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **fullPath** | **string** |  | [optional] 
 **accountPolicy** | **string** |  | [optional] 
 **passwordPolicy** | **string** |  | [optional] 
-**templates** | [**map[string,\SyncopePhpClient\Model\AnyTO]**](AnyTO.md) |  | [optional] 
+**templates** | [**map[string,\OpenEuropa\SyncopePhpClient\Model\AnyTO]**](AnyTO.md) |  | [optional] 
 **actions** | **string[]** |  | [optional] 
 **resources** | **string[]** |  | [optional] 
 

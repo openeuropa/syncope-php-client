@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * PoliciesApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -76,9 +76,9 @@ class PoliciesApi {
    *
    * @param  string $type policy type (required)
    * @param  string $xSyncopeDomain Policy to be created (needs to match type) (required)
-   * @param  \SyncopePhpClient\Model\PolicyTO $policyTO policyTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\PolicyTO $policyTO policyTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -122,7 +122,7 @@ class PoliciesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -137,7 +137,7 @@ class PoliciesApi {
    *
    * @param  string $type policy type (required)
    * @param  string $xSyncopeDomain Policy to be created (needs to match type) (required)
-   * @param  \SyncopePhpClient\Model\PolicyTO $policyTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\PolicyTO $policyTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -268,7 +268,7 @@ class PoliciesApi {
    * @param  string $key key of policy to be deleted (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -312,7 +312,7 @@ class PoliciesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -462,7 +462,7 @@ class PoliciesApi {
    * @param  string $type response type (extending PolicyTO) (required)
    * @param  string $xSyncopeDomain Type selector for requested policies (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -506,7 +506,7 @@ class PoliciesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -642,7 +642,7 @@ class PoliciesApi {
    * @param  string $key policy type (required)
    * @param  string $xSyncopeDomain key of requested policy (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -686,7 +686,7 @@ class PoliciesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -836,9 +836,9 @@ class PoliciesApi {
    * @param  string $key Policy&#39;s key (required)
    * @param  string $type Policy to replace existing policy (required)
    * @param  string $xSyncopeDomain policy type (required)
-   * @param  \SyncopePhpClient\Model\PolicyTO $policyTO policyTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\PolicyTO $policyTO policyTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -882,7 +882,7 @@ class PoliciesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -898,7 +898,7 @@ class PoliciesApi {
    * @param  string $key Policy&#39;s key (required)
    * @param  string $type Policy to replace existing policy (required)
    * @param  string $xSyncopeDomain policy type (required)
-   * @param  \SyncopePhpClient\Model\PolicyTO $policyTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\PolicyTO $policyTO (required)
    *
    * @throws \InvalidArgumentException
    *

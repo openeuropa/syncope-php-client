@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * AnyPatch Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,11 +59,11 @@ class AnyPatch implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'class' => 'string',
         'key' => 'string',
-        'realm' => '\SyncopePhpClient\Model\StringReplacePatchItem',
-        'auxClasses' => '\SyncopePhpClient\Model\StringPatchItem[]',
-        'plainAttrs' => '\SyncopePhpClient\Model\AttrPatch[]',
-        'virAttrs' => '\SyncopePhpClient\Model\AttrTO[]',
-        'resources' => '\SyncopePhpClient\Model\StringPatchItem[]'
+        'realm' => '\OpenEuropa\SyncopePhpClient\Model\StringReplacePatchItem',
+        'auxClasses' => '\OpenEuropa\SyncopePhpClient\Model\StringPatchItem[]',
+        'plainAttrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrPatch[]',
+        'virAttrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO[]',
+        'resources' => '\OpenEuropa\SyncopePhpClient\Model\StringPatchItem[]'
     ];
 
     /**
@@ -301,7 +301,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Gets realm
      *
-     * @return \SyncopePhpClient\Model\StringReplacePatchItem|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\StringReplacePatchItem|null
      */
     public function getRealm()
     {
@@ -311,7 +311,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Sets realm
      *
-     * @param \SyncopePhpClient\Model\StringReplacePatchItem|null $realm realm
+     * @param \OpenEuropa\SyncopePhpClient\Model\StringReplacePatchItem|null $realm realm
      *
      * @return $this
      */
@@ -325,7 +325,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Gets auxClasses
      *
-     * @return \SyncopePhpClient\Model\StringPatchItem[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\StringPatchItem[]|null
      */
     public function getAuxClasses()
     {
@@ -335,7 +335,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Sets auxClasses
      *
-     * @param \SyncopePhpClient\Model\StringPatchItem[]|null $auxClasses auxClasses
+     * @param \OpenEuropa\SyncopePhpClient\Model\StringPatchItem[]|null $auxClasses auxClasses
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Gets plainAttrs
      *
-     * @return \SyncopePhpClient\Model\AttrPatch[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrPatch[]|null
      */
     public function getPlainAttrs()
     {
@@ -359,7 +359,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Sets plainAttrs
      *
-     * @param \SyncopePhpClient\Model\AttrPatch[]|null $plainAttrs plainAttrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrPatch[]|null $plainAttrs plainAttrs
      *
      * @return $this
      */
@@ -373,7 +373,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Gets virAttrs
      *
-     * @return \SyncopePhpClient\Model\AttrTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null
      */
     public function getVirAttrs()
     {
@@ -383,7 +383,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Sets virAttrs
      *
-     * @param \SyncopePhpClient\Model\AttrTO[]|null $virAttrs virAttrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null $virAttrs virAttrs
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Gets resources
      *
-     * @return \SyncopePhpClient\Model\StringPatchItem[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\StringPatchItem[]|null
      */
     public function getResources()
     {
@@ -407,7 +407,7 @@ class AnyPatch implements ModelInterface, ArrayAccess
     /**
      * Sets resources
      *
-     * @param \SyncopePhpClient\Model\StringPatchItem[]|null $resources resources
+     * @param \OpenEuropa\SyncopePhpClient\Model\StringPatchItem[]|null $resources resources
      *
      * @return $this
      */

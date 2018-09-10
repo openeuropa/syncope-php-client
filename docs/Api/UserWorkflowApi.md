@@ -1,4 +1,4 @@
-# SyncopePhpClient\UserWorkflowApi
+# OpenEuropa\SyncopePhpClient\UserWorkflowApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -23,17 +23,17 @@ Claims the form for the given task id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserWorkflowApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserWorkflowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -83,17 +83,17 @@ Executes workflow task for matching id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserWorkflowApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserWorkflowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -101,7 +101,7 @@ $apiInstance = new SyncopePhpClient\Api\UserWorkflowApi(
 );
 $taskId = 'taskId_example'; // string | workflow task id
 $xSyncopeDomain = 'Master'; // string | argument to be passed to workflow task
-$userTO = new \SyncopePhpClient\Model\UserTO(); // \SyncopePhpClient\Model\UserTO | 
+$userTO = new \OpenEuropa\SyncopePhpClient\Model\UserTO(); // \OpenEuropa\SyncopePhpClient\Model\UserTO | 
 
 try {
     $apiInstance->executeTask($taskId, $xSyncopeDomain, $userTO);
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**| workflow task id |
  **xSyncopeDomain** | **string**| argument to be passed to workflow task | [default to &#39;Master&#39;]
- **userTO** | [**\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
+ **userTO** | [**\OpenEuropa\SyncopePhpClient\Model\UserTO**](../Model/UserTO.md)|  |
 
 ### Return type
 
@@ -145,17 +145,17 @@ Returns a list of available tasks for the given user key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserWorkflowApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserWorkflowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -205,17 +205,17 @@ Returns a list of available forms for the given user key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserWorkflowApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserWorkflowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,17 +265,17 @@ Returns a list of all available workflow forms.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserWorkflowApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserWorkflowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -329,24 +329,24 @@ Submits a workflow form.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\UserWorkflowApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\UserWorkflowApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | workflow form.
-$workflowFormTO = new \SyncopePhpClient\Model\WorkflowFormTO(); // \SyncopePhpClient\Model\WorkflowFormTO | 
+$workflowFormTO = new \OpenEuropa\SyncopePhpClient\Model\WorkflowFormTO(); // \OpenEuropa\SyncopePhpClient\Model\WorkflowFormTO | 
 
 try {
     $apiInstance->submitForm($xSyncopeDomain, $workflowFormTO);
@@ -361,7 +361,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| workflow form. | [default to &#39;Master&#39;]
- **workflowFormTO** | [**\SyncopePhpClient\Model\WorkflowFormTO**](../Model/WorkflowFormTO.md)|  |
+ **workflowFormTO** | [**\OpenEuropa\SyncopePhpClient\Model\WorkflowFormTO**](../Model/WorkflowFormTO.md)|  |
 
 ### Return type
 

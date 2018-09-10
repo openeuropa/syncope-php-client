@@ -14,9 +14,9 @@ Name | Type | Description | Notes
 **supportUnsolicited** | **bool** |  | [optional] 
 **bindingType** | **string** |  | [optional] 
 **logoutSupported** | **bool** |  | [optional] 
-**userTemplate** | [**\SyncopePhpClient\Model\UserTO**](UserTO.md) |  | [optional] 
-**connObjectKeyItem** | [**\SyncopePhpClient\Model\ItemTO**](ItemTO.md) |  | [optional] 
-**items** | [**\SyncopePhpClient\Model\ItemTO[]**](ItemTO.md) |  | [optional] 
+**userTemplate** | [**\OpenEuropa\SyncopePhpClient\Model\UserTO**](UserTO.md) |  | [optional] 
+**connObjectKeyItem** | [**\OpenEuropa\SyncopePhpClient\Model\ItemTO**](ItemTO.md) |  | [optional] 
+**items** | [**\OpenEuropa\SyncopePhpClient\Model\ItemTO[]**](ItemTO.md) |  | [optional] 
 **actions** | **string[]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

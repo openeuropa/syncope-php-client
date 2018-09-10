@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ConnInstanceTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -65,8 +65,8 @@ class ConnInstanceTO implements ModelInterface, ArrayAccess
         'version' => 'string',
         'displayName' => 'string',
         'connRequestTimeout' => 'int',
-        'poolConf' => '\SyncopePhpClient\Model\ConnPoolConfTO',
-        'conf' => '\SyncopePhpClient\Model\ConnConfProperty[]',
+        'poolConf' => '\OpenEuropa\SyncopePhpClient\Model\ConnPoolConfTO',
+        'conf' => '\OpenEuropa\SyncopePhpClient\Model\ConnConfProperty[]',
         'capabilities' => 'string[]'
     ];
 
@@ -482,7 +482,7 @@ class ConnInstanceTO implements ModelInterface, ArrayAccess
     /**
      * Gets poolConf
      *
-     * @return \SyncopePhpClient\Model\ConnPoolConfTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnPoolConfTO|null
      */
     public function getPoolConf()
     {
@@ -492,7 +492,7 @@ class ConnInstanceTO implements ModelInterface, ArrayAccess
     /**
      * Sets poolConf
      *
-     * @param \SyncopePhpClient\Model\ConnPoolConfTO|null $poolConf poolConf
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnPoolConfTO|null $poolConf poolConf
      *
      * @return $this
      */
@@ -506,7 +506,7 @@ class ConnInstanceTO implements ModelInterface, ArrayAccess
     /**
      * Gets conf
      *
-     * @return \SyncopePhpClient\Model\ConnConfProperty[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnConfProperty[]|null
      */
     public function getConf()
     {
@@ -516,7 +516,7 @@ class ConnInstanceTO implements ModelInterface, ArrayAccess
     /**
      * Sets conf
      *
-     * @param \SyncopePhpClient\Model\ConnConfProperty[]|null $conf conf
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnConfProperty[]|null $conf conf
      *
      * @return $this
      */

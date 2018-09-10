@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * PagedConnObjectTOResult Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -61,7 +61,7 @@ class PagedConnObjectTOResult implements ModelInterface, ArrayAccess
         'pagedResultsCookie' => 'string',
         'remainingPagedResults' => 'int',
         'allResultsReturned' => 'bool',
-        'result' => '\SyncopePhpClient\Model\ConnObjectTO[]'
+        'result' => '\OpenEuropa\SyncopePhpClient\Model\ConnObjectTO[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class PagedConnObjectTOResult implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \SyncopePhpClient\Model\ConnObjectTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO[]|null
      */
     public function getResult()
     {
@@ -337,7 +337,7 @@ class PagedConnObjectTOResult implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \SyncopePhpClient\Model\ConnObjectTO[]|null $result result
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO[]|null $result result
      *
      * @return $this
      */

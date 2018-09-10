@@ -14,12 +14,12 @@ Name | Type | Description | Notes
 **userinfoEndpoint** | **string** |  | [optional] 
 **endSessionEndpoint** | **string** |  | [optional] 
 **hasDiscovery** | **bool** |  | [optional] 
-**userTemplate** | [**\SyncopePhpClient\Model\UserTO**](UserTO.md) |  | [optional] 
+**userTemplate** | [**\OpenEuropa\SyncopePhpClient\Model\UserTO**](UserTO.md) |  | [optional] 
 **createUnmatching** | **bool** |  | [optional] 
 **updateMatching** | **bool** |  | [optional] 
 **selfRegUnmatching** | **bool** |  | [optional] 
-**connObjectKeyItem** | [**\SyncopePhpClient\Model\ItemTO**](ItemTO.md) |  | [optional] 
-**items** | [**\SyncopePhpClient\Model\ItemTO[]**](ItemTO.md) |  | [optional] 
+**connObjectKeyItem** | [**\OpenEuropa\SyncopePhpClient\Model\ItemTO**](ItemTO.md) |  | [optional] 
+**items** | [**\OpenEuropa\SyncopePhpClient\Model\ItemTO[]**](ItemTO.md) |  | [optional] 
 **actionsClassNames** | **string[]** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

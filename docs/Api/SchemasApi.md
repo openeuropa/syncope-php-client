@@ -1,4 +1,4 @@
-# SyncopePhpClient\SchemasApi
+# OpenEuropa\SyncopePhpClient\SchemasApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -22,17 +22,17 @@ Creates a new schema.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SchemasApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SchemasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new SyncopePhpClient\Api\SchemasApi(
 );
 $type = 'type_example'; // string | type for schema to be created
 $xSyncopeDomain = 'Master'; // string | schema to be created
-$schemaTO = new \SyncopePhpClient\Model\SchemaTO(); // \SyncopePhpClient\Model\SchemaTO | 
+$schemaTO = new \OpenEuropa\SyncopePhpClient\Model\SchemaTO(); // \OpenEuropa\SyncopePhpClient\Model\SchemaTO | 
 
 try {
     $apiInstance->createSchema($type, $xSyncopeDomain, $schemaTO);
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type** | **string**| type for schema to be created |
  **xSyncopeDomain** | **string**| schema to be created | [default to &#39;Master&#39;]
- **schemaTO** | [**\SyncopePhpClient\Model\SchemaTO**](../Model/SchemaTO.md)|  |
+ **schemaTO** | [**\OpenEuropa\SyncopePhpClient\Model\SchemaTO**](../Model/SchemaTO.md)|  |
 
 ### Return type
 
@@ -84,17 +84,17 @@ Deletes the schema matching the given type and key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SchemasApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SchemasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -146,17 +146,17 @@ Returns schema matching the given type and key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SchemasApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SchemasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -208,17 +208,17 @@ Returns a list of schemas matching the given query.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SchemasApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SchemasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -272,17 +272,17 @@ Updates the schema matching the given type and key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SchemasApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SchemasApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -291,7 +291,7 @@ $apiInstance = new SyncopePhpClient\Api\SchemasApi(
 $key = 'key_example'; // string | Schema's key
 $type = 'type_example'; // string | updated schema to be stored
 $xSyncopeDomain = 'Master'; // string | type for schema to be deleted
-$schemaTO = new \SyncopePhpClient\Model\SchemaTO(); // \SyncopePhpClient\Model\SchemaTO | 
+$schemaTO = new \OpenEuropa\SyncopePhpClient\Model\SchemaTO(); // \OpenEuropa\SyncopePhpClient\Model\SchemaTO | 
 
 try {
     $apiInstance->updateSchema($key, $type, $xSyncopeDomain, $schemaTO);
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Schema&#39;s key |
  **type** | **string**| updated schema to be stored |
  **xSyncopeDomain** | **string**| type for schema to be deleted | [default to &#39;Master&#39;]
- **schemaTO** | [**\SyncopePhpClient\Model\SchemaTO**](../Model/SchemaTO.md)|  |
+ **schemaTO** | [**\OpenEuropa\SyncopePhpClient\Model\SchemaTO**](../Model/SchemaTO.md)|  |
 
 ### Return type
 

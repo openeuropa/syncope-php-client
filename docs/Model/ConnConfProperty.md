@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**schema** | [**\SyncopePhpClient\Model\ConnConfPropSchema**](ConnConfPropSchema.md) |  | [optional] 
+**schema** | [**\OpenEuropa\SyncopePhpClient\Model\ConnConfPropSchema**](ConnConfPropSchema.md) |  | [optional] 
 **overridable** | **bool** |  | [optional] 
 **values** | **object[]** |  | [optional] 
 

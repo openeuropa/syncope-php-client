@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**beforeObj** | [**\SyncopePhpClient\Model\ConnObjectTO**](ConnObjectTO.md) |  | [optional] 
-**afterObj** | [**\SyncopePhpClient\Model\ConnObjectTO**](ConnObjectTO.md) |  | [optional] 
+**beforeObj** | [**\OpenEuropa\SyncopePhpClient\Model\ConnObjectTO**](ConnObjectTO.md) |  | [optional] 
+**afterObj** | [**\OpenEuropa\SyncopePhpClient\Model\ConnObjectTO**](ConnObjectTO.md) |  | [optional] 
 **resource** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
 **failureReason** | **string** |  | [optional] 

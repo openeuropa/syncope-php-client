@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * MembershipPatch Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,8 +59,8 @@ class MembershipPatch implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'operation' => 'string',
         'group' => 'string',
-        'plainAttrs' => '\SyncopePhpClient\Model\AttrTO[]',
-        'virAttrs' => '\SyncopePhpClient\Model\AttrTO[]'
+        'plainAttrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO[]',
+        'virAttrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO[]'
     ];
 
     /**
@@ -305,7 +305,7 @@ class MembershipPatch implements ModelInterface, ArrayAccess
     /**
      * Gets plainAttrs
      *
-     * @return \SyncopePhpClient\Model\AttrTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null
      */
     public function getPlainAttrs()
     {
@@ -315,7 +315,7 @@ class MembershipPatch implements ModelInterface, ArrayAccess
     /**
      * Sets plainAttrs
      *
-     * @param \SyncopePhpClient\Model\AttrTO[]|null $plainAttrs plainAttrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null $plainAttrs plainAttrs
      *
      * @return $this
      */
@@ -329,7 +329,7 @@ class MembershipPatch implements ModelInterface, ArrayAccess
     /**
      * Gets virAttrs
      *
-     * @return \SyncopePhpClient\Model\AttrTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null
      */
     public function getVirAttrs()
     {
@@ -339,7 +339,7 @@ class MembershipPatch implements ModelInterface, ArrayAccess
     /**
      * Sets virAttrs
      *
-     * @param \SyncopePhpClient\Model\AttrTO[]|null $virAttrs virAttrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null $virAttrs virAttrs
      *
      * @return $this
      */

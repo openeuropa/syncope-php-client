@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ResourceTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -60,7 +60,7 @@ class ResourceTO implements ModelInterface, ArrayAccess
         'key' => 'string',
         'connector' => 'string',
         'connectorDisplayName' => 'string',
-        'orgUnit' => '\SyncopePhpClient\Model\OrgUnitTO',
+        'orgUnit' => '\OpenEuropa\SyncopePhpClient\Model\OrgUnitTO',
         'propagationPriority' => 'int',
         'randomPwdIfNotProvided' => 'bool',
         'enforceMandatoryCondition' => 'bool',
@@ -73,8 +73,8 @@ class ResourceTO implements ModelInterface, ArrayAccess
         'pullPolicy' => 'string',
         'pushPolicy' => 'string',
         'overrideCapabilities' => 'bool',
-        'provisions' => '\SyncopePhpClient\Model\ProvisionTO[]',
-        'confOverride' => '\SyncopePhpClient\Model\ConnConfProperty[]',
+        'provisions' => '\OpenEuropa\SyncopePhpClient\Model\ProvisionTO[]',
+        'confOverride' => '\OpenEuropa\SyncopePhpClient\Model\ConnConfProperty[]',
         'capabilitiesOverride' => 'string[]',
         'propagationActions' => 'string[]'
     ];
@@ -524,7 +524,7 @@ class ResourceTO implements ModelInterface, ArrayAccess
     /**
      * Gets orgUnit
      *
-     * @return \SyncopePhpClient\Model\OrgUnitTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\OrgUnitTO|null
      */
     public function getOrgUnit()
     {
@@ -534,7 +534,7 @@ class ResourceTO implements ModelInterface, ArrayAccess
     /**
      * Sets orgUnit
      *
-     * @param \SyncopePhpClient\Model\OrgUnitTO|null $orgUnit orgUnit
+     * @param \OpenEuropa\SyncopePhpClient\Model\OrgUnitTO|null $orgUnit orgUnit
      *
      * @return $this
      */
@@ -872,7 +872,7 @@ class ResourceTO implements ModelInterface, ArrayAccess
     /**
      * Gets provisions
      *
-     * @return \SyncopePhpClient\Model\ProvisionTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ProvisionTO[]|null
      */
     public function getProvisions()
     {
@@ -882,7 +882,7 @@ class ResourceTO implements ModelInterface, ArrayAccess
     /**
      * Sets provisions
      *
-     * @param \SyncopePhpClient\Model\ProvisionTO[]|null $provisions provisions
+     * @param \OpenEuropa\SyncopePhpClient\Model\ProvisionTO[]|null $provisions provisions
      *
      * @return $this
      */
@@ -896,7 +896,7 @@ class ResourceTO implements ModelInterface, ArrayAccess
     /**
      * Gets confOverride
      *
-     * @return \SyncopePhpClient\Model\ConnConfProperty[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnConfProperty[]|null
      */
     public function getConfOverride()
     {
@@ -906,7 +906,7 @@ class ResourceTO implements ModelInterface, ArrayAccess
     /**
      * Sets confOverride
      *
-     * @param \SyncopePhpClient\Model\ConnConfProperty[]|null $confOverride confOverride
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnConfProperty[]|null $confOverride confOverride
      *
      * @return $this
      */

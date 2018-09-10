@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * SAML2SPApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -78,7 +78,7 @@ class SAML2SPApi {
    * @param  string $spEntityID SAML 2.0 SP entity ID. (optional)
    * @param  string $idpEntityID SAML 2.0 IdP entity ID. (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -122,7 +122,7 @@ class SAML2SPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class SAML2SPApi {
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    * @param  string $spEntityID SAML 2.0 SP entity ID. (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -296,7 +296,7 @@ class SAML2SPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -422,7 +422,7 @@ class SAML2SPApi {
    * @param  string $spEntityID SAML 2.0 SP entity ID. (optional)
    * @param  string $urlContext SAML 2.0 SP agent URL context (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -466,7 +466,7 @@ class SAML2SPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -594,9 +594,9 @@ class SAML2SPApi {
    * Validates the received SAML 2.0 authentication response and creates JWT for the matching user, if found.
    *
    * @param  string $xSyncopeDomain SAML response and relay state (required)
-   * @param  \SyncopePhpClient\Model\SAML2ReceivedResponseTO $sAML2ReceivedResponseTO sAML2ReceivedResponseTO (optional)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO $sAML2ReceivedResponseTO sAML2ReceivedResponseTO (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -640,7 +640,7 @@ class SAML2SPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -654,7 +654,7 @@ class SAML2SPApi {
    * Create request for operation 'validateLoginResponse'
    *
    * @param  string $xSyncopeDomain SAML response and relay state (required)
-   * @param  \SyncopePhpClient\Model\SAML2ReceivedResponseTO $sAML2ReceivedResponseTO (optional)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO $sAML2ReceivedResponseTO (optional)
    *
    * @throws \InvalidArgumentException
    *
@@ -762,9 +762,9 @@ class SAML2SPApi {
    * Validates the received SAML 2.0 logout response.
    *
    * @param  string $xSyncopeDomain SAML response and relay state (required)
-   * @param  \SyncopePhpClient\Model\SAML2ReceivedResponseTO $sAML2ReceivedResponseTO sAML2ReceivedResponseTO (optional)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO $sAML2ReceivedResponseTO sAML2ReceivedResponseTO (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -808,7 +808,7 @@ class SAML2SPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -822,7 +822,7 @@ class SAML2SPApi {
    * Create request for operation 'validateLogoutResponse'
    *
    * @param  string $xSyncopeDomain SAML response and relay state (required)
-   * @param  \SyncopePhpClient\Model\SAML2ReceivedResponseTO $sAML2ReceivedResponseTO (optional)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO $sAML2ReceivedResponseTO (optional)
    *
    * @throws \InvalidArgumentException
    *

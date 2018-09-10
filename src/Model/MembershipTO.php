@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * MembershipTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,9 +59,9 @@ class MembershipTO implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'groupKey' => 'string',
         'groupName' => 'string',
-        'plainAttrs' => '\SyncopePhpClient\Model\AttrTO[]',
-        'derAttrs' => '\SyncopePhpClient\Model\AttrTO[]',
-        'virAttrs' => '\SyncopePhpClient\Model\AttrTO[]'
+        'plainAttrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO[]',
+        'derAttrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO[]',
+        'virAttrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO[]'
     ];
 
     /**
@@ -279,7 +279,7 @@ class MembershipTO implements ModelInterface, ArrayAccess
     /**
      * Gets plainAttrs
      *
-     * @return \SyncopePhpClient\Model\AttrTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null
      */
     public function getPlainAttrs()
     {
@@ -289,7 +289,7 @@ class MembershipTO implements ModelInterface, ArrayAccess
     /**
      * Sets plainAttrs
      *
-     * @param \SyncopePhpClient\Model\AttrTO[]|null $plainAttrs plainAttrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null $plainAttrs plainAttrs
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class MembershipTO implements ModelInterface, ArrayAccess
     /**
      * Gets derAttrs
      *
-     * @return \SyncopePhpClient\Model\AttrTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null
      */
     public function getDerAttrs()
     {
@@ -313,7 +313,7 @@ class MembershipTO implements ModelInterface, ArrayAccess
     /**
      * Sets derAttrs
      *
-     * @param \SyncopePhpClient\Model\AttrTO[]|null $derAttrs derAttrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null $derAttrs derAttrs
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class MembershipTO implements ModelInterface, ArrayAccess
     /**
      * Gets virAttrs
      *
-     * @return \SyncopePhpClient\Model\AttrTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null
      */
     public function getVirAttrs()
     {
@@ -337,7 +337,7 @@ class MembershipTO implements ModelInterface, ArrayAccess
     /**
      * Sets virAttrs
      *
-     * @param \SyncopePhpClient\Model\AttrTO[]|null $virAttrs virAttrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null $virAttrs virAttrs
      *
      * @return $this
      */

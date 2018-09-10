@@ -1,4 +1,4 @@
-# SyncopePhpClient\RealmsApi
+# OpenEuropa\SyncopePhpClient\RealmsApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createRootedRealm**
-> \SyncopePhpClient\Model\ProvisioningResult createRootedRealm($parentPath, $xSyncopeDomain, $realmTO, $prefer, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult createRootedRealm($parentPath, $xSyncopeDomain, $realmTO, $prefer, $xSyncopeNullPriorityAsync)
 
 Creates a new realm under the given path.
 
@@ -22,17 +22,17 @@ Creates a new realm under the given path.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new SyncopePhpClient\Api\RealmsApi(
 );
 $parentPath = 'parentPath_example'; // string | 
 $xSyncopeDomain = 'Master'; // string | 
-$realmTO = new \SyncopePhpClient\Model\RealmTO(); // \SyncopePhpClient\Model\RealmTO | 
+$realmTO = new \OpenEuropa\SyncopePhpClient\Model\RealmTO(); // \OpenEuropa\SyncopePhpClient\Model\RealmTO | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
 
@@ -59,13 +59,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **parentPath** | **string**|  |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **realmTO** | [**\SyncopePhpClient\Model\RealmTO**](../Model/RealmTO.md)|  |
+ **realmTO** | [**\OpenEuropa\SyncopePhpClient\Model\RealmTO**](../Model/RealmTO.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteRealm**
-> \SyncopePhpClient\Model\ProvisioningResult deleteRealm($fullPath, $xSyncopeDomain, $prefer, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult deleteRealm($fullPath, $xSyncopeDomain, $prefer, $xSyncopeNullPriorityAsync)
 
 Deletes the realm under the given path.
 
@@ -89,17 +89,17 @@ Deletes the realm under the given path.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -154,17 +154,17 @@ Returns realms rooted at the given path.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -214,17 +214,17 @@ Returns a list of all realms.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -262,7 +262,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateRealm**
-> \SyncopePhpClient\Model\ProvisioningResult updateRealm($fullPath, $xSyncopeDomain, $realmTO, $prefer, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult updateRealm($fullPath, $xSyncopeDomain, $realmTO, $prefer, $xSyncopeNullPriorityAsync)
 
 Updates the realm under the given path.
 
@@ -272,17 +272,17 @@ Updates the realm under the given path.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RealmsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RealmsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -290,7 +290,7 @@ $apiInstance = new SyncopePhpClient\Api\RealmsApi(
 );
 $fullPath = 'fullPath_example'; // string | Realm's key
 $xSyncopeDomain = 'Master'; // string | 
-$realmTO = new \SyncopePhpClient\Model\RealmTO(); // \SyncopePhpClient\Model\RealmTO | 
+$realmTO = new \OpenEuropa\SyncopePhpClient\Model\RealmTO(); // \OpenEuropa\SyncopePhpClient\Model\RealmTO | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
 
@@ -309,13 +309,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fullPath** | **string**| Realm&#39;s key |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **realmTO** | [**\SyncopePhpClient\Model\RealmTO**](../Model/RealmTO.md)|  |
+ **realmTO** | [**\OpenEuropa\SyncopePhpClient\Model\RealmTO**](../Model/RealmTO.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 

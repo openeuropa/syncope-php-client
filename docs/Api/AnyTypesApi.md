@@ -1,4 +1,4 @@
-# SyncopePhpClient\AnyTypesApi
+# OpenEuropa\SyncopePhpClient\AnyTypesApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -22,24 +22,24 @@ Creates a new anyType.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\AnyTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\AnyTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | anyType to be created
-$anyTypeTO = new \SyncopePhpClient\Model\AnyTypeTO(); // \SyncopePhpClient\Model\AnyTypeTO | 
+$anyTypeTO = new \OpenEuropa\SyncopePhpClient\Model\AnyTypeTO(); // \OpenEuropa\SyncopePhpClient\Model\AnyTypeTO | 
 
 try {
     $apiInstance->createAnyType($xSyncopeDomain, $anyTypeTO);
@@ -54,7 +54,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| anyType to be created | [default to &#39;Master&#39;]
- **anyTypeTO** | [**\SyncopePhpClient\Model\AnyTypeTO**](../Model/AnyTypeTO.md)|  |
+ **anyTypeTO** | [**\OpenEuropa\SyncopePhpClient\Model\AnyTypeTO**](../Model/AnyTypeTO.md)|  |
 
 ### Return type
 
@@ -82,17 +82,17 @@ Deletes the anyType matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\AnyTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\AnyTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -142,17 +142,17 @@ Returns a list of all anyTypes.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\AnyTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\AnyTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -200,17 +200,17 @@ Returns anyType with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\AnyTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\AnyTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,17 +260,17 @@ Updates the anyType matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\AnyTypesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\AnyTypesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -278,7 +278,7 @@ $apiInstance = new SyncopePhpClient\Api\AnyTypesApi(
 );
 $key = 'key_example'; // string | AnyType's key
 $xSyncopeDomain = 'Master'; // string | anyType key to be deleted
-$anyTypeTO = new \SyncopePhpClient\Model\AnyTypeTO(); // \SyncopePhpClient\Model\AnyTypeTO | 
+$anyTypeTO = new \OpenEuropa\SyncopePhpClient\Model\AnyTypeTO(); // \OpenEuropa\SyncopePhpClient\Model\AnyTypeTO | 
 
 try {
     $apiInstance->updateAnyType($key, $xSyncopeDomain, $anyTypeTO);
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| AnyType&#39;s key |
  **xSyncopeDomain** | **string**| anyType key to be deleted | [default to &#39;Master&#39;]
- **anyTypeTO** | [**\SyncopePhpClient\Model\AnyTypeTO**](../Model/AnyTypeTO.md)|  |
+ **anyTypeTO** | [**\OpenEuropa\SyncopePhpClient\Model\AnyTypeTO**](../Model/AnyTypeTO.md)|  |
 
 ### Return type
 

@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ResourcesApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -75,9 +75,9 @@ class ResourcesApi {
    * Checks whether the connection to resource could be established.
    *
    * @param  string $xSyncopeDomain resource to be checked (required)
-   * @param  \SyncopePhpClient\Model\ResourceTO $resourceTO resourceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ResourceTO $resourceTO resourceTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -121,7 +121,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -135,7 +135,7 @@ class ResourcesApi {
    * Create request for operation 'check1'
    *
    * @param  string $xSyncopeDomain resource to be checked (required)
-   * @param  \SyncopePhpClient\Model\ResourceTO $resourceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ResourceTO $resourceTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -249,9 +249,9 @@ class ResourcesApi {
    * Creates a new resource.
    *
    * @param  string $xSyncopeDomain Resource to be created (required)
-   * @param  \SyncopePhpClient\Model\ResourceTO $resourceTO resourceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ResourceTO $resourceTO resourceTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -295,7 +295,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -309,7 +309,7 @@ class ResourcesApi {
    * Create request for operation 'create1'
    *
    * @param  string $xSyncopeDomain Resource to be created (required)
-   * @param  \SyncopePhpClient\Model\ResourceTO $resourceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ResourceTO $resourceTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -425,7 +425,7 @@ class ResourcesApi {
    * @param  string $key name of resource to be deleted (required)
    * @param  string $xSyncopeDomain resource to be checked (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -469,7 +469,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -603,7 +603,7 @@ class ResourcesApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -647,7 +647,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -771,7 +771,7 @@ class ResourcesApi {
    * @param  string $connIdPagedResultsCookie connIdPagedResultsCookie (optional)
    * @param  string $orderby orderby (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -815,7 +815,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -980,7 +980,7 @@ class ResourcesApi {
    * @param  string $key Name of resource to be read (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1024,7 +1024,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1161,7 +1161,7 @@ class ResourcesApi {
    * @param  string $anyKey any object key (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1205,7 +1205,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1371,7 +1371,7 @@ class ResourcesApi {
    * @param  string $anyTypeKey any type (required)
    * @param  string $xSyncopeDomain name of resource to be deleted (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1415,7 +1415,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1566,7 +1566,7 @@ class ResourcesApi {
    * @param  string $anyTypeKey any type (required)
    * @param  string $xSyncopeDomain resource (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1610,7 +1610,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1759,9 +1759,9 @@ class ResourcesApi {
    *
    * @param  string $key Resource&#39;s key (required)
    * @param  string $xSyncopeDomain resource (required)
-   * @param  \SyncopePhpClient\Model\ResourceTO $resourceTO resourceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ResourceTO $resourceTO resourceTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1805,7 +1805,7 @@ class ResourcesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1820,7 +1820,7 @@ class ResourcesApi {
    *
    * @param  string $key Resource&#39;s key (required)
    * @param  string $xSyncopeDomain resource (required)
-   * @param  \SyncopePhpClient\Model\ResourceTO $resourceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ResourceTO $resourceTO (required)
    *
    * @throws \InvalidArgumentException
    *

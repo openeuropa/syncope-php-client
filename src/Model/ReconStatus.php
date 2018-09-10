@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ReconStatus Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,8 +57,8 @@ class ReconStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'onSyncope' => '\SyncopePhpClient\Model\ConnObjectTO',
-        'onResource' => '\SyncopePhpClient\Model\ConnObjectTO'
+        'onSyncope' => '\OpenEuropa\SyncopePhpClient\Model\ConnObjectTO',
+        'onResource' => '\OpenEuropa\SyncopePhpClient\Model\ConnObjectTO'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ReconStatus implements ModelInterface, ArrayAccess
     /**
      * Gets onSyncope
      *
-     * @return \SyncopePhpClient\Model\ConnObjectTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO|null
      */
     public function getOnSyncope()
     {
@@ -223,7 +223,7 @@ class ReconStatus implements ModelInterface, ArrayAccess
     /**
      * Sets onSyncope
      *
-     * @param \SyncopePhpClient\Model\ConnObjectTO|null $onSyncope onSyncope
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO|null $onSyncope onSyncope
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ReconStatus implements ModelInterface, ArrayAccess
     /**
      * Gets onResource
      *
-     * @return \SyncopePhpClient\Model\ConnObjectTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO|null
      */
     public function getOnResource()
     {
@@ -247,7 +247,7 @@ class ReconStatus implements ModelInterface, ArrayAccess
     /**
      * Sets onResource
      *
-     * @param \SyncopePhpClient\Model\ConnObjectTO|null $onResource onResource
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO|null $onResource onResource
      *
      * @return $this
      */

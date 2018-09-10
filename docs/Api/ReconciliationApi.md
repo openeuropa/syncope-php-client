@@ -1,4 +1,4 @@
-# SyncopePhpClient\ReconciliationApi
+# OpenEuropa\SyncopePhpClient\ReconciliationApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -20,17 +20,17 @@ Pulls the given user, group or any object from the External Resource into Syncop
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ReconciliationApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ReconciliationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $anyTypeKind = 'anyTypeKind_example'; // string | anyTypeKind
 $anyKey = 'anyKey_example'; // string | user, group or any object: if value looks like a UUID then it is interpreted as key, otherwise as  a (user)name
 $resourceKey = 'resourceKey_example'; // string | resource key
 $xSyncopeDomain = 'Master'; // string | pull specification
-$pullTaskTO = new \SyncopePhpClient\Model\PullTaskTO(); // \SyncopePhpClient\Model\PullTaskTO | 
+$pullTaskTO = new \OpenEuropa\SyncopePhpClient\Model\PullTaskTO(); // \OpenEuropa\SyncopePhpClient\Model\PullTaskTO | 
 
 try {
     $apiInstance->pull($anyTypeKind, $anyKey, $resourceKey, $xSyncopeDomain, $pullTaskTO);
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
  **anyKey** | **string**| user, group or any object: if value looks like a UUID then it is interpreted as key, otherwise as  a (user)name |
  **resourceKey** | **string**| resource key |
  **xSyncopeDomain** | **string**| pull specification | [default to &#39;Master&#39;]
- **pullTaskTO** | [**\SyncopePhpClient\Model\PullTaskTO**](../Model/PullTaskTO.md)|  |
+ **pullTaskTO** | [**\OpenEuropa\SyncopePhpClient\Model\PullTaskTO**](../Model/PullTaskTO.md)|  |
 
 ### Return type
 
@@ -86,17 +86,17 @@ Pushes the given user, group or any object in Syncope onto the External Resource
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ReconciliationApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ReconciliationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -106,7 +106,7 @@ $anyTypeKind = 'anyTypeKind_example'; // string | anyTypeKind
 $anyKey = 'anyKey_example'; // string | user, group or any object: if value looks like a UUID then it is interpreted as key, otherwise as  a (user)name
 $resourceKey = 'resourceKey_example'; // string | resource key
 $xSyncopeDomain = 'Master'; // string | push specification
-$pushTaskTO = new \SyncopePhpClient\Model\PushTaskTO(); // \SyncopePhpClient\Model\PushTaskTO | 
+$pushTaskTO = new \OpenEuropa\SyncopePhpClient\Model\PushTaskTO(); // \OpenEuropa\SyncopePhpClient\Model\PushTaskTO | 
 
 try {
     $apiInstance->push($anyTypeKind, $anyKey, $resourceKey, $xSyncopeDomain, $pushTaskTO);
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
  **anyKey** | **string**| user, group or any object: if value looks like a UUID then it is interpreted as key, otherwise as  a (user)name |
  **resourceKey** | **string**| resource key |
  **xSyncopeDomain** | **string**| push specification | [default to &#39;Master&#39;]
- **pushTaskTO** | [**\SyncopePhpClient\Model\PushTaskTO**](../Model/PushTaskTO.md)|  |
+ **pushTaskTO** | [**\OpenEuropa\SyncopePhpClient\Model\PushTaskTO**](../Model/PushTaskTO.md)|  |
 
 ### Return type
 
@@ -152,17 +152,17 @@ Gets current attributes on Syncope and on the given External Resource, related t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\ReconciliationApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\ReconciliationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

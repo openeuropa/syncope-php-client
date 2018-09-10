@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * AnyTypesApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -75,9 +75,9 @@ class AnyTypesApi {
    * Creates a new anyType.
    *
    * @param  string $xSyncopeDomain anyType to be created (required)
-   * @param  \SyncopePhpClient\Model\AnyTypeTO $anyTypeTO anyTypeTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\AnyTypeTO $anyTypeTO anyTypeTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -121,7 +121,7 @@ class AnyTypesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -135,7 +135,7 @@ class AnyTypesApi {
    * Create request for operation 'createAnyType'
    *
    * @param  string $xSyncopeDomain anyType to be created (required)
-   * @param  \SyncopePhpClient\Model\AnyTypeTO $anyTypeTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\AnyTypeTO $anyTypeTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -251,7 +251,7 @@ class AnyTypesApi {
    * @param  string $key anyType key to be deleted (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -295,7 +295,7 @@ class AnyTypesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -429,7 +429,7 @@ class AnyTypesApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -473,7 +473,7 @@ class AnyTypesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -593,7 +593,7 @@ class AnyTypesApi {
    * @param  string $key anyType key to be read (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -637,7 +637,7 @@ class AnyTypesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -771,9 +771,9 @@ class AnyTypesApi {
    *
    * @param  string $key AnyType&#39;s key (required)
    * @param  string $xSyncopeDomain anyType key to be deleted (required)
-   * @param  \SyncopePhpClient\Model\AnyTypeTO $anyTypeTO anyTypeTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\AnyTypeTO $anyTypeTO anyTypeTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -817,7 +817,7 @@ class AnyTypesApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -832,7 +832,7 @@ class AnyTypesApi {
    *
    * @param  string $key AnyType&#39;s key (required)
    * @param  string $xSyncopeDomain anyType key to be deleted (required)
-   * @param  \SyncopePhpClient\Model\AnyTypeTO $anyTypeTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\AnyTypeTO $anyTypeTO (required)
    *
    * @throws \InvalidArgumentException
    *

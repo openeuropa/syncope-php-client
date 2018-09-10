@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * RealmTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -63,7 +63,7 @@ class RealmTO implements ModelInterface, ArrayAccess
         'fullPath' => 'string',
         'accountPolicy' => 'string',
         'passwordPolicy' => 'string',
-        'templates' => 'map[string,\SyncopePhpClient\Model\AnyTO]',
+        'templates' => 'map[string,\OpenEuropa\SyncopePhpClient\Model\AnyTO]',
         'actions' => 'string[]',
         'resources' => 'string[]'
     ];
@@ -399,7 +399,7 @@ class RealmTO implements ModelInterface, ArrayAccess
     /**
      * Gets templates
      *
-     * @return map[string,\SyncopePhpClient\Model\AnyTO]|null
+     * @return map[string,\OpenEuropa\SyncopePhpClient\Model\AnyTO]|null
      */
     public function getTemplates()
     {
@@ -409,7 +409,7 @@ class RealmTO implements ModelInterface, ArrayAccess
     /**
      * Sets templates
      *
-     * @param map[string,\SyncopePhpClient\Model\AnyTO]|null $templates templates
+     * @param map[string,\OpenEuropa\SyncopePhpClient\Model\AnyTO]|null $templates templates
      *
      * @return $this
      */

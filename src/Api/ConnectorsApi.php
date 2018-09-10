@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ConnectorsApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -76,10 +76,10 @@ class ConnectorsApi {
    *
    * @param  string $key Connector instance&#39;s key (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO connInstanceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO connInstanceTO (required)
    * @param  bool $includeSpecial if set to true, special schema names (like &#39;__PASSWORD__&#39;) will be included;  default is false (optional, default to false)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -123,7 +123,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -138,7 +138,7 @@ class ConnectorsApi {
    *
    * @param  string $key Connector instance&#39;s key (required)
    * @param  string $xSyncopeDomain (required)
-   * @param  \SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO (required)
    * @param  bool $includeSpecial if set to true, special schema names (like &#39;__PASSWORD__&#39;) will be included;  default is false (optional, default to false)
    *
    * @throws \InvalidArgumentException
@@ -271,9 +271,9 @@ class ConnectorsApi {
    * Checks whether the connection to resource could be established.
    *
    * @param  string $xSyncopeDomain connector instance to be used for connection check (required)
-   * @param  \SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO connInstanceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO connInstanceTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -317,7 +317,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -331,7 +331,7 @@ class ConnectorsApi {
    * Create request for operation 'check'
    *
    * @param  string $xSyncopeDomain connector instance to be used for connection check (required)
-   * @param  \SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -445,9 +445,9 @@ class ConnectorsApi {
    * Creates a new connector instance.
    *
    * @param  string $xSyncopeDomain connector instance to be created (required)
-   * @param  \SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO connInstanceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO connInstanceTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -491,7 +491,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -505,7 +505,7 @@ class ConnectorsApi {
    * Create request for operation 'create'
    *
    * @param  string $xSyncopeDomain connector instance to be created (required)
-   * @param  \SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -621,7 +621,7 @@ class ConnectorsApi {
    * @param  string $key connector instance key to be deleted (required)
    * @param  string $xSyncopeDomain connector instance to be used for connection check (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -665,7 +665,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -800,7 +800,7 @@ class ConnectorsApi {
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    * @param  string $lang language to select property keys; default language is English (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -844,7 +844,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -969,7 +969,7 @@ class ConnectorsApi {
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    * @param  string $lang language to select property keys, null for default (English).  An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1013,7 +1013,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1139,7 +1139,7 @@ class ConnectorsApi {
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    * @param  string $lang language to select property keys, null for default (English).  An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1183,7 +1183,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1324,7 +1324,7 @@ class ConnectorsApi {
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    * @param  string $lang language to select property keys, null for default (English).  An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1368,7 +1368,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1507,7 +1507,7 @@ class ConnectorsApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1551,7 +1551,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1670,9 +1670,9 @@ class ConnectorsApi {
    *
    * @param  string $key Connector instance&#39;s key (required)
    * @param  string $xSyncopeDomain connector instance key to be deleted (required)
-   * @param  \SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO connInstanceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO connInstanceTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -1716,7 +1716,7 @@ class ConnectorsApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -1731,7 +1731,7 @@ class ConnectorsApi {
    *
    * @param  string $key Connector instance&#39;s key (required)
    * @param  string $xSyncopeDomain connector instance key to be deleted (required)
-   * @param  \SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\ConnInstanceTO $connInstanceTO (required)
    *
    * @throws \InvalidArgumentException
    *

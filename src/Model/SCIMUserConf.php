@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * SCIMUserConf Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,7 +57,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => '\SyncopePhpClient\Model\SCIMUserNameConf',
+        'name' => '\OpenEuropa\SyncopePhpClient\Model\SCIMUserNameConf',
         'displayName' => 'string',
         'nickName' => 'string',
         'profileUrl' => 'string',
@@ -66,11 +66,11 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
         'preferredLanguage' => 'string',
         'locale' => 'string',
         'timezone' => 'string',
-        'emails' => '\SyncopePhpClient\Model\SCIMComplexConfEmailCanonicalType[]',
-        'phoneNumbers' => '\SyncopePhpClient\Model\SCIMComplexConfPhoneNumberCanonicalType[]',
-        'ims' => '\SyncopePhpClient\Model\SCIMComplexConfIMCanonicalType[]',
-        'photos' => '\SyncopePhpClient\Model\SCIMComplexConfPhotoCanonicalType[]',
-        'addresses' => '\SyncopePhpClient\Model\SCIMUserAddressConf[]',
+        'emails' => '\OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfEmailCanonicalType[]',
+        'phoneNumbers' => '\OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfPhoneNumberCanonicalType[]',
+        'ims' => '\OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfIMCanonicalType[]',
+        'photos' => '\OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfPhotoCanonicalType[]',
+        'addresses' => '\OpenEuropa\SyncopePhpClient\Model\SCIMUserAddressConf[]',
         'x509Certificates' => 'string[]'
     ];
 
@@ -291,7 +291,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Gets name
      *
-     * @return \SyncopePhpClient\Model\SCIMUserNameConf|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMUserNameConf|null
      */
     public function getName()
     {
@@ -301,7 +301,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Sets name
      *
-     * @param \SyncopePhpClient\Model\SCIMUserNameConf|null $name name
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMUserNameConf|null $name name
      *
      * @return $this
      */
@@ -507,7 +507,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Gets emails
      *
-     * @return \SyncopePhpClient\Model\SCIMComplexConfEmailCanonicalType[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfEmailCanonicalType[]|null
      */
     public function getEmails()
     {
@@ -517,7 +517,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Sets emails
      *
-     * @param \SyncopePhpClient\Model\SCIMComplexConfEmailCanonicalType[]|null $emails emails
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfEmailCanonicalType[]|null $emails emails
      *
      * @return $this
      */
@@ -531,7 +531,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Gets phoneNumbers
      *
-     * @return \SyncopePhpClient\Model\SCIMComplexConfPhoneNumberCanonicalType[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfPhoneNumberCanonicalType[]|null
      */
     public function getPhoneNumbers()
     {
@@ -541,7 +541,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Sets phoneNumbers
      *
-     * @param \SyncopePhpClient\Model\SCIMComplexConfPhoneNumberCanonicalType[]|null $phoneNumbers phoneNumbers
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfPhoneNumberCanonicalType[]|null $phoneNumbers phoneNumbers
      *
      * @return $this
      */
@@ -555,7 +555,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Gets ims
      *
-     * @return \SyncopePhpClient\Model\SCIMComplexConfIMCanonicalType[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfIMCanonicalType[]|null
      */
     public function getIms()
     {
@@ -565,7 +565,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Sets ims
      *
-     * @param \SyncopePhpClient\Model\SCIMComplexConfIMCanonicalType[]|null $ims ims
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfIMCanonicalType[]|null $ims ims
      *
      * @return $this
      */
@@ -579,7 +579,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Gets photos
      *
-     * @return \SyncopePhpClient\Model\SCIMComplexConfPhotoCanonicalType[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfPhotoCanonicalType[]|null
      */
     public function getPhotos()
     {
@@ -589,7 +589,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Sets photos
      *
-     * @param \SyncopePhpClient\Model\SCIMComplexConfPhotoCanonicalType[]|null $photos photos
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMComplexConfPhotoCanonicalType[]|null $photos photos
      *
      * @return $this
      */
@@ -603,7 +603,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Gets addresses
      *
-     * @return \SyncopePhpClient\Model\SCIMUserAddressConf[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\SCIMUserAddressConf[]|null
      */
     public function getAddresses()
     {
@@ -613,7 +613,7 @@ class SCIMUserConf implements ModelInterface, ArrayAccess
     /**
      * Sets addresses
      *
-     * @param \SyncopePhpClient\Model\SCIMUserAddressConf[]|null $addresses addresses
+     * @param \OpenEuropa\SyncopePhpClient\Model\SCIMUserAddressConf[]|null $addresses addresses
      *
      * @return $this
      */

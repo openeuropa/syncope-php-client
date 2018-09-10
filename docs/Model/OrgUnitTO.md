@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **syncToken** | **string** |  | [optional] 
 **ignoreCaseMatch** | **bool** |  | [optional] 
 **connObjectLink** | **string** |  | [optional] 
-**connObjectKeyItem** | [**\SyncopePhpClient\Model\ItemTO**](ItemTO.md) |  | [optional] 
-**items** | [**\SyncopePhpClient\Model\ItemTO[]**](ItemTO.md) |  | [optional] 
+**connObjectKeyItem** | [**\OpenEuropa\SyncopePhpClient\Model\ItemTO**](ItemTO.md) |  | [optional] 
+**items** | [**\OpenEuropa\SyncopePhpClient\Model\ItemTO[]**](ItemTO.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

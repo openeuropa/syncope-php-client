@@ -1,4 +1,4 @@
-# SyncopePhpClient\SAML2SPApi
+# OpenEuropa\SyncopePhpClient\SAML2SPApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -22,17 +22,17 @@ Generates SAML 2.0 authentication request for the IdP matching the provided enti
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2SPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2SPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -84,17 +84,17 @@ Generates SAML 2.0 logout request for the IdP matching the requesting access tok
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2SPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2SPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -144,17 +144,17 @@ Returns the XML metadata for the provided SAML 2.0 Service Provider.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2SPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2SPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -206,24 +206,24 @@ Validates the received SAML 2.0 authentication response and creates JWT for the 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2SPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2SPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | SAML response and relay state
-$sAML2ReceivedResponseTO = new \SyncopePhpClient\Model\SAML2ReceivedResponseTO(); // \SyncopePhpClient\Model\SAML2ReceivedResponseTO | 
+$sAML2ReceivedResponseTO = new \OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO(); // \OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO | 
 
 try {
     $apiInstance->validateLoginResponse($xSyncopeDomain, $sAML2ReceivedResponseTO);
@@ -238,7 +238,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| SAML response and relay state | [default to &#39;Master&#39;]
- **sAML2ReceivedResponseTO** | [**\SyncopePhpClient\Model\SAML2ReceivedResponseTO**](../Model/SAML2ReceivedResponseTO.md)|  | [optional]
+ **sAML2ReceivedResponseTO** | [**\OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO**](../Model/SAML2ReceivedResponseTO.md)|  | [optional]
 
 ### Return type
 
@@ -266,24 +266,24 @@ Validates the received SAML 2.0 logout response.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\SAML2SPApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\SAML2SPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | SAML response and relay state
-$sAML2ReceivedResponseTO = new \SyncopePhpClient\Model\SAML2ReceivedResponseTO(); // \SyncopePhpClient\Model\SAML2ReceivedResponseTO | 
+$sAML2ReceivedResponseTO = new \OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO(); // \OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO | 
 
 try {
     $apiInstance->validateLogoutResponse($xSyncopeDomain, $sAML2ReceivedResponseTO);
@@ -298,7 +298,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| SAML response and relay state | [default to &#39;Master&#39;]
- **sAML2ReceivedResponseTO** | [**\SyncopePhpClient\Model\SAML2ReceivedResponseTO**](../Model/SAML2ReceivedResponseTO.md)|  | [optional]
+ **sAML2ReceivedResponseTO** | [**\OpenEuropa\SyncopePhpClient\Model\SAML2ReceivedResponseTO**](../Model/SAML2ReceivedResponseTO.md)|  | [optional]
 
 ### Return type
 

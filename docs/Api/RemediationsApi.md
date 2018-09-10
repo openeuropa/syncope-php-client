@@ -1,4 +1,4 @@
-# SyncopePhpClient\RemediationsApi
+# OpenEuropa\SyncopePhpClient\RemediationsApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -23,17 +23,17 @@ Deletes the remediation matching the given key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RemediationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RemediationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -83,17 +83,17 @@ Returns a list of all remediations.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RemediationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RemediationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -147,17 +147,17 @@ Returns remediation with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RemediationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RemediationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -197,7 +197,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **remedy**
-> \SyncopePhpClient\Model\ProvisioningResult remedy($key, $remediationKey, $xSyncopeDomain, $anyPatch, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult remedy($key, $remediationKey, $xSyncopeDomain, $anyPatch, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
 
 Perform remediation by creating the provided user, group or any object.
 
@@ -207,17 +207,17 @@ Perform remediation by creating the provided user, group or any object.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RemediationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RemediationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -226,7 +226,7 @@ $apiInstance = new SyncopePhpClient\Api\RemediationsApi(
 $key = 'key_example'; // string | Entity's key
 $remediationKey = 'remediationKey_example'; // string | 
 $xSyncopeDomain = 'Master'; // string | 
-$anyPatch = new \SyncopePhpClient\Model\AnyPatch(); // \SyncopePhpClient\Model\AnyPatch | 
+$anyPatch = new \OpenEuropa\SyncopePhpClient\Model\AnyPatch(); // \OpenEuropa\SyncopePhpClient\Model\AnyPatch | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $ifMatch = 'ifMatch_example'; // string | When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed.
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
@@ -247,14 +247,14 @@ Name | Type | Description  | Notes
  **key** | **string**| Entity&#39;s key |
  **remediationKey** | **string**|  |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **anyPatch** | [**\SyncopePhpClient\Model\AnyPatch**](../Model/AnyPatch.md)|  |
+ **anyPatch** | [**\OpenEuropa\SyncopePhpClient\Model\AnyPatch**](../Model/AnyPatch.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **ifMatch** | **string**| When the provided ETag value does not match the latest modification date of the entity, an error is reported and the requested operation is not performed. | [optional]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **remedy1**
-> \SyncopePhpClient\Model\ProvisioningResult remedy1($remediationKey, $anyKey, $xSyncopeDomain, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult remedy1($remediationKey, $anyKey, $xSyncopeDomain, $prefer, $ifMatch, $xSyncopeNullPriorityAsync)
 
 Perform remediation by creating the provided user, group or any object.
 
@@ -278,17 +278,17 @@ Perform remediation by creating the provided user, group or any object.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RemediationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RemediationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **remedy2**
-> \SyncopePhpClient\Model\ProvisioningResult remedy2($key, $remediationKey, $xSyncopeDomain, $anyTO, $prefer, $xSyncopeNullPriorityAsync)
+> \OpenEuropa\SyncopePhpClient\Model\ProvisioningResult remedy2($key, $remediationKey, $xSyncopeDomain, $anyTO, $prefer, $xSyncopeNullPriorityAsync)
 
 Perform remediation by creating the provided user, group or any object.
 
@@ -347,17 +347,17 @@ Perform remediation by creating the provided user, group or any object.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\RemediationsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\RemediationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -366,7 +366,7 @@ $apiInstance = new SyncopePhpClient\Api\RemediationsApi(
 $key = 'key_example'; // string | Entity's key
 $remediationKey = 'remediationKey_example'; // string | 
 $xSyncopeDomain = 'Master'; // string | 
-$anyTO = new \SyncopePhpClient\Model\AnyTO(); // \SyncopePhpClient\Model\AnyTO | 
+$anyTO = new \OpenEuropa\SyncopePhpClient\Model\AnyTO(); // \OpenEuropa\SyncopePhpClient\Model\AnyTO | 
 $prefer = 'return-content'; // string | Allows client to specify a preference for the result to be returned from the server
 $xSyncopeNullPriorityAsync = false; // bool | If 'true', instructs the propagation process not to wait for completion when communicating with External Resources with no priority set
 
@@ -386,13 +386,13 @@ Name | Type | Description  | Notes
  **key** | **string**| Entity&#39;s key |
  **remediationKey** | **string**|  |
  **xSyncopeDomain** | **string**|  | [default to &#39;Master&#39;]
- **anyTO** | [**\SyncopePhpClient\Model\AnyTO**](../Model/AnyTO.md)|  |
+ **anyTO** | [**\OpenEuropa\SyncopePhpClient\Model\AnyTO**](../Model/AnyTO.md)|  |
  **prefer** | **string**| Allows client to specify a preference for the result to be returned from the server | [optional] [default to &#39;return-content&#39;]
  **xSyncopeNullPriorityAsync** | **bool**| If &#39;true&#39;, instructs the propagation process not to wait for completion when communicating with External Resources with no priority set | [optional] [default to false]
 
 ### Return type
 
-[**\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
+[**\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult**](../Model/ProvisioningResult.md)
 
 ### Authorization
 

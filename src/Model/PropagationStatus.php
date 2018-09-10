@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * PropagationStatus Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,8 +57,8 @@ class PropagationStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'beforeObj' => '\SyncopePhpClient\Model\ConnObjectTO',
-        'afterObj' => '\SyncopePhpClient\Model\ConnObjectTO',
+        'beforeObj' => '\OpenEuropa\SyncopePhpClient\Model\ConnObjectTO',
+        'afterObj' => '\OpenEuropa\SyncopePhpClient\Model\ConnObjectTO',
         'resource' => 'string',
         'status' => 'string',
         'failureReason' => 'string'
@@ -258,7 +258,7 @@ class PropagationStatus implements ModelInterface, ArrayAccess
     /**
      * Gets beforeObj
      *
-     * @return \SyncopePhpClient\Model\ConnObjectTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO|null
      */
     public function getBeforeObj()
     {
@@ -268,7 +268,7 @@ class PropagationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets beforeObj
      *
-     * @param \SyncopePhpClient\Model\ConnObjectTO|null $beforeObj beforeObj
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO|null $beforeObj beforeObj
      *
      * @return $this
      */
@@ -282,7 +282,7 @@ class PropagationStatus implements ModelInterface, ArrayAccess
     /**
      * Gets afterObj
      *
-     * @return \SyncopePhpClient\Model\ConnObjectTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO|null
      */
     public function getAfterObj()
     {
@@ -292,7 +292,7 @@ class PropagationStatus implements ModelInterface, ArrayAccess
     /**
      * Sets afterObj
      *
-     * @param \SyncopePhpClient\Model\ConnObjectTO|null $afterObj afterObj
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnObjectTO|null $afterObj afterObj
      *
      * @return $this
      */

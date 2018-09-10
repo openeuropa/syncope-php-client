@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * SAML2IdPTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -68,9 +68,9 @@ class SAML2IdPTO implements ModelInterface, ArrayAccess
         'supportUnsolicited' => 'bool',
         'bindingType' => 'string',
         'logoutSupported' => 'bool',
-        'userTemplate' => '\SyncopePhpClient\Model\UserTO',
-        'connObjectKeyItem' => '\SyncopePhpClient\Model\ItemTO',
-        'items' => '\SyncopePhpClient\Model\ItemTO[]',
+        'userTemplate' => '\OpenEuropa\SyncopePhpClient\Model\UserTO',
+        'connObjectKeyItem' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO',
+        'items' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO[]',
         'actions' => 'string[]'
     ];
 
@@ -587,7 +587,7 @@ class SAML2IdPTO implements ModelInterface, ArrayAccess
     /**
      * Gets userTemplate
      *
-     * @return \SyncopePhpClient\Model\UserTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\UserTO|null
      */
     public function getUserTemplate()
     {
@@ -597,7 +597,7 @@ class SAML2IdPTO implements ModelInterface, ArrayAccess
     /**
      * Sets userTemplate
      *
-     * @param \SyncopePhpClient\Model\UserTO|null $userTemplate userTemplate
+     * @param \OpenEuropa\SyncopePhpClient\Model\UserTO|null $userTemplate userTemplate
      *
      * @return $this
      */
@@ -611,7 +611,7 @@ class SAML2IdPTO implements ModelInterface, ArrayAccess
     /**
      * Gets connObjectKeyItem
      *
-     * @return \SyncopePhpClient\Model\ItemTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO|null
      */
     public function getConnObjectKeyItem()
     {
@@ -621,7 +621,7 @@ class SAML2IdPTO implements ModelInterface, ArrayAccess
     /**
      * Sets connObjectKeyItem
      *
-     * @param \SyncopePhpClient\Model\ItemTO|null $connObjectKeyItem connObjectKeyItem
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO|null $connObjectKeyItem connObjectKeyItem
      *
      * @return $this
      */
@@ -635,7 +635,7 @@ class SAML2IdPTO implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \SyncopePhpClient\Model\ItemTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null
      */
     public function getItems()
     {
@@ -645,7 +645,7 @@ class SAML2IdPTO implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \SyncopePhpClient\Model\ItemTO[]|null $items items
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null $items items
      *
      * @return $this
      */

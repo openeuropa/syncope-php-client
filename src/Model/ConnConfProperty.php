@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ConnConfProperty Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,7 +57,7 @@ class ConnConfProperty implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schema' => '\SyncopePhpClient\Model\ConnConfPropSchema',
+        'schema' => '\OpenEuropa\SyncopePhpClient\Model\ConnConfPropSchema',
         'overridable' => 'bool',
         'values' => 'object[]'
     ];
@@ -219,7 +219,7 @@ class ConnConfProperty implements ModelInterface, ArrayAccess
     /**
      * Gets schema
      *
-     * @return \SyncopePhpClient\Model\ConnConfPropSchema|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnConfPropSchema|null
      */
     public function getSchema()
     {
@@ -229,7 +229,7 @@ class ConnConfProperty implements ModelInterface, ArrayAccess
     /**
      * Sets schema
      *
-     * @param \SyncopePhpClient\Model\ConnConfPropSchema|null $schema schema
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnConfPropSchema|null $schema schema
      *
      * @return $this
      */

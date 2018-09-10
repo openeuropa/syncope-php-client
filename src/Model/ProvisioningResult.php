@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ProvisioningResult Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,8 +57,8 @@ class ProvisioningResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'entity' => '\SyncopePhpClient\Model\EntityTO',
-        'propagationStatuses' => '\SyncopePhpClient\Model\PropagationStatus[]'
+        'entity' => '\OpenEuropa\SyncopePhpClient\Model\EntityTO',
+        'propagationStatuses' => '\OpenEuropa\SyncopePhpClient\Model\PropagationStatus[]'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ProvisioningResult implements ModelInterface, ArrayAccess
     /**
      * Gets entity
      *
-     * @return \SyncopePhpClient\Model\EntityTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\EntityTO|null
      */
     public function getEntity()
     {
@@ -223,7 +223,7 @@ class ProvisioningResult implements ModelInterface, ArrayAccess
     /**
      * Sets entity
      *
-     * @param \SyncopePhpClient\Model\EntityTO|null $entity entity
+     * @param \OpenEuropa\SyncopePhpClient\Model\EntityTO|null $entity entity
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ProvisioningResult implements ModelInterface, ArrayAccess
     /**
      * Gets propagationStatuses
      *
-     * @return \SyncopePhpClient\Model\PropagationStatus[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\PropagationStatus[]|null
      */
     public function getPropagationStatuses()
     {
@@ -247,7 +247,7 @@ class ProvisioningResult implements ModelInterface, ArrayAccess
     /**
      * Sets propagationStatuses
      *
-     * @param \SyncopePhpClient\Model\PropagationStatus[]|null $propagationStatuses propagationStatuses
+     * @param \OpenEuropa\SyncopePhpClient\Model\PropagationStatus[]|null $propagationStatuses propagationStatuses
      *
      * @return $this
      */

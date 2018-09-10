@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **page** | **int** |  | [optional] 
 **size** | **int** |  | [optional] 
 **totalCount** | **int** |  | [optional] 
-**result** | [**\SyncopePhpClient\Model\UserTO[]**](UserTO.md) |  | [optional] 
+**result** | [**\OpenEuropa\SyncopePhpClient\Model\UserTO[]**](UserTO.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

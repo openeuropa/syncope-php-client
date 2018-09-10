@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * RelationshipPatch Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,7 +58,7 @@ class RelationshipPatch implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'operation' => 'string',
-        'relationshipTO' => '\SyncopePhpClient\Model\RelationshipTO'
+        'relationshipTO' => '\OpenEuropa\SyncopePhpClient\Model\RelationshipTO'
     ];
 
     /**
@@ -269,7 +269,7 @@ class RelationshipPatch implements ModelInterface, ArrayAccess
     /**
      * Gets relationshipTO
      *
-     * @return \SyncopePhpClient\Model\RelationshipTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\RelationshipTO|null
      */
     public function getRelationshipTO()
     {
@@ -279,7 +279,7 @@ class RelationshipPatch implements ModelInterface, ArrayAccess
     /**
      * Sets relationshipTO
      *
-     * @param \SyncopePhpClient\Model\RelationshipTO|null $relationshipTO relationshipTO
+     * @param \OpenEuropa\SyncopePhpClient\Model\RelationshipTO|null $relationshipTO relationshipTO
      *
      * @return $this
      */

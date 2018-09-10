@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**schemaInfo** | [**\SyncopePhpClient\Model\SchemaTO**](SchemaTO.md) |  | [optional] 
+**schemaInfo** | [**\OpenEuropa\SyncopePhpClient\Model\SchemaTO**](SchemaTO.md) |  | [optional] 
 **schema** | **string** |  | 
 **values** | **string[]** |  | 
 

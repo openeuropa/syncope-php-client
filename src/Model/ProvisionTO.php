@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ProvisionTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -63,7 +63,7 @@ class ProvisionTO implements ModelInterface, ArrayAccess
         'syncToken' => 'string',
         'ignoreCaseMatch' => 'bool',
         'uidOnCreate' => 'string',
-        'mapping' => '\SyncopePhpClient\Model\MappingTO',
+        'mapping' => '\OpenEuropa\SyncopePhpClient\Model\MappingTO',
         'auxClasses' => 'string[]',
         'virSchemas' => 'string[]'
     ];
@@ -399,7 +399,7 @@ class ProvisionTO implements ModelInterface, ArrayAccess
     /**
      * Gets mapping
      *
-     * @return \SyncopePhpClient\Model\MappingTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\MappingTO|null
      */
     public function getMapping()
     {
@@ -409,7 +409,7 @@ class ProvisionTO implements ModelInterface, ArrayAccess
     /**
      * Sets mapping
      *
-     * @param \SyncopePhpClient\Model\MappingTO|null $mapping mapping
+     * @param \OpenEuropa\SyncopePhpClient\Model\MappingTO|null $mapping mapping
      *
      * @return $this
      */

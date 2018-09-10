@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ConnObjectTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,7 +57,7 @@ class ConnObjectTO implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'attrs' => '\SyncopePhpClient\Model\AttrTO[]'
+        'attrs' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class ConnObjectTO implements ModelInterface, ArrayAccess
     /**
      * Gets attrs
      *
-     * @return \SyncopePhpClient\Model\AttrTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null
      */
     public function getAttrs()
     {
@@ -217,7 +217,7 @@ class ConnObjectTO implements ModelInterface, ArrayAccess
     /**
      * Sets attrs
      *
-     * @param \SyncopePhpClient\Model\AttrTO[]|null $attrs attrs
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO[]|null $attrs attrs
      *
      * @return $this
      */

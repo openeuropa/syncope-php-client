@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * AttrPatch Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,7 +58,7 @@ class AttrPatch implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'operation' => 'string',
-        'attrTO' => '\SyncopePhpClient\Model\AttrTO'
+        'attrTO' => '\OpenEuropa\SyncopePhpClient\Model\AttrTO'
     ];
 
     /**
@@ -269,7 +269,7 @@ class AttrPatch implements ModelInterface, ArrayAccess
     /**
      * Gets attrTO
      *
-     * @return \SyncopePhpClient\Model\AttrTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\AttrTO|null
      */
     public function getAttrTO()
     {
@@ -279,7 +279,7 @@ class AttrPatch implements ModelInterface, ArrayAccess
     /**
      * Sets attrTO
      *
-     * @param \SyncopePhpClient\Model\AttrTO|null $attrTO attrTO
+     * @param \OpenEuropa\SyncopePhpClient\Model\AttrTO|null $attrTO attrTO
      *
      * @return $this
      */

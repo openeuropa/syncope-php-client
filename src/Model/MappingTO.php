@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * MappingTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,9 +58,9 @@ class MappingTO implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'connObjectLink' => 'string',
-        'connObjectKeyItem' => '\SyncopePhpClient\Model\ItemTO',
-        'items' => '\SyncopePhpClient\Model\ItemTO[]',
-        'linkingItems' => '\SyncopePhpClient\Model\ItemTO[]'
+        'connObjectKeyItem' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO',
+        'items' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO[]',
+        'linkingItems' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO[]'
     ];
 
     /**
@@ -249,7 +249,7 @@ class MappingTO implements ModelInterface, ArrayAccess
     /**
      * Gets connObjectKeyItem
      *
-     * @return \SyncopePhpClient\Model\ItemTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO|null
      */
     public function getConnObjectKeyItem()
     {
@@ -259,7 +259,7 @@ class MappingTO implements ModelInterface, ArrayAccess
     /**
      * Sets connObjectKeyItem
      *
-     * @param \SyncopePhpClient\Model\ItemTO|null $connObjectKeyItem connObjectKeyItem
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO|null $connObjectKeyItem connObjectKeyItem
      *
      * @return $this
      */
@@ -273,7 +273,7 @@ class MappingTO implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \SyncopePhpClient\Model\ItemTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null
      */
     public function getItems()
     {
@@ -283,7 +283,7 @@ class MappingTO implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \SyncopePhpClient\Model\ItemTO[]|null $items items
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null $items items
      *
      * @return $this
      */
@@ -297,7 +297,7 @@ class MappingTO implements ModelInterface, ArrayAccess
     /**
      * Gets linkingItems
      *
-     * @return \SyncopePhpClient\Model\ItemTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null
      */
     public function getLinkingItems()
     {
@@ -307,7 +307,7 @@ class MappingTO implements ModelInterface, ArrayAccess
     /**
      * Sets linkingItems
      *
-     * @param \SyncopePhpClient\Model\ItemTO[]|null $linkingItems linkingItems
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null $linkingItems linkingItems
      *
      * @return $this
      */

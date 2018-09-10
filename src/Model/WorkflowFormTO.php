@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * WorkflowFormTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -63,9 +63,9 @@ class WorkflowFormTO implements ModelInterface, ArrayAccess
         'createTime' => '\DateTime',
         'dueDate' => '\DateTime',
         'owner' => 'string',
-        'userTO' => '\SyncopePhpClient\Model\UserTO',
-        'userPatch' => '\SyncopePhpClient\Model\UserPatch',
-        'workflowFormProperties' => '\SyncopePhpClient\Model\WorkflowFormPropertyTO[]'
+        'userTO' => '\OpenEuropa\SyncopePhpClient\Model\UserTO',
+        'userPatch' => '\OpenEuropa\SyncopePhpClient\Model\UserPatch',
+        'workflowFormProperties' => '\OpenEuropa\SyncopePhpClient\Model\WorkflowFormPropertyTO[]'
     ];
 
     /**
@@ -399,7 +399,7 @@ class WorkflowFormTO implements ModelInterface, ArrayAccess
     /**
      * Gets userTO
      *
-     * @return \SyncopePhpClient\Model\UserTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\UserTO|null
      */
     public function getUserTO()
     {
@@ -409,7 +409,7 @@ class WorkflowFormTO implements ModelInterface, ArrayAccess
     /**
      * Sets userTO
      *
-     * @param \SyncopePhpClient\Model\UserTO|null $userTO userTO
+     * @param \OpenEuropa\SyncopePhpClient\Model\UserTO|null $userTO userTO
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class WorkflowFormTO implements ModelInterface, ArrayAccess
     /**
      * Gets userPatch
      *
-     * @return \SyncopePhpClient\Model\UserPatch|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\UserPatch|null
      */
     public function getUserPatch()
     {
@@ -433,7 +433,7 @@ class WorkflowFormTO implements ModelInterface, ArrayAccess
     /**
      * Sets userPatch
      *
-     * @param \SyncopePhpClient\Model\UserPatch|null $userPatch userPatch
+     * @param \OpenEuropa\SyncopePhpClient\Model\UserPatch|null $userPatch userPatch
      *
      * @return $this
      */
@@ -447,7 +447,7 @@ class WorkflowFormTO implements ModelInterface, ArrayAccess
     /**
      * Gets workflowFormProperties
      *
-     * @return \SyncopePhpClient\Model\WorkflowFormPropertyTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\WorkflowFormPropertyTO[]|null
      */
     public function getWorkflowFormProperties()
     {
@@ -457,7 +457,7 @@ class WorkflowFormTO implements ModelInterface, ArrayAccess
     /**
      * Sets workflowFormProperties
      *
-     * @param \SyncopePhpClient\Model\WorkflowFormPropertyTO[]|null $workflowFormProperties workflowFormProperties
+     * @param \OpenEuropa\SyncopePhpClient\Model\WorkflowFormPropertyTO[]|null $workflowFormProperties workflowFormProperties
      *
      * @return $this
      */

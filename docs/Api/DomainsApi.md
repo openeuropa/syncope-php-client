@@ -1,4 +1,4 @@
-# SyncopePhpClient\DomainsApi
+# OpenEuropa\SyncopePhpClient\DomainsApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -22,24 +22,24 @@ Creates a new domain.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DomainsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $xSyncopeDomain = 'Master'; // string | domain to be created
-$domainTO = new \SyncopePhpClient\Model\DomainTO(); // \SyncopePhpClient\Model\DomainTO | 
+$domainTO = new \OpenEuropa\SyncopePhpClient\Model\DomainTO(); // \OpenEuropa\SyncopePhpClient\Model\DomainTO | 
 
 try {
     $apiInstance->create($xSyncopeDomain, $domainTO);
@@ -54,7 +54,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xSyncopeDomain** | **string**| domain to be created | [default to &#39;Master&#39;]
- **domainTO** | [**\SyncopePhpClient\Model\DomainTO**](../Model/DomainTO.md)|  |
+ **domainTO** | [**\OpenEuropa\SyncopePhpClient\Model\DomainTO**](../Model/DomainTO.md)|  |
 
 ### Return type
 
@@ -82,17 +82,17 @@ Deletes the domain matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DomainsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -142,17 +142,17 @@ Returns a list of all domains.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DomainsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -200,17 +200,17 @@ Returns domain with matching key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DomainsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -260,17 +260,17 @@ Updates the domain matching the provided key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\DomainsApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\DomainsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -278,7 +278,7 @@ $apiInstance = new SyncopePhpClient\Api\DomainsApi(
 );
 $key = 'key_example'; // string | Domain's key
 $xSyncopeDomain = 'Master'; // string | domain key to be deleted
-$domainTO = new \SyncopePhpClient\Model\DomainTO(); // \SyncopePhpClient\Model\DomainTO | 
+$domainTO = new \OpenEuropa\SyncopePhpClient\Model\DomainTO(); // \OpenEuropa\SyncopePhpClient\Model\DomainTO | 
 
 try {
     $apiInstance->update($key, $xSyncopeDomain, $domainTO);
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **key** | **string**| Domain&#39;s key |
  **xSyncopeDomain** | **string**| domain key to be deleted | [default to &#39;Master&#39;]
- **domainTO** | [**\SyncopePhpClient\Model\DomainTO**](../Model/DomainTO.md)|  |
+ **domainTO** | [**\OpenEuropa\SyncopePhpClient\Model\DomainTO**](../Model/DomainTO.md)|  |
 
 ### Return type
 

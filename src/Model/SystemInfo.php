@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * SystemInfo Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -62,7 +62,7 @@ class SystemInfo implements ModelInterface, ArrayAccess
         'jvm' => 'string',
         'availableProcessors' => 'int',
         'startTime' => 'int',
-        'load' => '\SyncopePhpClient\Model\LoadInstant[]'
+        'load' => '\OpenEuropa\SyncopePhpClient\Model\LoadInstant[]'
     ];
 
     /**
@@ -357,7 +357,7 @@ class SystemInfo implements ModelInterface, ArrayAccess
     /**
      * Gets load
      *
-     * @return \SyncopePhpClient\Model\LoadInstant[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\LoadInstant[]|null
      */
     public function getLoad()
     {
@@ -367,7 +367,7 @@ class SystemInfo implements ModelInterface, ArrayAccess
     /**
      * Sets load
      *
-     * @param \SyncopePhpClient\Model\LoadInstant[]|null $load load
+     * @param \OpenEuropa\SyncopePhpClient\Model\LoadInstant[]|null $load load
      *
      * @return $this
      */

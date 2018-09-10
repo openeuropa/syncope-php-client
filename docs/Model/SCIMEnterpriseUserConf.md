@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **organization** | **string** |  | [optional] 
 **division** | **string** |  | [optional] 
 **department** | **string** |  | [optional] 
-**manager** | [**\SyncopePhpClient\Model\SCIMManagerConf**](SCIMManagerConf.md) |  | [optional] 
+**manager** | [**\OpenEuropa\SyncopePhpClient\Model\SCIMManagerConf**](SCIMManagerConf.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

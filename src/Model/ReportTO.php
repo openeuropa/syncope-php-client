@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ReportTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -68,7 +68,7 @@ class ReportTO implements ModelInterface, ArrayAccess
         'active' => 'bool',
         'template' => 'string',
         'reportlets' => 'string[]',
-        'executions' => '\SyncopePhpClient\Model\ExecTO[]'
+        'executions' => '\OpenEuropa\SyncopePhpClient\Model\ExecTO[]'
     ];
 
     /**
@@ -537,7 +537,7 @@ class ReportTO implements ModelInterface, ArrayAccess
     /**
      * Gets executions
      *
-     * @return \SyncopePhpClient\Model\ExecTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ExecTO[]|null
      */
     public function getExecutions()
     {
@@ -547,7 +547,7 @@ class ReportTO implements ModelInterface, ArrayAccess
     /**
      * Sets executions
      *
-     * @param \SyncopePhpClient\Model\ExecTO[]|null $executions executions
+     * @param \OpenEuropa\SyncopePhpClient\Model\ExecTO[]|null $executions executions
      *
      * @return $this
      */

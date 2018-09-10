@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * SAML2IdPApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -77,7 +77,7 @@ class SAML2IdPApi {
    * @param  string $key SAML 2.0 Identity Provider&#39;s entityID (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -121,7 +121,7 @@ class SAML2IdPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -255,7 +255,7 @@ class SAML2IdPApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -299,7 +299,7 @@ class SAML2IdPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -417,9 +417,9 @@ class SAML2IdPApi {
    * Imports the SAML 2.0 Identity Provider definitions available in the provided XML metadata.
    *
    * @param  string $xSyncopeDomain XML metadata (required)
-   * @param  \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE $uNKNOWNBASETYPE uNKNOWNBASETYPE (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE $uNKNOWNBASETYPE uNKNOWNBASETYPE (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -463,7 +463,7 @@ class SAML2IdPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -477,7 +477,7 @@ class SAML2IdPApi {
    * Create request for operation 'importFromMetadata'
    *
    * @param  string $xSyncopeDomain XML metadata (required)
-   * @param  \SyncopePhpClient\Model\UNKNOWN_BASE_TYPE $uNKNOWNBASETYPE (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\UNKNOWN_BASE_TYPE $uNKNOWNBASETYPE (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -592,7 +592,7 @@ class SAML2IdPApi {
    *
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -636,7 +636,7 @@ class SAML2IdPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -756,7 +756,7 @@ class SAML2IdPApi {
    * @param  string $key SAML 2.0 Identity Provider&#39;s entityID (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -800,7 +800,7 @@ class SAML2IdPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -934,9 +934,9 @@ class SAML2IdPApi {
    *
    * @param  string $key IdP&#39;s key (required)
    * @param  string $xSyncopeDomain SAML 2.0 Identity Provider&#39;s entityID (required)
-   * @param  \SyncopePhpClient\Model\SAML2IdPTO $sAML2IdPTO sAML2IdPTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SAML2IdPTO $sAML2IdPTO sAML2IdPTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -980,7 +980,7 @@ class SAML2IdPApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -995,7 +995,7 @@ class SAML2IdPApi {
    *
    * @param  string $key IdP&#39;s key (required)
    * @param  string $xSyncopeDomain SAML 2.0 Identity Provider&#39;s entityID (required)
-   * @param  \SyncopePhpClient\Model\SAML2IdPTO $sAML2IdPTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SAML2IdPTO $sAML2IdPTO (required)
    *
    * @throws \InvalidArgumentException
    *

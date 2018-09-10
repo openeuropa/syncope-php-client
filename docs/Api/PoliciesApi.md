@@ -1,4 +1,4 @@
-# SyncopePhpClient\PoliciesApi
+# OpenEuropa\SyncopePhpClient\PoliciesApi
 
 All URIs are relative to *http://syncope-vm.apache.org:9080/syncope/rest*
 
@@ -22,17 +22,17 @@ Create a new policy.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\PoliciesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\PoliciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -40,7 +40,7 @@ $apiInstance = new SyncopePhpClient\Api\PoliciesApi(
 );
 $type = 'type_example'; // string | policy type
 $xSyncopeDomain = 'Master'; // string | Policy to be created (needs to match type)
-$policyTO = new \SyncopePhpClient\Model\PolicyTO(); // \SyncopePhpClient\Model\PolicyTO | 
+$policyTO = new \OpenEuropa\SyncopePhpClient\Model\PolicyTO(); // \OpenEuropa\SyncopePhpClient\Model\PolicyTO | 
 
 try {
     $apiInstance->create($type, $xSyncopeDomain, $policyTO);
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **type** | **string**| policy type |
  **xSyncopeDomain** | **string**| Policy to be created (needs to match type) | [default to &#39;Master&#39;]
- **policyTO** | [**\SyncopePhpClient\Model\PolicyTO**](../Model/PolicyTO.md)|  |
+ **policyTO** | [**\OpenEuropa\SyncopePhpClient\Model\PolicyTO**](../Model/PolicyTO.md)|  |
 
 ### Return type
 
@@ -84,17 +84,17 @@ Delete policy matching the given key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\PoliciesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\PoliciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -146,17 +146,17 @@ Returns a list of policies of the matching type.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\PoliciesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\PoliciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -206,17 +206,17 @@ Returns the policy matching the given key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\PoliciesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\PoliciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -268,17 +268,17 @@ Updates policy matching the given key.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: BasicAuthentication
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure HTTP basic authorization: Bearer
-$config = SyncopePhpClient\Configuration::getDefaultConfiguration()
+$config = OpenEuropa\SyncopePhpClient\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new SyncopePhpClient\Api\PoliciesApi(
+$apiInstance = new OpenEuropa\SyncopePhpClient\Api\PoliciesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -287,7 +287,7 @@ $apiInstance = new SyncopePhpClient\Api\PoliciesApi(
 $key = 'key_example'; // string | Policy's key
 $type = 'type_example'; // string | Policy to replace existing policy
 $xSyncopeDomain = 'Master'; // string | policy type
-$policyTO = new \SyncopePhpClient\Model\PolicyTO(); // \SyncopePhpClient\Model\PolicyTO | 
+$policyTO = new \OpenEuropa\SyncopePhpClient\Model\PolicyTO(); // \OpenEuropa\SyncopePhpClient\Model\PolicyTO | 
 
 try {
     $apiInstance->update1($key, $type, $xSyncopeDomain, $policyTO);
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
  **key** | **string**| Policy&#39;s key |
  **type** | **string**| Policy to replace existing policy |
  **xSyncopeDomain** | **string**| policy type | [default to &#39;Master&#39;]
- **policyTO** | [**\SyncopePhpClient\Model\PolicyTO**](../Model/PolicyTO.md)|  |
+ **policyTO** | [**\OpenEuropa\SyncopePhpClient\Model\PolicyTO**](../Model/PolicyTO.md)|  |
 
 ### Return type
 

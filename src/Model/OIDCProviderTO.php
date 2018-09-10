@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * OIDCProviderTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -68,12 +68,12 @@ class OIDCProviderTO implements ModelInterface, ArrayAccess
         'userinfoEndpoint' => 'string',
         'endSessionEndpoint' => 'string',
         'hasDiscovery' => 'bool',
-        'userTemplate' => '\SyncopePhpClient\Model\UserTO',
+        'userTemplate' => '\OpenEuropa\SyncopePhpClient\Model\UserTO',
         'createUnmatching' => 'bool',
         'updateMatching' => 'bool',
         'selfRegUnmatching' => 'bool',
-        'connObjectKeyItem' => '\SyncopePhpClient\Model\ItemTO',
-        'items' => '\SyncopePhpClient\Model\ItemTO[]',
+        'connObjectKeyItem' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO',
+        'items' => '\OpenEuropa\SyncopePhpClient\Model\ItemTO[]',
         'actionsClassNames' => 'string[]'
     ];
 
@@ -573,7 +573,7 @@ class OIDCProviderTO implements ModelInterface, ArrayAccess
     /**
      * Gets userTemplate
      *
-     * @return \SyncopePhpClient\Model\UserTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\UserTO|null
      */
     public function getUserTemplate()
     {
@@ -583,7 +583,7 @@ class OIDCProviderTO implements ModelInterface, ArrayAccess
     /**
      * Sets userTemplate
      *
-     * @param \SyncopePhpClient\Model\UserTO|null $userTemplate userTemplate
+     * @param \OpenEuropa\SyncopePhpClient\Model\UserTO|null $userTemplate userTemplate
      *
      * @return $this
      */
@@ -669,7 +669,7 @@ class OIDCProviderTO implements ModelInterface, ArrayAccess
     /**
      * Gets connObjectKeyItem
      *
-     * @return \SyncopePhpClient\Model\ItemTO|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO|null
      */
     public function getConnObjectKeyItem()
     {
@@ -679,7 +679,7 @@ class OIDCProviderTO implements ModelInterface, ArrayAccess
     /**
      * Sets connObjectKeyItem
      *
-     * @param \SyncopePhpClient\Model\ItemTO|null $connObjectKeyItem connObjectKeyItem
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO|null $connObjectKeyItem connObjectKeyItem
      *
      * @return $this
      */
@@ -693,7 +693,7 @@ class OIDCProviderTO implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \SyncopePhpClient\Model\ItemTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null
      */
     public function getItems()
     {
@@ -703,7 +703,7 @@ class OIDCProviderTO implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \SyncopePhpClient\Model\ItemTO[]|null $items items
+     * @param \OpenEuropa\SyncopePhpClient\Model\ItemTO[]|null $items items
      *
      * @return $this
      */

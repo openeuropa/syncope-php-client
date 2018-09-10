@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ApplicationTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,7 +59,7 @@ class ApplicationTO implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'key' => 'string',
         'description' => 'string',
-        'privileges' => '\SyncopePhpClient\Model\PrivilegeTO[]'
+        'privileges' => '\OpenEuropa\SyncopePhpClient\Model\PrivilegeTO[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class ApplicationTO implements ModelInterface, ArrayAccess
     /**
      * Gets privileges
      *
-     * @return \SyncopePhpClient\Model\PrivilegeTO[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\PrivilegeTO[]|null
      */
     public function getPrivileges()
     {
@@ -277,7 +277,7 @@ class ApplicationTO implements ModelInterface, ArrayAccess
     /**
      * Sets privileges
      *
-     * @param \SyncopePhpClient\Model\PrivilegeTO[]|null $privileges privileges
+     * @param \OpenEuropa\SyncopePhpClient\Model\PrivilegeTO[]|null $privileges privileges
      *
      * @return $this
      */

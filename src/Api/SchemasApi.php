@@ -5,12 +5,12 @@
  * PHP version 5
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
 
-namespace SyncopePhpClient\SyncopePhpClient\Api;
+namespace OpenEuropa\SyncopePhpClient\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -18,16 +18,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use SyncopePhpClient\ApiException;
-use SyncopePhpClient\Configuration;
-use SyncopePhpClient\HeaderSelector;
-use SyncopePhpClient\ObjectSerializer;
+use OpenEuropa\SyncopePhpClient\ApiException;
+use OpenEuropa\SyncopePhpClient\Configuration;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+use OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * SchemasApi Class Doc Comment.
  *
  * @category Class
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
@@ -76,9 +76,9 @@ class SchemasApi {
    *
    * @param  string $type type for schema to be created (required)
    * @param  string $xSyncopeDomain schema to be created (required)
-   * @param  \SyncopePhpClient\Model\SchemaTO $schemaTO schemaTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SchemaTO $schemaTO schemaTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -122,7 +122,7 @@ class SchemasApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -137,7 +137,7 @@ class SchemasApi {
    *
    * @param  string $type type for schema to be created (required)
    * @param  string $xSyncopeDomain schema to be created (required)
-   * @param  \SyncopePhpClient\Model\SchemaTO $schemaTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SchemaTO $schemaTO (required)
    *
    * @throws \InvalidArgumentException
    *
@@ -268,7 +268,7 @@ class SchemasApi {
    * @param  string $key name of schema to be deleted (required)
    * @param  string $xSyncopeDomain xSyncopeDomain (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -312,7 +312,7 @@ class SchemasApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -463,7 +463,7 @@ class SchemasApi {
    * @param  string $key type for schemas to be read (required)
    * @param  string $xSyncopeDomain name of schema to be read (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -507,7 +507,7 @@ class SchemasApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -659,7 +659,7 @@ class SchemasApi {
    * @param  string[] $anyTypeClass query conditions (optional)
    * @param  string $keyword keyword (optional)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -703,7 +703,7 @@ class SchemasApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -851,9 +851,9 @@ class SchemasApi {
    * @param  string $key Schema&#39;s key (required)
    * @param  string $type updated schema to be stored (required)
    * @param  string $xSyncopeDomain type for schema to be deleted (required)
-   * @param  \SyncopePhpClient\Model\SchemaTO $schemaTO schemaTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SchemaTO $schemaTO schemaTO (required)
    *
-   * @throws \SyncopePhpClient\ApiException on non-2xx response
+   * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
    * @return void
    */
@@ -897,7 +897,7 @@ class SchemasApi {
         case 400:
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
-            '\SyncopePhpClient\Model\ErrorTO',
+            '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
@@ -913,7 +913,7 @@ class SchemasApi {
    * @param  string $key Schema&#39;s key (required)
    * @param  string $type updated schema to be stored (required)
    * @param  string $xSyncopeDomain type for schema to be deleted (required)
-   * @param  \SyncopePhpClient\Model\SchemaTO $schemaTO (required)
+   * @param  \OpenEuropa\SyncopePhpClient\Model\SchemaTO $schemaTO (required)
    *
    * @throws \InvalidArgumentException
    *

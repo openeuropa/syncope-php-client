@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace SyncopePhpClient\Model;
+namespace OpenEuropa\SyncopePhpClient\Model;
 
 use \ArrayAccess;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ConnBundleTO Class Doc Comment
  *
  * @category Class
- * @package  SyncopePhpClient
+ * @package  OpenEuropa\SyncopePhpClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -62,7 +62,7 @@ class ConnBundleTO implements ModelInterface, ArrayAccess
         'bundleName' => 'string',
         'connectorName' => 'string',
         'version' => 'string',
-        'properties' => '\SyncopePhpClient\Model\ConnConfPropSchema[]'
+        'properties' => '\OpenEuropa\SyncopePhpClient\Model\ConnConfPropSchema[]'
     ];
 
     /**
@@ -357,7 +357,7 @@ class ConnBundleTO implements ModelInterface, ArrayAccess
     /**
      * Gets properties
      *
-     * @return \SyncopePhpClient\Model\ConnConfPropSchema[]|null
+     * @return \OpenEuropa\SyncopePhpClient\Model\ConnConfPropSchema[]|null
      */
     public function getProperties()
     {
@@ -367,7 +367,7 @@ class ConnBundleTO implements ModelInterface, ArrayAccess
     /**
      * Sets properties
      *
-     * @param \SyncopePhpClient\Model\ConnConfPropSchema[]|null $properties properties
+     * @param \OpenEuropa\SyncopePhpClient\Model\ConnConfPropSchema[]|null $properties properties
      *
      * @return $this
      */
