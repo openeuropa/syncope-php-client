@@ -1,7 +1,7 @@
 {
   "packagePath": ".",
   "packageName": "Syncope PHP Client",
-  "apiPackage": "SyncopePhpClient\\Api",
+  "apiPackage": "Api",
   "modelPackage": "Model",
   "invokerPackage": "OpenEuropa\\SyncopePhpClient",
   "variableNamingConvention": "camelCase",
