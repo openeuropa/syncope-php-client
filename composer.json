@@ -12,14 +12,14 @@
         "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8",
+        "phpunit/phpunit": "~5.0|~6.0",
         "openeuropa/code-review": "~0.2",
-        "openeuropa/task-runner": "^0.4"
+        "openeuropa/task-runner": "~0.8"
     },
     "autoload": {
         "psr-4": { "OpenEuropa\\SyncopePhpClient\\" : "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenEuropa\\SyncopePhpClient\\" : "test/" }
+        "psr-4": { "OpenEuropa\\SyncopePhpClient\\Test" : "test/" }
     }
 }

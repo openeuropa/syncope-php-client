@@ -1,13 +1,13 @@
 <?php
 
-namespace SyncopePhpClient;
+namespace OpenEuropa\SyncopePhpClient\Test\Model;
 
 /**
  * AnyTypeClassTOTest Class Doc Comment.
  *
  * @category Class
  * @description AnyTypeClassTO
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */

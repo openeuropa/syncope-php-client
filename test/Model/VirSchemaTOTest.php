@@ -1,13 +1,13 @@
 <?php
 
-namespace SyncopePhpClient;
+namespace OpenEuropa\SyncopePhpClient\Test\Model;
 
 /**
  * VirSchemaTOTest Class Doc Comment.
  *
  * @category Class
  * @description VirSchemaTO
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */

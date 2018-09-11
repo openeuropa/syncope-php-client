@@ -1,13 +1,13 @@
 <?php
 
-namespace SyncopePhpClient;
+namespace OpenEuropa\SyncopePhpClient\Test\Model;
 
 /**
  * SCIMComplexConfPhoneNumberCanonicalTypeTest Class Doc Comment.
  *
  * @category Class
  * @description SCIMComplexConfPhoneNumberCanonicalType
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */

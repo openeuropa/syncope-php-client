@@ -4,9 +4,9 @@
  * PHP version 5
  *
  * @category Class
- * @package  SyncopePhpClient
- * @author   OpenAPI Generator team
- * @link     https://openapi-generator.tech
+ * @package OpenEuropa\SyncopePhpClient
+ * @author OpenAPI Generator team
+ * @link https://openapi-generator.tech
  */
 
 /**
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace SyncopePhpClient;
+namespace OpenEuropa\SyncopePhpClient\Test\Api;
 
-use \SyncopePhpClient\Configuration;
-use \SyncopePhpClient\ApiException;
-use \SyncopePhpClient\ObjectSerializer;
+use \OpenEuropa\SyncopePhpClient\Configuration;
+use \OpenEuropa\SyncopePhpClient\ApiException;
+use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
 /**
  * ConnectorsApiTest Class Doc Comment.
  *
  * @category Class.
- * @package SyncopePhpClient
+ * @package OpenEuropa\SyncopePhpClient
  * @author OpenAPI Generator team
  * @link https://openapi-generator.tech
  */
