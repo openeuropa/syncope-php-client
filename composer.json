@@ -20,6 +20,6 @@
         "psr-4": { "OpenEuropa\\SyncopePhpClient\\" : "src/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenEuropa\\SyncopePhpClient\\Test" : "test/" }
+        "psr-4": { "OpenEuropa\\SyncopePhpClient\\Test\\" : "test/" }
     }
 }
