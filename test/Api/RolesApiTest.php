@@ -75,15 +75,14 @@ class RolesApiTest extends \PHPUnit_Framework_TestCase
     /**
      * Setup before running any test cases.
      */
-    public static function setUpBeforeClass()
-    {
+    public static function setUpBeforeClass()  {
     }
 
     /**
      * Setup before running each test case.
      */
     public function setUp()  {
-      $this->client = new Client();
+      // Initialize some needed parameters for RoleApi instance.
       $this->config = new Configuration();
       $this->headerSelector = new HeaderSelector();
     }
@@ -106,15 +105,20 @@ class RolesApiTest extends \PHPUnit_Framework_TestCase
      * Creates a new role..
      *
      */
-    public function testCreateRole()  {
+    public function testCreateRole()  {      // Create a mock and queue two responses.
 
-      // Initialize needed parameters and RoleApi instance.
+      // Initialize mocked client.
+      $mock = new MockHandler([
+        new Response(200, []),
+      ]);
+      $handler = HandlerStack::create($mock);
+      $this->client = new Client(['handler' => $handler]);
+
       $RoleApi = new RolesApi($this->client, $this->config, $this->headerSelector);
       $roleTO = new RoleTO([]);
       $result = $RoleApi->createRole('tester', $roleTO);
 
-      // $this->assertEquals($result[1], 200);
-
+      $this->assertEquals($result[1], 200);
     }
 
     /**
