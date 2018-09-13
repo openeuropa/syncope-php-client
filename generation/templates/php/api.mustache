@@ -138,11 +138,14 @@ use {{invokerPackage}}\ObjectSerializer;
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '{{dataType}}', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
       {{/dataType}}
       {{#-last}}
       }

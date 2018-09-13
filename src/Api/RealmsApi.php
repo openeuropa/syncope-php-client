@@ -128,11 +128,14 @@ class RealmsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
         case 201:
           if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
@@ -143,11 +146,14 @@ class RealmsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
       }
 
       $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
@@ -386,11 +392,14 @@ class RealmsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
         case 200:
           if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
@@ -401,11 +410,14 @@ class RealmsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
       }
 
       $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
@@ -632,11 +644,14 @@ class RealmsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
         case 200:
           if ('\OpenEuropa\SyncopePhpClient\Model\GroupTO' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
@@ -647,11 +662,14 @@ class RealmsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\GroupTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
       }
 
       $returnType = '\OpenEuropa\SyncopePhpClient\Model\GroupTO';
@@ -1034,11 +1052,14 @@ class RealmsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
         case 200:
           if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
@@ -1049,11 +1070,14 @@ class RealmsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
       }
 
       $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';

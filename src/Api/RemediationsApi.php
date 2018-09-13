@@ -669,11 +669,14 @@ class RemediationsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
         case 200:
           if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
@@ -684,11 +687,14 @@ class RemediationsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
       }
 
       $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
@@ -949,11 +955,14 @@ class RemediationsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
         case 200:
           if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
@@ -964,11 +973,14 @@ class RemediationsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
       }
 
       $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
@@ -1219,11 +1231,14 @@ class RemediationsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
         case 201:
           if ('\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult' === '\SplFileObject') {
             $content = $responseBody; //stream goes to serializer
@@ -1234,11 +1249,14 @@ class RemediationsApi {
             }
           }
 
+          return $content;
+          /*
           return [
             ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult', []),
             $response->getStatusCode(),
             $response->getHeaders()
           ];
+          */
       }
 
       $returnType = '\OpenEuropa\SyncopePhpClient\Model\ProvisioningResult';
