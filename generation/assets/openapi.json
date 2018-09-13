@@ -460,7 +460,25 @@
                   "type" : "string"
                 }
               }
+            },
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/AnyObjectTO"
+                }
+              },
+              "application/yaml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/AnyObjectTO"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/AnyObjectTO"
+                }
+              }
             }
+
           }
         },
         "security" : [ {
@@ -5630,6 +5648,23 @@
                   "type" : "string"
                 }
               }
+            },
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GroupTO"
+                }
+              },
+              "application/yaml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GroupTO"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GroupTO"
+                }
+              }
             }
           }
         },
@@ -10132,6 +10167,35 @@
               "application/xml" : {
                 "schema" : {
                   "$ref" : "#/components/schemas/ErrorTO"
+                }
+              }
+            }
+          },
+          "200" : {
+            "description" : "Group matching the provided key; if value looks like a UUID then it is interpreted as key, otherwise as a name.",
+            "headers" : {
+              "ETag" : {
+                "description" : "Opaque identifier for the latest modification made to the entity returned by this endpoint",
+                "style" : "simple",
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GroupTO"
+                }
+              },
+              "application/yaml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GroupTO"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GroupTO"
                 }
               }
             }
@@ -19489,6 +19553,23 @@
                 "style" : "simple",
                 "schema" : {
                   "type" : "string"
+                }
+              }
+            },
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/UserTO"
+                }
+              },
+              "application/yaml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/UserTO"
+                }
+              },
+              "application/xml" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/UserTO"
                 }
               }
             }

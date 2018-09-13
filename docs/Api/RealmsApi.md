@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listRealm**
-> listRealm($fullPath, $xSyncopeDomain)
+> \OpenEuropa\SyncopePhpClient\Model\GroupTO listRealm($fullPath, $xSyncopeDomain)
 
 Returns realms rooted at the given path.
 
@@ -174,7 +174,8 @@ $fullPath = 'fullPath_example'; // string | full path of the root realm where to
 $xSyncopeDomain = 'Master'; // string | 
 
 try {
-    $apiInstance->listRealm($fullPath, $xSyncopeDomain);
+    $result = $apiInstance->listRealm($fullPath, $xSyncopeDomain);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RealmsApi->listRealm: ', $e->getMessage(), PHP_EOL;
 }
@@ -190,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\OpenEuropa\SyncopePhpClient\Model\GroupTO**](../Model/GroupTO.md)
 
 ### Authorization
 
