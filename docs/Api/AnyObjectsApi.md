@@ -355,7 +355,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **readAnyObject**
-> readAnyObject($key, $xSyncopeDomain)
+> \OpenEuropa\SyncopePhpClient\Model\AnyObjectTO readAnyObject($key, $xSyncopeDomain)
 
 Reads the any object matching the provided key.
 
@@ -385,7 +385,8 @@ $key = 'key_example'; // string | if value looks like a UUID then it is interpre
 $xSyncopeDomain = 'Master'; // string | 
 
 try {
-    $apiInstance->readAnyObject($key, $xSyncopeDomain);
+    $result = $apiInstance->readAnyObject($key, $xSyncopeDomain);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnyObjectsApi->readAnyObject: ', $e->getMessage(), PHP_EOL;
 }
@@ -401,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\OpenEuropa\SyncopePhpClient\Model\AnyObjectTO**](../Model/AnyObjectTO.md)
 
 ### Authorization
 

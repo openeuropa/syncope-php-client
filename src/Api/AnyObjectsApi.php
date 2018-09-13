@@ -1235,7 +1235,7 @@ class AnyObjectsApi {
    *
    * @throws \OpenEuropa\SyncopePhpClient\ApiException on non-2xx response
    * @throws \InvalidArgumentException
-   * @return void
+   * @return \OpenEuropa\SyncopePhpClient\Model\ErrorTO|\OpenEuropa\SyncopePhpClient\Model\AnyObjectTO
    */
   public function readAnyObject($key, $xSyncopeDomain) {
     $request = $this->readAnyObjectRequest($key, $xSyncopeDomain);
@@ -1269,7 +1269,56 @@ class AnyObjectsApi {
         );
       }
 
-      return [NULL, $statusCode, $response->getHeaders()];
+      $responseBody = $response->getBody();
+      switch($statusCode) {
+        case 400:
+          if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' === '\SplFileObject') {
+            $content = $responseBody; //stream goes to serializer
+          } else {
+            $content = $responseBody->getContents();
+            if ('\OpenEuropa\SyncopePhpClient\Model\ErrorTO' !== 'string') {
+                $content = json_decode($content);
+            }
+          }
+
+          return [
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\ErrorTO', []),
+            $response->getStatusCode(),
+            $response->getHeaders()
+          ];
+        case 200:
+          if ('\OpenEuropa\SyncopePhpClient\Model\AnyObjectTO' === '\SplFileObject') {
+            $content = $responseBody; //stream goes to serializer
+          } else {
+            $content = $responseBody->getContents();
+            if ('\OpenEuropa\SyncopePhpClient\Model\AnyObjectTO' !== 'string') {
+                $content = json_decode($content);
+            }
+          }
+
+          return [
+            ObjectSerializer::deserialize($content, '\OpenEuropa\SyncopePhpClient\Model\AnyObjectTO', []),
+            $response->getStatusCode(),
+            $response->getHeaders()
+          ];
+      }
+
+      $returnType = '\OpenEuropa\SyncopePhpClient\Model\AnyObjectTO';
+      $responseBody = $response->getBody();
+      if ($returnType === '\SplFileObject') {
+        $content = $responseBody; //stream goes to serializer
+      } else {
+        $content = $responseBody->getContents();
+        if ($returnType !== 'string') {
+          $content = json_decode($content);
+        }
+      }
+
+      return [
+        ObjectSerializer::deserialize($content, $returnType, []),
+        $response->getStatusCode(),
+        $response->getHeaders()
+      ];
 
     }
     catch (ApiException $e) {
@@ -1278,6 +1327,14 @@ class AnyObjectsApi {
           $data = ObjectSerializer::deserialize(
             $e->getResponseBody(),
             '\OpenEuropa\SyncopePhpClient\Model\ErrorTO',
+            $e->getResponseHeaders()
+          );
+          $e->setResponseObject($data);
+          break;
+        case 200:
+          $data = ObjectSerializer::deserialize(
+            $e->getResponseBody(),
+            '\OpenEuropa\SyncopePhpClient\Model\AnyObjectTO',
             $e->getResponseHeaders()
           );
           $e->setResponseObject($data);
