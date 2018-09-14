@@ -55,7 +55,11 @@ class AnyObjectTO extends AnyTO
       * @var string[]
       */
     protected static $openAPITypes = [
-        
+        'class' => 'string',
+        'name' => 'string',
+        'relationships' => '\OpenEuropa\SyncopePhpClient\Model\RelationshipTO[]',
+        'memberships' => '\OpenEuropa\SyncopePhpClient\Model\MembershipTO[]',
+        'dynMemberships' => '\OpenEuropa\SyncopePhpClient\Model\MembershipTO[]'
     ];
 
     /**
@@ -64,7 +68,11 @@ class AnyObjectTO extends AnyTO
       * @var string[]
       */
     protected static $openAPIFormats = [
-        
+        'class' => null,
+        'name' => null,
+        'relationships' => null,
+        'memberships' => null,
+        'dynMemberships' => null
     ];
 
     /**
@@ -94,7 +102,11 @@ class AnyObjectTO extends AnyTO
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'class' => '@class',
+        'name' => 'name',
+        'relationships' => 'relationships',
+        'memberships' => 'memberships',
+        'dynMemberships' => 'dynMemberships'
     ];
 
     /**
@@ -103,7 +115,11 @@ class AnyObjectTO extends AnyTO
      * @var string[]
      */
     protected static $setters = [
-        
+        'class' => 'setClass',
+        'name' => 'setName',
+        'relationships' => 'setRelationships',
+        'memberships' => 'setMemberships',
+        'dynMemberships' => 'setDynMemberships'
     ];
 
     /**
@@ -112,7 +128,11 @@ class AnyObjectTO extends AnyTO
      * @var string[]
      */
     protected static $getters = [
-        
+        'class' => 'getClass',
+        'name' => 'getName',
+        'relationships' => 'getRelationships',
+        'memberships' => 'getMemberships',
+        'dynMemberships' => 'getDynMemberships'
     ];
 
     /**
@@ -171,6 +191,11 @@ class AnyObjectTO extends AnyTO
     {
         parent::__construct($data);
 
+        $this->container['class'] = isset($data['class']) ? $data['class'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['relationships'] = isset($data['relationships']) ? $data['relationships'] : null;
+        $this->container['memberships'] = isset($data['memberships']) ? $data['memberships'] : null;
+        $this->container['dynMemberships'] = isset($data['dynMemberships']) ? $data['dynMemberships'] : null;
     }
 
     /**
@@ -182,6 +207,9 @@ class AnyObjectTO extends AnyTO
     {
         $invalidProperties = parent::listInvalidProperties();
 
+        if ($this->container['class'] === null) {
+            $invalidProperties[] = "'class' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,6 +224,126 @@ class AnyObjectTO extends AnyTO
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets class
+     *
+     * @return string
+     */
+    public function getClass()
+    {
+        return $this->container['class'];
+    }
+
+    /**
+     * Sets class
+     *
+     * @param string $class class
+     *
+     * @return $this
+     */
+    public function setClass($class)
+    {
+        $this->container['class'] = $class;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string|null $name name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets relationships
+     *
+     * @return \OpenEuropa\SyncopePhpClient\Model\RelationshipTO[]|null
+     */
+    public function getRelationships()
+    {
+        return $this->container['relationships'];
+    }
+
+    /**
+     * Sets relationships
+     *
+     * @param \OpenEuropa\SyncopePhpClient\Model\RelationshipTO[]|null $relationships relationships
+     *
+     * @return $this
+     */
+    public function setRelationships($relationships)
+    {
+        $this->container['relationships'] = $relationships;
+
+        return $this;
+    }
+
+    /**
+     * Gets memberships
+     *
+     * @return \OpenEuropa\SyncopePhpClient\Model\MembershipTO[]|null
+     */
+    public function getMemberships()
+    {
+        return $this->container['memberships'];
+    }
+
+    /**
+     * Sets memberships
+     *
+     * @param \OpenEuropa\SyncopePhpClient\Model\MembershipTO[]|null $memberships memberships
+     *
+     * @return $this
+     */
+    public function setMemberships($memberships)
+    {
+        $this->container['memberships'] = $memberships;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynMemberships
+     *
+     * @return \OpenEuropa\SyncopePhpClient\Model\MembershipTO[]|null
+     */
+    public function getDynMemberships()
+    {
+        return $this->container['dynMemberships'];
+    }
+
+    /**
+     * Sets dynMemberships
+     *
+     * @param \OpenEuropa\SyncopePhpClient\Model\MembershipTO[]|null $dynMemberships dynMemberships
+     *
+     * @return $this
+     */
+    public function setDynMemberships($dynMemberships)
+    {
+        $this->container['dynMemberships'] = $dynMemberships;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

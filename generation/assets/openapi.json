@@ -22507,135 +22507,142 @@
           "$ref" : "#/components/schemas/TaskTO"
         } ]
       },
-      "UserTO" : {
-        "required" : [ "@class", "username" ],
-        "type" : "object",
-        "properties" : {
-          "@class" : {
-            "type" : "string",
-            "example" : "org.apache.syncope.common.lib.to.UserTO"
+      "UserTO": {
+        "xml": {
+          "name": "user"
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AnyTO"
           },
-          "username" : {
-            "type" : "string"
-          },
-          "password" : {
-            "type" : "string"
-          },
-          "token" : {
-            "type" : "string",
-            "readOnly" : true,
-            "xml" : {
-              "name" : "role"
-            }
-          },
-          "tokenExpireTime" : {
-            "type" : "string",
-            "format" : "date-time",
-            "readOnly" : true
-          },
-          "lastLoginDate" : {
-            "type" : "string",
-            "format" : "date-time",
-            "readOnly" : true
-          },
-          "changePwdDate" : {
-            "type" : "string",
-            "format" : "date-time",
-            "readOnly" : true
-          },
-          "failedLogins" : {
-            "type" : "integer",
-            "format" : "int32",
-            "readOnly" : true
-          },
-          "securityQuestion" : {
-            "type" : "string"
-          },
-          "securityAnswer" : {
-            "type" : "string"
-          },
-          "suspended" : {
-            "type" : "boolean",
-            "readOnly" : true
-          },
-          "mustChangePassword" : {
-            "type" : "boolean",
-            "readOnly" : true
-          },
-          "roles" : {
-            "type" : "array",
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "type" : "string",
-              "xml" : {
-                "name" : "privilege"
+          {
+            "required": [
+              "@class",
+              "username"
+            ],
+            "type": "object",
+            "properties": {
+              "@class": {
+                "type": "string",
+                "example": "org.apache.syncope.common.lib.to.UserTO"
+              },
+              "username": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "token": {
+                "type": "string",
+                "readOnly": true,
+                "xml": {
+                  "name": "role"
+                }
+              },
+              "tokenExpireTime": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "lastLoginDate": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "changePwdDate": {
+                "type": "string",
+                "format": "date-time",
+                "readOnly": true
+              },
+              "failedLogins": {
+                "type": "integer",
+                "format": "int32",
+                "readOnly": true
+              },
+              "securityQuestion": {
+                "type": "string"
+              },
+              "securityAnswer": {
+                "type": "string"
+              },
+              "suspended": {
+                "type": "boolean",
+                "readOnly": true
+              },
+              "mustChangePassword": {
+                "type": "boolean",
+                "readOnly": true
+              },
+              "roles": {
+                "type": "array",
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "type": "string",
+                  "xml": {
+                    "name": "privilege"
+                  }
+                }
+              },
+              "dynRoles": {
+                "type": "array",
+                "readOnly": true,
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "type": "string",
+                  "readOnly": true,
+                  "xml": {
+                    "name": "role"
+                  }
+                }
+              },
+              "privileges": {
+                "uniqueItems": true,
+                "type": "array",
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "type": "string",
+                  "xml": {
+                    "name": "privilege"
+                  }
+                }
+              },
+              "relationships": {
+                "type": "array",
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "$ref": "#/components/schemas/RelationshipTO"
+                }
+              },
+              "memberships": {
+                "type": "array",
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "$ref": "#/components/schemas/MembershipTO"
+                }
+              },
+              "dynMemberships": {
+                "type": "array",
+                "readOnly": true,
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "$ref": "#/components/schemas/MembershipTO"
+                }
               }
-            }
-          },
-          "dynRoles" : {
-            "type" : "array",
-            "readOnly" : true,
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "type" : "string",
-              "readOnly" : true,
-              "xml" : {
-                "name" : "role"
-              }
-            }
-          },
-          "privileges" : {
-            "uniqueItems" : true,
-            "type" : "array",
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "type" : "string",
-              "xml" : {
-                "name" : "privilege"
-              }
-            }
-          },
-          "relationships" : {
-            "type" : "array",
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "$ref" : "#/components/schemas/RelationshipTO"
-            }
-          },
-          "memberships" : {
-            "type" : "array",
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "$ref" : "#/components/schemas/MembershipTO"
-            }
-          },
-          "dynMemberships" : {
-            "type" : "array",
-            "readOnly" : true,
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "$ref" : "#/components/schemas/MembershipTO"
             }
           }
-        },
-        "xml" : {
-          "name" : "user"
-        },
-        "allOf" : [ {
-          "$ref" : "#/components/schemas/AnyTO"
-        } ]
+        ]
       },
       "StringPatchItem" : {
         "required" : [ "value" ],
@@ -24587,71 +24594,77 @@
           "name" : "role"
         }
       },
-      "GroupTO" : {
-        "required" : [ "@class" ],
-        "type" : "object",
-        "properties" : {
-          "@class" : {
-            "type" : "string",
-            "example" : "org.apache.syncope.common.lib.to.GroupTO"
+      "GroupTO": {
+        "xml": {
+          "name": "group"
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AnyTO"
           },
-          "name" : {
-            "type" : "string"
-          },
-          "userOwner" : {
-            "type" : "string"
-          },
-          "groupOwner" : {
-            "type" : "string"
-          },
-          "udynMembershipCond" : {
-            "type" : "string"
-          },
-          "staticUserMembershipCount" : {
-            "type" : "integer",
-            "format" : "int32",
-            "readOnly" : true
-          },
-          "dynamicUserMembershipCount" : {
-            "type" : "integer",
-            "format" : "int32",
-            "readOnly" : true
-          },
-          "staticAnyObjectMembershipCount" : {
-            "type" : "integer",
-            "format" : "int32",
-            "readOnly" : true
-          },
-          "dynamicAnyObjectMembershipCount" : {
-            "type" : "integer",
-            "format" : "int32",
-            "readOnly" : true
-          },
-          "adynMembershipConds" : {
-            "type" : "object",
-            "additionalProperties" : {
-              "type" : "string",
-              "xml" : {
-                "name" : "privilege"
+          {
+            "required": [
+              "@class"
+            ],
+            "type": "object",
+            "properties": {
+              "@class": {
+                "type": "string",
+                "example": "org.apache.syncope.common.lib.to.GroupTO"
+              },
+              "name": {
+                "type": "string"
+              },
+              "userOwner": {
+                "type": "string"
+              },
+              "groupOwner": {
+                "type": "string"
+              },
+              "udynMembershipCond": {
+                "type": "string"
+              },
+              "staticUserMembershipCount": {
+                "type": "integer",
+                "format": "int32",
+                "readOnly": true
+              },
+              "dynamicUserMembershipCount": {
+                "type": "integer",
+                "format": "int32",
+                "readOnly": true
+              },
+              "staticAnyObjectMembershipCount": {
+                "type": "integer",
+                "format": "int32",
+                "readOnly": true
+              },
+              "dynamicAnyObjectMembershipCount": {
+                "type": "integer",
+                "format": "int32",
+                "readOnly": true
+              },
+              "adynMembershipConds": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string",
+                  "xml": {
+                    "name": "privilege"
+                  }
+                }
+              },
+              "typeExtensions": {
+                "type": "array",
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "$ref": "#/components/schemas/TypeExtensionTO"
+                }
               }
             }
-          },
-          "typeExtensions" : {
-            "type" : "array",
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "$ref" : "#/components/schemas/TypeExtensionTO"
-            }
           }
-        },
-        "xml" : {
-          "name" : "group"
-        },
-        "allOf" : [ {
-          "$ref" : "#/components/schemas/AnyTO"
-        } ]
+        ]
       },
       "SecurityQuestionTO" : {
         "type" : "object",
@@ -25350,52 +25363,58 @@
           "$ref" : "#/components/schemas/AnyPatch"
         } ]
       },
-      "AnyObjectTO" : {
-        "required" : [ "@class" ],
-        "type" : "object",
-        "properties" : {
-          "@class" : {
-            "type" : "string",
-            "example" : "org.apache.syncope.common.lib.to.AnyObjectTO"
+      "AnyObjectTO": {
+        "xml": {
+          "name": "anyObject"
+        },
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/AnyTO"
           },
-          "name" : {
-            "type" : "string"
-          },
-          "relationships" : {
-            "type" : "array",
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "$ref" : "#/components/schemas/RelationshipTO"
-            }
-          },
-          "memberships" : {
-            "type" : "array",
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "$ref" : "#/components/schemas/MembershipTO"
-            }
-          },
-          "dynMemberships" : {
-            "type" : "array",
-            "readOnly" : true,
-            "xml" : {
-              "wrapped" : true
-            },
-            "items" : {
-              "$ref" : "#/components/schemas/MembershipTO"
+          {
+            "required": [
+              "@class"
+            ],
+            "type": "object",
+            "properties": {
+              "@class": {
+                "type": "string",
+                "example": "org.apache.syncope.common.lib.to.AnyObjectTO"
+              },
+              "name": {
+                "type": "string"
+              },
+              "relationships": {
+                "type": "array",
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "$ref": "#/components/schemas/RelationshipTO"
+                }
+              },
+              "memberships": {
+                "type": "array",
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "$ref": "#/components/schemas/MembershipTO"
+                }
+              },
+              "dynMemberships": {
+                "type": "array",
+                "readOnly": true,
+                "xml": {
+                  "wrapped": true
+                },
+                "items": {
+                  "$ref": "#/components/schemas/MembershipTO"
+                }
+              }
             }
           }
-        },
-        "xml" : {
-          "name" : "anyObject"
-        },
-        "allOf" : [ {
-          "$ref" : "#/components/schemas/AnyTO"
-        } ]
+        ]
       },
       "CamelMetrics" : {
         "type" : "object",

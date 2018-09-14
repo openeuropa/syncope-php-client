@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1900fb7a8ab8be5b32c583967fe8021",
+    "content-hash": "091045dee56281da954b30b5d061b0c8",
     "packages": [
         {
             "name": "composer/installers",
@@ -224,7 +224,7 @@
             "type": "library",
             "extra": {
                 "patches_applied": {
-                    "Change operationIds to friendly names": "patches/openapi.json.operationsFriendlyNames.patch"
+                    "Change operationIds to friendly names": "patches/syncope.openapi.oe.patch"
                 }
             }
         }
