@@ -55,7 +55,24 @@ class UserTO extends AnyTO
       * @var string[]
       */
     protected static $openAPITypes = [
-        
+        'class' => 'string',
+        'username' => 'string',
+        'password' => 'string',
+        'token' => 'string',
+        'tokenExpireTime' => '\DateTime',
+        'lastLoginDate' => '\DateTime',
+        'changePwdDate' => '\DateTime',
+        'failedLogins' => 'int',
+        'securityQuestion' => 'string',
+        'securityAnswer' => 'string',
+        'suspended' => 'bool',
+        'mustChangePassword' => 'bool',
+        'roles' => 'string[]',
+        'dynRoles' => 'string[]',
+        'privileges' => 'string[]',
+        'relationships' => '\OpenEuropa\SyncopePhpClient\Model\RelationshipTO[]',
+        'memberships' => '\OpenEuropa\SyncopePhpClient\Model\MembershipTO[]',
+        'dynMemberships' => '\OpenEuropa\SyncopePhpClient\Model\MembershipTO[]'
     ];
 
     /**
@@ -64,7 +81,24 @@ class UserTO extends AnyTO
       * @var string[]
       */
     protected static $openAPIFormats = [
-        
+        'class' => null,
+        'username' => null,
+        'password' => null,
+        'token' => null,
+        'tokenExpireTime' => 'date-time',
+        'lastLoginDate' => 'date-time',
+        'changePwdDate' => 'date-time',
+        'failedLogins' => 'int32',
+        'securityQuestion' => null,
+        'securityAnswer' => null,
+        'suspended' => null,
+        'mustChangePassword' => null,
+        'roles' => null,
+        'dynRoles' => null,
+        'privileges' => null,
+        'relationships' => null,
+        'memberships' => null,
+        'dynMemberships' => null
     ];
 
     /**
@@ -94,7 +128,24 @@ class UserTO extends AnyTO
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'class' => '@class',
+        'username' => 'username',
+        'password' => 'password',
+        'token' => 'token',
+        'tokenExpireTime' => 'tokenExpireTime',
+        'lastLoginDate' => 'lastLoginDate',
+        'changePwdDate' => 'changePwdDate',
+        'failedLogins' => 'failedLogins',
+        'securityQuestion' => 'securityQuestion',
+        'securityAnswer' => 'securityAnswer',
+        'suspended' => 'suspended',
+        'mustChangePassword' => 'mustChangePassword',
+        'roles' => 'roles',
+        'dynRoles' => 'dynRoles',
+        'privileges' => 'privileges',
+        'relationships' => 'relationships',
+        'memberships' => 'memberships',
+        'dynMemberships' => 'dynMemberships'
     ];
 
     /**
@@ -103,7 +154,24 @@ class UserTO extends AnyTO
      * @var string[]
      */
     protected static $setters = [
-        
+        'class' => 'setClass',
+        'username' => 'setUsername',
+        'password' => 'setPassword',
+        'token' => 'setToken',
+        'tokenExpireTime' => 'setTokenExpireTime',
+        'lastLoginDate' => 'setLastLoginDate',
+        'changePwdDate' => 'setChangePwdDate',
+        'failedLogins' => 'setFailedLogins',
+        'securityQuestion' => 'setSecurityQuestion',
+        'securityAnswer' => 'setSecurityAnswer',
+        'suspended' => 'setSuspended',
+        'mustChangePassword' => 'setMustChangePassword',
+        'roles' => 'setRoles',
+        'dynRoles' => 'setDynRoles',
+        'privileges' => 'setPrivileges',
+        'relationships' => 'setRelationships',
+        'memberships' => 'setMemberships',
+        'dynMemberships' => 'setDynMemberships'
     ];
 
     /**
@@ -112,7 +180,24 @@ class UserTO extends AnyTO
      * @var string[]
      */
     protected static $getters = [
-        
+        'class' => 'getClass',
+        'username' => 'getUsername',
+        'password' => 'getPassword',
+        'token' => 'getToken',
+        'tokenExpireTime' => 'getTokenExpireTime',
+        'lastLoginDate' => 'getLastLoginDate',
+        'changePwdDate' => 'getChangePwdDate',
+        'failedLogins' => 'getFailedLogins',
+        'securityQuestion' => 'getSecurityQuestion',
+        'securityAnswer' => 'getSecurityAnswer',
+        'suspended' => 'getSuspended',
+        'mustChangePassword' => 'getMustChangePassword',
+        'roles' => 'getRoles',
+        'dynRoles' => 'getDynRoles',
+        'privileges' => 'getPrivileges',
+        'relationships' => 'getRelationships',
+        'memberships' => 'getMemberships',
+        'dynMemberships' => 'getDynMemberships'
     ];
 
     /**
@@ -171,6 +256,24 @@ class UserTO extends AnyTO
     {
         parent::__construct($data);
 
+        $this->container['class'] = isset($data['class']) ? $data['class'] : null;
+        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
+        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['tokenExpireTime'] = isset($data['tokenExpireTime']) ? $data['tokenExpireTime'] : null;
+        $this->container['lastLoginDate'] = isset($data['lastLoginDate']) ? $data['lastLoginDate'] : null;
+        $this->container['changePwdDate'] = isset($data['changePwdDate']) ? $data['changePwdDate'] : null;
+        $this->container['failedLogins'] = isset($data['failedLogins']) ? $data['failedLogins'] : null;
+        $this->container['securityQuestion'] = isset($data['securityQuestion']) ? $data['securityQuestion'] : null;
+        $this->container['securityAnswer'] = isset($data['securityAnswer']) ? $data['securityAnswer'] : null;
+        $this->container['suspended'] = isset($data['suspended']) ? $data['suspended'] : null;
+        $this->container['mustChangePassword'] = isset($data['mustChangePassword']) ? $data['mustChangePassword'] : null;
+        $this->container['roles'] = isset($data['roles']) ? $data['roles'] : null;
+        $this->container['dynRoles'] = isset($data['dynRoles']) ? $data['dynRoles'] : null;
+        $this->container['privileges'] = isset($data['privileges']) ? $data['privileges'] : null;
+        $this->container['relationships'] = isset($data['relationships']) ? $data['relationships'] : null;
+        $this->container['memberships'] = isset($data['memberships']) ? $data['memberships'] : null;
+        $this->container['dynMemberships'] = isset($data['dynMemberships']) ? $data['dynMemberships'] : null;
     }
 
     /**
@@ -182,6 +285,12 @@ class UserTO extends AnyTO
     {
         $invalidProperties = parent::listInvalidProperties();
 
+        if ($this->container['class'] === null) {
+            $invalidProperties[] = "'class' can't be null";
+        }
+        if ($this->container['username'] === null) {
+            $invalidProperties[] = "'username' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,6 +305,438 @@ class UserTO extends AnyTO
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets class
+     *
+     * @return string
+     */
+    public function getClass()
+    {
+        return $this->container['class'];
+    }
+
+    /**
+     * Sets class
+     *
+     * @param string $class class
+     *
+     * @return $this
+     */
+    public function setClass($class)
+    {
+        $this->container['class'] = $class;
+
+        return $this;
+    }
+
+    /**
+     * Gets username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->container['username'];
+    }
+
+    /**
+     * Sets username
+     *
+     * @param string $username username
+     *
+     * @return $this
+     */
+    public function setUsername($username)
+    {
+        $this->container['username'] = $username;
+
+        return $this;
+    }
+
+    /**
+     * Gets password
+     *
+     * @return string|null
+     */
+    public function getPassword()
+    {
+        return $this->container['password'];
+    }
+
+    /**
+     * Sets password
+     *
+     * @param string|null $password password
+     *
+     * @return $this
+     */
+    public function setPassword($password)
+    {
+        $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     *
+     * @return string|null
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string|null $token token
+     *
+     * @return $this
+     */
+    public function setToken($token)
+    {
+        $this->container['token'] = $token;
+
+        return $this;
+    }
+
+    /**
+     * Gets tokenExpireTime
+     *
+     * @return \DateTime|null
+     */
+    public function getTokenExpireTime()
+    {
+        return $this->container['tokenExpireTime'];
+    }
+
+    /**
+     * Sets tokenExpireTime
+     *
+     * @param \DateTime|null $tokenExpireTime tokenExpireTime
+     *
+     * @return $this
+     */
+    public function setTokenExpireTime($tokenExpireTime)
+    {
+        $this->container['tokenExpireTime'] = $tokenExpireTime;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastLoginDate
+     *
+     * @return \DateTime|null
+     */
+    public function getLastLoginDate()
+    {
+        return $this->container['lastLoginDate'];
+    }
+
+    /**
+     * Sets lastLoginDate
+     *
+     * @param \DateTime|null $lastLoginDate lastLoginDate
+     *
+     * @return $this
+     */
+    public function setLastLoginDate($lastLoginDate)
+    {
+        $this->container['lastLoginDate'] = $lastLoginDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets changePwdDate
+     *
+     * @return \DateTime|null
+     */
+    public function getChangePwdDate()
+    {
+        return $this->container['changePwdDate'];
+    }
+
+    /**
+     * Sets changePwdDate
+     *
+     * @param \DateTime|null $changePwdDate changePwdDate
+     *
+     * @return $this
+     */
+    public function setChangePwdDate($changePwdDate)
+    {
+        $this->container['changePwdDate'] = $changePwdDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets failedLogins
+     *
+     * @return int|null
+     */
+    public function getFailedLogins()
+    {
+        return $this->container['failedLogins'];
+    }
+
+    /**
+     * Sets failedLogins
+     *
+     * @param int|null $failedLogins failedLogins
+     *
+     * @return $this
+     */
+    public function setFailedLogins($failedLogins)
+    {
+        $this->container['failedLogins'] = $failedLogins;
+
+        return $this;
+    }
+
+    /**
+     * Gets securityQuestion
+     *
+     * @return string|null
+     */
+    public function getSecurityQuestion()
+    {
+        return $this->container['securityQuestion'];
+    }
+
+    /**
+     * Sets securityQuestion
+     *
+     * @param string|null $securityQuestion securityQuestion
+     *
+     * @return $this
+     */
+    public function setSecurityQuestion($securityQuestion)
+    {
+        $this->container['securityQuestion'] = $securityQuestion;
+
+        return $this;
+    }
+
+    /**
+     * Gets securityAnswer
+     *
+     * @return string|null
+     */
+    public function getSecurityAnswer()
+    {
+        return $this->container['securityAnswer'];
+    }
+
+    /**
+     * Sets securityAnswer
+     *
+     * @param string|null $securityAnswer securityAnswer
+     *
+     * @return $this
+     */
+    public function setSecurityAnswer($securityAnswer)
+    {
+        $this->container['securityAnswer'] = $securityAnswer;
+
+        return $this;
+    }
+
+    /**
+     * Gets suspended
+     *
+     * @return bool|null
+     */
+    public function getSuspended()
+    {
+        return $this->container['suspended'];
+    }
+
+    /**
+     * Sets suspended
+     *
+     * @param bool|null $suspended suspended
+     *
+     * @return $this
+     */
+    public function setSuspended($suspended)
+    {
+        $this->container['suspended'] = $suspended;
+
+        return $this;
+    }
+
+    /**
+     * Gets mustChangePassword
+     *
+     * @return bool|null
+     */
+    public function getMustChangePassword()
+    {
+        return $this->container['mustChangePassword'];
+    }
+
+    /**
+     * Sets mustChangePassword
+     *
+     * @param bool|null $mustChangePassword mustChangePassword
+     *
+     * @return $this
+     */
+    public function setMustChangePassword($mustChangePassword)
+    {
+        $this->container['mustChangePassword'] = $mustChangePassword;
+
+        return $this;
+    }
+
+    /**
+     * Gets roles
+     *
+     * @return string[]|null
+     */
+    public function getRoles()
+    {
+        return $this->container['roles'];
+    }
+
+    /**
+     * Sets roles
+     *
+     * @param string[]|null $roles roles
+     *
+     * @return $this
+     */
+    public function setRoles($roles)
+    {
+        $this->container['roles'] = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynRoles
+     *
+     * @return string[]|null
+     */
+    public function getDynRoles()
+    {
+        return $this->container['dynRoles'];
+    }
+
+    /**
+     * Sets dynRoles
+     *
+     * @param string[]|null $dynRoles dynRoles
+     *
+     * @return $this
+     */
+    public function setDynRoles($dynRoles)
+    {
+        $this->container['dynRoles'] = $dynRoles;
+
+        return $this;
+    }
+
+    /**
+     * Gets privileges
+     *
+     * @return string[]|null
+     */
+    public function getPrivileges()
+    {
+        return $this->container['privileges'];
+    }
+
+    /**
+     * Sets privileges
+     *
+     * @param string[]|null $privileges privileges
+     *
+     * @return $this
+     */
+    public function setPrivileges($privileges)
+    {
+        $this->container['privileges'] = $privileges;
+
+        return $this;
+    }
+
+    /**
+     * Gets relationships
+     *
+     * @return \OpenEuropa\SyncopePhpClient\Model\RelationshipTO[]|null
+     */
+    public function getRelationships()
+    {
+        return $this->container['relationships'];
+    }
+
+    /**
+     * Sets relationships
+     *
+     * @param \OpenEuropa\SyncopePhpClient\Model\RelationshipTO[]|null $relationships relationships
+     *
+     * @return $this
+     */
+    public function setRelationships($relationships)
+    {
+        $this->container['relationships'] = $relationships;
+
+        return $this;
+    }
+
+    /**
+     * Gets memberships
+     *
+     * @return \OpenEuropa\SyncopePhpClient\Model\MembershipTO[]|null
+     */
+    public function getMemberships()
+    {
+        return $this->container['memberships'];
+    }
+
+    /**
+     * Sets memberships
+     *
+     * @param \OpenEuropa\SyncopePhpClient\Model\MembershipTO[]|null $memberships memberships
+     *
+     * @return $this
+     */
+    public function setMemberships($memberships)
+    {
+        $this->container['memberships'] = $memberships;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynMemberships
+     *
+     * @return \OpenEuropa\SyncopePhpClient\Model\MembershipTO[]|null
+     */
+    public function getDynMemberships()
+    {
+        return $this->container['dynMemberships'];
+    }
+
+    /**
+     * Sets dynMemberships
+     *
+     * @param \OpenEuropa\SyncopePhpClient\Model\MembershipTO[]|null $dynMemberships dynMemberships
+     *
+     * @return $this
+     */
+    public function setDynMemberships($dynMemberships)
+    {
+        $this->container['dynMemberships'] = $dynMemberships;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

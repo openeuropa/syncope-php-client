@@ -55,7 +55,17 @@ class GroupTO extends AnyTO
       * @var string[]
       */
     protected static $openAPITypes = [
-        
+        'class' => 'string',
+        'name' => 'string',
+        'userOwner' => 'string',
+        'groupOwner' => 'string',
+        'udynMembershipCond' => 'string',
+        'staticUserMembershipCount' => 'int',
+        'dynamicUserMembershipCount' => 'int',
+        'staticAnyObjectMembershipCount' => 'int',
+        'dynamicAnyObjectMembershipCount' => 'int',
+        'adynMembershipConds' => 'map[string,string]',
+        'typeExtensions' => '\OpenEuropa\SyncopePhpClient\Model\TypeExtensionTO[]'
     ];
 
     /**
@@ -64,7 +74,17 @@ class GroupTO extends AnyTO
       * @var string[]
       */
     protected static $openAPIFormats = [
-        
+        'class' => null,
+        'name' => null,
+        'userOwner' => null,
+        'groupOwner' => null,
+        'udynMembershipCond' => null,
+        'staticUserMembershipCount' => 'int32',
+        'dynamicUserMembershipCount' => 'int32',
+        'staticAnyObjectMembershipCount' => 'int32',
+        'dynamicAnyObjectMembershipCount' => 'int32',
+        'adynMembershipConds' => null,
+        'typeExtensions' => null
     ];
 
     /**
@@ -94,7 +114,17 @@ class GroupTO extends AnyTO
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'class' => '@class',
+        'name' => 'name',
+        'userOwner' => 'userOwner',
+        'groupOwner' => 'groupOwner',
+        'udynMembershipCond' => 'udynMembershipCond',
+        'staticUserMembershipCount' => 'staticUserMembershipCount',
+        'dynamicUserMembershipCount' => 'dynamicUserMembershipCount',
+        'staticAnyObjectMembershipCount' => 'staticAnyObjectMembershipCount',
+        'dynamicAnyObjectMembershipCount' => 'dynamicAnyObjectMembershipCount',
+        'adynMembershipConds' => 'adynMembershipConds',
+        'typeExtensions' => 'typeExtensions'
     ];
 
     /**
@@ -103,7 +133,17 @@ class GroupTO extends AnyTO
      * @var string[]
      */
     protected static $setters = [
-        
+        'class' => 'setClass',
+        'name' => 'setName',
+        'userOwner' => 'setUserOwner',
+        'groupOwner' => 'setGroupOwner',
+        'udynMembershipCond' => 'setUdynMembershipCond',
+        'staticUserMembershipCount' => 'setStaticUserMembershipCount',
+        'dynamicUserMembershipCount' => 'setDynamicUserMembershipCount',
+        'staticAnyObjectMembershipCount' => 'setStaticAnyObjectMembershipCount',
+        'dynamicAnyObjectMembershipCount' => 'setDynamicAnyObjectMembershipCount',
+        'adynMembershipConds' => 'setAdynMembershipConds',
+        'typeExtensions' => 'setTypeExtensions'
     ];
 
     /**
@@ -112,7 +152,17 @@ class GroupTO extends AnyTO
      * @var string[]
      */
     protected static $getters = [
-        
+        'class' => 'getClass',
+        'name' => 'getName',
+        'userOwner' => 'getUserOwner',
+        'groupOwner' => 'getGroupOwner',
+        'udynMembershipCond' => 'getUdynMembershipCond',
+        'staticUserMembershipCount' => 'getStaticUserMembershipCount',
+        'dynamicUserMembershipCount' => 'getDynamicUserMembershipCount',
+        'staticAnyObjectMembershipCount' => 'getStaticAnyObjectMembershipCount',
+        'dynamicAnyObjectMembershipCount' => 'getDynamicAnyObjectMembershipCount',
+        'adynMembershipConds' => 'getAdynMembershipConds',
+        'typeExtensions' => 'getTypeExtensions'
     ];
 
     /**
@@ -171,6 +221,17 @@ class GroupTO extends AnyTO
     {
         parent::__construct($data);
 
+        $this->container['class'] = isset($data['class']) ? $data['class'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['userOwner'] = isset($data['userOwner']) ? $data['userOwner'] : null;
+        $this->container['groupOwner'] = isset($data['groupOwner']) ? $data['groupOwner'] : null;
+        $this->container['udynMembershipCond'] = isset($data['udynMembershipCond']) ? $data['udynMembershipCond'] : null;
+        $this->container['staticUserMembershipCount'] = isset($data['staticUserMembershipCount']) ? $data['staticUserMembershipCount'] : null;
+        $this->container['dynamicUserMembershipCount'] = isset($data['dynamicUserMembershipCount']) ? $data['dynamicUserMembershipCount'] : null;
+        $this->container['staticAnyObjectMembershipCount'] = isset($data['staticAnyObjectMembershipCount']) ? $data['staticAnyObjectMembershipCount'] : null;
+        $this->container['dynamicAnyObjectMembershipCount'] = isset($data['dynamicAnyObjectMembershipCount']) ? $data['dynamicAnyObjectMembershipCount'] : null;
+        $this->container['adynMembershipConds'] = isset($data['adynMembershipConds']) ? $data['adynMembershipConds'] : null;
+        $this->container['typeExtensions'] = isset($data['typeExtensions']) ? $data['typeExtensions'] : null;
     }
 
     /**
@@ -182,6 +243,9 @@ class GroupTO extends AnyTO
     {
         $invalidProperties = parent::listInvalidProperties();
 
+        if ($this->container['class'] === null) {
+            $invalidProperties[] = "'class' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,6 +260,270 @@ class GroupTO extends AnyTO
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets class
+     *
+     * @return string
+     */
+    public function getClass()
+    {
+        return $this->container['class'];
+    }
+
+    /**
+     * Sets class
+     *
+     * @param string $class class
+     *
+     * @return $this
+     */
+    public function setClass($class)
+    {
+        $this->container['class'] = $class;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     *
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     *
+     * @param string|null $name name
+     *
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets userOwner
+     *
+     * @return string|null
+     */
+    public function getUserOwner()
+    {
+        return $this->container['userOwner'];
+    }
+
+    /**
+     * Sets userOwner
+     *
+     * @param string|null $userOwner userOwner
+     *
+     * @return $this
+     */
+    public function setUserOwner($userOwner)
+    {
+        $this->container['userOwner'] = $userOwner;
+
+        return $this;
+    }
+
+    /**
+     * Gets groupOwner
+     *
+     * @return string|null
+     */
+    public function getGroupOwner()
+    {
+        return $this->container['groupOwner'];
+    }
+
+    /**
+     * Sets groupOwner
+     *
+     * @param string|null $groupOwner groupOwner
+     *
+     * @return $this
+     */
+    public function setGroupOwner($groupOwner)
+    {
+        $this->container['groupOwner'] = $groupOwner;
+
+        return $this;
+    }
+
+    /**
+     * Gets udynMembershipCond
+     *
+     * @return string|null
+     */
+    public function getUdynMembershipCond()
+    {
+        return $this->container['udynMembershipCond'];
+    }
+
+    /**
+     * Sets udynMembershipCond
+     *
+     * @param string|null $udynMembershipCond udynMembershipCond
+     *
+     * @return $this
+     */
+    public function setUdynMembershipCond($udynMembershipCond)
+    {
+        $this->container['udynMembershipCond'] = $udynMembershipCond;
+
+        return $this;
+    }
+
+    /**
+     * Gets staticUserMembershipCount
+     *
+     * @return int|null
+     */
+    public function getStaticUserMembershipCount()
+    {
+        return $this->container['staticUserMembershipCount'];
+    }
+
+    /**
+     * Sets staticUserMembershipCount
+     *
+     * @param int|null $staticUserMembershipCount staticUserMembershipCount
+     *
+     * @return $this
+     */
+    public function setStaticUserMembershipCount($staticUserMembershipCount)
+    {
+        $this->container['staticUserMembershipCount'] = $staticUserMembershipCount;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynamicUserMembershipCount
+     *
+     * @return int|null
+     */
+    public function getDynamicUserMembershipCount()
+    {
+        return $this->container['dynamicUserMembershipCount'];
+    }
+
+    /**
+     * Sets dynamicUserMembershipCount
+     *
+     * @param int|null $dynamicUserMembershipCount dynamicUserMembershipCount
+     *
+     * @return $this
+     */
+    public function setDynamicUserMembershipCount($dynamicUserMembershipCount)
+    {
+        $this->container['dynamicUserMembershipCount'] = $dynamicUserMembershipCount;
+
+        return $this;
+    }
+
+    /**
+     * Gets staticAnyObjectMembershipCount
+     *
+     * @return int|null
+     */
+    public function getStaticAnyObjectMembershipCount()
+    {
+        return $this->container['staticAnyObjectMembershipCount'];
+    }
+
+    /**
+     * Sets staticAnyObjectMembershipCount
+     *
+     * @param int|null $staticAnyObjectMembershipCount staticAnyObjectMembershipCount
+     *
+     * @return $this
+     */
+    public function setStaticAnyObjectMembershipCount($staticAnyObjectMembershipCount)
+    {
+        $this->container['staticAnyObjectMembershipCount'] = $staticAnyObjectMembershipCount;
+
+        return $this;
+    }
+
+    /**
+     * Gets dynamicAnyObjectMembershipCount
+     *
+     * @return int|null
+     */
+    public function getDynamicAnyObjectMembershipCount()
+    {
+        return $this->container['dynamicAnyObjectMembershipCount'];
+    }
+
+    /**
+     * Sets dynamicAnyObjectMembershipCount
+     *
+     * @param int|null $dynamicAnyObjectMembershipCount dynamicAnyObjectMembershipCount
+     *
+     * @return $this
+     */
+    public function setDynamicAnyObjectMembershipCount($dynamicAnyObjectMembershipCount)
+    {
+        $this->container['dynamicAnyObjectMembershipCount'] = $dynamicAnyObjectMembershipCount;
+
+        return $this;
+    }
+
+    /**
+     * Gets adynMembershipConds
+     *
+     * @return map[string,string]|null
+     */
+    public function getAdynMembershipConds()
+    {
+        return $this->container['adynMembershipConds'];
+    }
+
+    /**
+     * Sets adynMembershipConds
+     *
+     * @param map[string,string]|null $adynMembershipConds adynMembershipConds
+     *
+     * @return $this
+     */
+    public function setAdynMembershipConds($adynMembershipConds)
+    {
+        $this->container['adynMembershipConds'] = $adynMembershipConds;
+
+        return $this;
+    }
+
+    /**
+     * Gets typeExtensions
+     *
+     * @return \OpenEuropa\SyncopePhpClient\Model\TypeExtensionTO[]|null
+     */
+    public function getTypeExtensions()
+    {
+        return $this->container['typeExtensions'];
+    }
+
+    /**
+     * Sets typeExtensions
+     *
+     * @param \OpenEuropa\SyncopePhpClient\Model\TypeExtensionTO[]|null $typeExtensions typeExtensions
+     *
+     * @return $this
+     */
+    public function setTypeExtensions($typeExtensions)
+    {
+        $this->container['typeExtensions'] = $typeExtensions;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

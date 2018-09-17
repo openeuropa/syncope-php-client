@@ -24,7 +24,7 @@
         },
         "patches": {
             "syncope/openapi": {
-                "Change operationIds to friendly names": "patches/openapi.json.operationsFriendlyNames.patch"
+                "Change operationIds to friendly names": "patches/syncope.openapi.oe.patch"
             }
         }
     },
