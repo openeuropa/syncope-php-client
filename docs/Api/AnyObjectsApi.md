@@ -542,7 +542,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchAnyObject**
-> searchAnyObject($xSyncopeDomain, $page, $size, $orderby, $realm, $details, $fiql)
+> \OpenEuropa\SyncopePhpClient\Model\AnyObject[] searchAnyObject($xSyncopeDomain, $page, $size, $orderby, $realm, $details, $fiql)
 
 Returns a paged list of any objects matching the given query.
 
@@ -577,7 +577,8 @@ $details = true; // bool |
 $fiql = 'fiql_example'; // string | 
 
 try {
-    $apiInstance->searchAnyObject($xSyncopeDomain, $page, $size, $orderby, $realm, $details, $fiql);
+    $result = $apiInstance->searchAnyObject($xSyncopeDomain, $page, $size, $orderby, $realm, $details, $fiql);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnyObjectsApi->searchAnyObject: ', $e->getMessage(), PHP_EOL;
 }
@@ -598,7 +599,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**\OpenEuropa\SyncopePhpClient\Model\AnyObject[]**](../Model/AnyObject.md)
 
 ### Authorization
 

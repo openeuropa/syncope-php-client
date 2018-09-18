@@ -1,5 +1,5 @@
 diff --git a/openapi.json b/openapi.json
-index 6e814e8..abd3bcf 100644
+index d215c45..26b8ce3 100644
 --- a/openapi.json
 +++ b/openapi.json
 @@ -394,7 +394,7 @@
@@ -73,7 +73,43 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "page",
            "in" : "query",
-@@ -998,7 +1016,7 @@
+@@ -952,6 +970,35 @@
+           }
+         } ],
+         "responses" : {
++          "200": {
++            "description": "A list of AnyObjects.",
++            "content": {
++              "application/json": {
++                "schema": {
++                  "type": "array",
++                  "items": {
++                    "$ref": "#/components/schemas/AnyObject"
++                  }
++                }
++              },
++              "application/yaml": {
++                "schema": {
++                  "type": "array",
++                  "items": {
++                    "$ref": "#/components/schemas/AnyObject"
++                  }
++                }
++              },
++              "application/xml": {
++                "schema": {
++                  "type": "array",
++                  "items": {
++                    "$ref": "#/components/schemas/AnyObject"
++                  }
++                }
++              }
++            }
++          },
+           "400" : {
+             "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
+             "headers" : {
+@@ -998,7 +1045,7 @@
        "post" : {
          "tags" : [ "AnyObjects" ],
          "summary" : "Creates a new any object.",
@@ -82,7 +118,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -1140,7 +1158,7 @@
+@@ -1140,7 +1187,7 @@
        "post" : {
          "tags" : [ "AnyObjects" ],
          "summary" : "Executes resource-related operations on given entity.",
@@ -91,7 +127,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -1272,7 +1290,7 @@
+@@ -1272,7 +1319,7 @@
        "post" : {
          "tags" : [ "AnyObjects" ],
          "summary" : "Executes resource-related operations on given entity.",
@@ -100,7 +136,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -1404,7 +1422,7 @@
+@@ -1404,7 +1451,7 @@
        "get" : {
          "tags" : [ "AnyObjects" ],
          "summary" : "Reads the attribute, owned by the given any object, for the given schema type and schema.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
@@ -109,7 +145,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -1487,7 +1505,7 @@
+@@ -1487,7 +1534,7 @@
        "put" : {
          "tags" : [ "AnyObjects" ],
          "summary" : "Adds or replaces the attribute, owned by the given any object, for the given schema type and schema.",
@@ -118,7 +154,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "schema",
            "in" : "path",
-@@ -1590,7 +1608,7 @@
+@@ -1590,7 +1637,7 @@
        "delete" : {
          "tags" : [ "AnyObjects" ],
          "summary" : "Deletes the attribute, owned by the given any object, for the given schema type and schema.",
@@ -127,7 +163,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -1679,7 +1697,7 @@
+@@ -1679,7 +1726,7 @@
        "get" : {
          "tags" : [ "AnyObjects" ],
          "summary" : "Reads the list of attributes owned by the given any object for the given schema type.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
@@ -136,7 +172,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -1756,7 +1774,7 @@
+@@ -1756,7 +1803,7 @@
        "get" : {
          "tags" : [ "AnyTypeClasses" ],
          "summary" : "Returns anyTypeClass with matching key.",
@@ -145,7 +181,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -1822,7 +1840,7 @@
+@@ -1822,7 +1869,7 @@
        "put" : {
          "tags" : [ "AnyTypeClasses" ],
          "summary" : "Updates the anyTypeClass matching the provided key.",
@@ -154,7 +190,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -1912,7 +1930,7 @@
+@@ -1912,7 +1959,7 @@
        "delete" : {
          "tags" : [ "AnyTypeClasses" ],
          "summary" : "Deletes the anyTypeClass matching the provided key.",
@@ -163,7 +199,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -1983,7 +2001,7 @@
+@@ -1983,7 +2030,7 @@
        "get" : {
          "tags" : [ "AnyTypeClasses" ],
          "summary" : "Returns a list of all anyTypeClasss.",
@@ -172,7 +208,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "X-Syncope-Domain",
            "in" : "header",
-@@ -2041,7 +2059,7 @@
+@@ -2041,7 +2088,7 @@
        "post" : {
          "tags" : [ "AnyTypeClasses" ],
          "summary" : "Creates a new anyTypeClass.",
@@ -181,7 +217,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "X-Syncope-Domain",
            "in" : "header",
-@@ -2141,7 +2159,7 @@
+@@ -2141,7 +2188,7 @@
        "get" : {
          "tags" : [ "AnyTypes" ],
          "summary" : "Returns anyType with matching key.",
@@ -190,7 +226,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -2207,7 +2225,7 @@
+@@ -2207,7 +2254,7 @@
        "put" : {
          "tags" : [ "AnyTypes" ],
          "summary" : "Updates the anyType matching the provided key.",
@@ -199,7 +235,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -2287,7 +2305,7 @@
+@@ -2287,7 +2334,7 @@
        "delete" : {
          "tags" : [ "AnyTypes" ],
          "summary" : "Deletes the anyType matching the provided key.",
@@ -208,7 +244,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -2358,7 +2376,7 @@
+@@ -2358,7 +2405,7 @@
        "get" : {
          "tags" : [ "AnyTypes" ],
          "summary" : "Returns a list of all anyTypes.",
@@ -217,7 +253,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "X-Syncope-Domain",
            "in" : "header",
-@@ -2416,7 +2434,7 @@
+@@ -2416,7 +2463,7 @@
        "post" : {
          "tags" : [ "AnyTypes" ],
          "summary" : "Creates a new anyType.",
@@ -226,75 +262,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "X-Syncope-Domain",
            "in" : "header",
-@@ -5423,12 +5441,29 @@
-         } ]
-       }
-     },
--    "/groups/own" : {
--      "get" : {
-+    "/groups/{key}/members/{action}" : {
-+      "post" : {
-         "tags" : [ "Groups" ],
--        "summary" : "This method allows a user to read his own groups.",
--        "operationId" : "own",
-+        "summary" : "(De)provision all members of the given group from / onto all the resources associated to it.",
-+        "operationId" : "provisionMembers",
-         "parameters" : [ {
-+          "name" : "key",
-+          "in" : "path",
-+          "description" : "group key",
-+          "required" : true,
-+          "schema" : {
-+            "type" : "string"
-+          }
-+        }, {
-+          "name" : "action",
-+          "in" : "path",
-+          "description" : "action type to perform on all group members",
-+          "required" : true,
-+          "schema" : {
-+            "type" : "string",
-+            "enum" : [ "PROVISION", "DEPROVISION" ]
-+          }
-+        }, {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
-           "required" : true,
-@@ -5483,29 +5518,12 @@
-         } ]
-       }
-     },
--    "/groups/{key}/members/{action}" : {
--      "post" : {
-+    "/groups/own" : {
-+      "get" : {
-         "tags" : [ "Groups" ],
--        "summary" : "(De)provision all members of the given group from / onto all the resources associated to it.",
--        "operationId" : "provisionMembers",
-+        "summary" : "This method allows a user to read his own groups.",
-+        "operationId" : "own",
-         "parameters" : [ {
--          "name" : "key",
--          "in" : "path",
--          "description" : "group key",
--          "required" : true,
--          "schema" : {
--            "type" : "string"
--          }
--        }, {
--          "name" : "action",
--          "in" : "path",
--          "description" : "action type to perform on all group members",
--          "required" : true,
--          "schema" : {
--            "type" : "string",
--            "enum" : [ "PROVISION", "DEPROVISION" ]
--          }
--        }, {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
-           "required" : true,
-@@ -5564,7 +5582,7 @@
+@@ -5564,7 +5611,7 @@
        "get" : {
          "tags" : [ "Groups" ],
          "summary" : "Reads the any object matching the provided key.",
@@ -303,7 +271,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -5630,6 +5648,23 @@
+@@ -5630,6 +5677,23 @@
                    "type" : "string"
                  }
                }
@@ -327,7 +295,7 @@ index 6e814e8..abd3bcf 100644
              }
            }
          },
-@@ -5642,7 +5677,7 @@
+@@ -5642,7 +5706,7 @@
        "put" : {
          "tags" : [ "Groups" ],
          "summary" : "Updates group matching the provided key.",
@@ -336,7 +304,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -5790,7 +5825,7 @@
+@@ -5790,7 +5854,7 @@
        "delete" : {
          "tags" : [ "Groups" ],
          "summary" : "Deletes any object matching provided key.",
@@ -345,7 +313,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -5917,7 +5952,7 @@
+@@ -5917,7 +5981,7 @@
        "patch" : {
          "tags" : [ "Groups" ],
          "summary" : "Updates group matching the provided key.",
@@ -354,7 +322,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -6067,7 +6102,7 @@
+@@ -6067,7 +6131,7 @@
        "get" : {
          "tags" : [ "Groups" ],
          "summary" : "Returns a paged list of any objects matching the given query.",
@@ -363,7 +331,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "page",
            "in" : "query",
-@@ -6168,7 +6203,7 @@
+@@ -6168,7 +6232,7 @@
        "post" : {
          "tags" : [ "Groups" ],
          "summary" : "Creates a new group.",
@@ -372,7 +340,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -6310,7 +6345,7 @@
+@@ -6310,7 +6374,7 @@
        "post" : {
          "tags" : [ "Groups" ],
          "summary" : "Executes resource-related operations on given entity.",
@@ -381,7 +349,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -6442,7 +6477,7 @@
+@@ -6442,7 +6506,7 @@
        "post" : {
          "tags" : [ "Groups" ],
          "summary" : "Executes resource-related operations on given entity.",
@@ -390,7 +358,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -6574,7 +6609,7 @@
+@@ -6574,7 +6638,7 @@
        "get" : {
          "tags" : [ "Groups" ],
          "summary" : "Reads the attribute, owned by the given any object, for the given schema type and schema.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
@@ -399,7 +367,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -6657,7 +6692,7 @@
+@@ -6657,7 +6721,7 @@
        "put" : {
          "tags" : [ "Groups" ],
          "summary" : "Adds or replaces the attribute, owned by the given any object, for the given schema type and schema.",
@@ -408,7 +376,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "schema",
            "in" : "path",
-@@ -6760,7 +6795,7 @@
+@@ -6760,7 +6824,7 @@
        "delete" : {
          "tags" : [ "Groups" ],
          "summary" : "Deletes the attribute, owned by the given any object, for the given schema type and schema.",
@@ -417,7 +385,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -6849,7 +6884,7 @@
+@@ -6849,7 +6913,7 @@
        "get" : {
          "tags" : [ "Groups" ],
          "summary" : "Reads the list of attributes owned by the given any object for the given schema type.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
@@ -426,7 +394,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -7393,20 +7428,12 @@
+@@ -7393,20 +7457,12 @@
          } ]
        }
      },
@@ -450,7 +418,7 @@ index 6e814e8..abd3bcf 100644
            "name" : "X-Syncope-Domain",
            "in" : "header",
            "required" : true,
-@@ -7461,12 +7488,20 @@
+@@ -7461,12 +7517,20 @@
          } ]
        }
      },
@@ -474,7 +442,167 @@ index 6e814e8..abd3bcf 100644
            "name" : "X-Syncope-Domain",
            "in" : "header",
            "required" : true,
-@@ -10080,7 +10115,7 @@
+@@ -8970,19 +9034,12 @@
+         } ]
+       }
+     },
+-    "/oidcclient/clients/loginRequest" : {
++    "/oidcclient/clients/logout" : {
+       "post" : {
+         "tags" : [ "OIDCClients" ],
+-        "summary" : "Generates OpenID Connect authentication request for the Provider matching the provided op.",
+-        "operationId" : "createLoginRequest",
++        "summary" : "Returns the endSession endpoint for the provided op.",
++        "operationId" : "createLogoutRequest",
+         "parameters" : [ {
+-          "name" : "redirect_uri",
+-          "in" : "query",
+-          "description" : "redirect URI",
+-          "schema" : {
+-            "type" : "string"
+-          }
+-        }, {
+           "name" : "op",
+           "in" : "query",
+           "description" : "OpenID Connect Provider",
+@@ -9044,12 +9101,19 @@
+         } ]
+       }
+     },
+-    "/oidcclient/clients/logout" : {
++    "/oidcclient/clients/loginRequest" : {
+       "post" : {
+         "tags" : [ "OIDCClients" ],
+-        "summary" : "Returns the endSession endpoint for the provided op.",
+-        "operationId" : "createLogoutRequest",
++        "summary" : "Generates OpenID Connect authentication request for the Provider matching the provided op.",
++        "operationId" : "createLoginRequest",
+         "parameters" : [ {
++          "name" : "redirect_uri",
++          "in" : "query",
++          "description" : "redirect URI",
++          "schema" : {
++            "type" : "string"
++          }
++        }, {
+           "name" : "op",
+           "in" : "query",
+           "description" : "OpenID Connect Provider",
+@@ -9111,6 +9175,56 @@
+         } ]
+       }
+     },
++    "/oidcclient/providers/actionsClasses" : {
++      "get" : {
++        "tags" : [ "OIDCProviders" ],
++        "summary" : "Returns the list of available OIDCProviderActions implementations.",
++        "operationId" : "getActionsClasses",
++        "parameters" : [ {
++          "name" : "X-Syncope-Domain",
++          "in" : "header",
++          "required" : true,
++          "schema" : {
++            "type" : "string",
++            "enum" : [ "Master", "Two" ],
++            "default" : "Master"
++          }
++        } ],
++        "responses" : {
++          "400" : {
++            "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
++            "headers" : {
++              "X-Application-Error-Code" : {
++                "description" : "Error code",
++                "style" : "simple",
++                "schema" : {
++                  "type" : "string"
++                }
++              },
++              "X-Application-Error-Info" : {
++                "description" : "Error message",
++                "style" : "simple",
++                "schema" : {
++                  "type" : "string"
++                }
++              }
++            },
++            "content" : {
++              "application/json" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/ErrorTO"
++                }
++              }
++            }
++          }
++        },
++        "security" : [ {
++          "BasicAuthentication" : [ ]
++        }, {
++          "Bearer" : [ ]
++        } ]
++      }
++    },
+     "/oidcclient/providers/fromDiscovery" : {
+       "post" : {
+         "tags" : [ "OIDCProviders" ],
+@@ -9210,56 +9324,6 @@
+         } ]
+       }
+     },
+-    "/oidcclient/providers/actionsClasses" : {
+-      "get" : {
+-        "tags" : [ "OIDCProviders" ],
+-        "summary" : "Returns the list of available OIDCProviderActions implementations.",
+-        "operationId" : "getActionsClasses",
+-        "parameters" : [ {
+-          "name" : "X-Syncope-Domain",
+-          "in" : "header",
+-          "required" : true,
+-          "schema" : {
+-            "type" : "string",
+-            "enum" : [ "Master", "Two" ],
+-            "default" : "Master"
+-          }
+-        } ],
+-        "responses" : {
+-          "400" : {
+-            "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
+-            "headers" : {
+-              "X-Application-Error-Code" : {
+-                "description" : "Error code",
+-                "style" : "simple",
+-                "schema" : {
+-                  "type" : "string"
+-                }
+-              },
+-              "X-Application-Error-Info" : {
+-                "description" : "Error message",
+-                "style" : "simple",
+-                "schema" : {
+-                  "type" : "string"
+-                }
+-              }
+-            },
+-            "content" : {
+-              "application/json" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              }
+-            }
+-          }
+-        },
+-        "security" : [ {
+-          "BasicAuthentication" : [ ]
+-        }, {
+-          "Bearer" : [ ]
+-        } ]
+-      }
+-    },
+     "/oidcclient/providers/{key}" : {
+       "get" : {
+         "tags" : [ "OIDCProviders" ],
+@@ -10080,7 +10144,7 @@
        "get" : {
          "tags" : [ "Realms" ],
          "summary" : "Returns realms rooted at the given path.",
@@ -483,7 +611,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "fullPath",
            "in" : "path",
-@@ -10135,6 +10170,35 @@
+@@ -10135,6 +10199,35 @@
                  }
                }
              }
@@ -519,7 +647,7 @@ index 6e814e8..abd3bcf 100644
            }
          },
          "security" : [ {
-@@ -10146,7 +10210,7 @@
+@@ -10146,7 +10239,7 @@
        "put" : {
          "tags" : [ "Realms" ],
          "summary" : "Updates the realm under the given path.",
@@ -528,7 +656,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -10283,7 +10347,7 @@
+@@ -10283,7 +10376,7 @@
        "delete" : {
          "tags" : [ "Realms" ],
          "summary" : "Deletes the realm under the given path.",
@@ -537,7 +665,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -10401,7 +10465,7 @@
+@@ -10401,7 +10494,7 @@
        "post" : {
          "tags" : [ "Realms" ],
          "summary" : "Creates a new realm under the given path.",
@@ -546,7 +674,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "Prefer",
            "in" : "header",
-@@ -10550,7 +10614,7 @@
+@@ -10550,7 +10643,7 @@
        "get" : {
          "tags" : [ "Realms" ],
          "summary" : "Returns a list of all realms.",
@@ -555,7 +683,390 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "X-Syncope-Domain",
            "in" : "header",
-@@ -14731,7 +14795,7 @@
+@@ -12411,40 +12504,18 @@
+         } ]
+       }
+     },
+-    "/reports/{key}/executions" : {
++    "/reports/jobs/{key}" : {
+       "get" : {
+         "tags" : [ "Reports" ],
+-        "summary" : "Returns a paged list of executions matching the given query.",
+-        "operationId" : "listExecutions",
++        "summary" : "Returns job (running or scheduled) for the executable matching the given key.",
++        "operationId" : "getJob_1",
+         "parameters" : [ {
+-          "name" : "page",
+-          "in" : "query",
+-          "description" : "query conditions",
++          "name" : "key",
++          "in" : "path",
++          "description" : "executable key",
++          "required" : true,
+           "schema" : {
+-            "type" : "integer",
+-            "format" : "int32",
+-            "default" : 1
+-          }
+-        }, {
+-          "name" : "size",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "integer",
+-            "format" : "int32",
+-            "default" : 25
+-          }
+-        }, {
+-          "name" : "orderby",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "string"
+-          }
+-        }, {
+-          "name" : "key",
+-          "in" : "path",
+-          "required" : true,
+-          "schema" : {
+-            "type" : "string"
++            "type" : "string"
+           }
+         }, {
+           "name" : "X-Syncope-Domain",
+@@ -12500,45 +12571,25 @@
+           "Bearer" : [ ]
+         } ]
+       },
+-      "delete" : {
++      "post" : {
+         "tags" : [ "Reports" ],
+-        "summary" : "Deletes the executions belonging matching the given query.",
+-        "operationId" : "deleteExecutions",
++        "summary" : "Executes an action on an existing executable's job.",
++        "operationId" : "actionJob",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+-          "description" : "query conditions",
++          "description" : "executable key",
+           "required" : true,
+           "schema" : {
+             "type" : "string"
+           }
+         }, {
+-          "name" : "startedBefore",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "string",
+-            "format" : "date-time"
+-          }
+-        }, {
+-          "name" : "startedAfter",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "string",
+-            "format" : "date-time"
+-          }
+-        }, {
+-          "name" : "endedBefore",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "string",
+-            "format" : "date-time"
+-          }
+-        }, {
+-          "name" : "endedAfter",
++          "name" : "action",
+           "in" : "query",
++          "description" : "action to execute",
+           "schema" : {
+             "type" : "string",
+-            "format" : "date-time"
++            "enum" : [ "START", "STOP", "DELETE" ]
+           }
+         }, {
+           "name" : "X-Syncope-Domain",
+@@ -12570,15 +12621,15 @@
+               }
+             },
+             "content" : {
+-              "multipart/mixed" : {
++              "*/*" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+                 }
+               }
+             }
+           },
+-          "200" : {
+-            "description" : "Batch results available, returned as Response entity"
++          "204" : {
++            "description" : "Operation was successful"
+           }
+         },
+         "security" : [ {
+@@ -12588,20 +12639,41 @@
+         } ]
+       }
+     },
+-    "/reports/executions/recent" : {
++    "/reports/{key}/executions" : {
+       "get" : {
+         "tags" : [ "Reports" ],
+-        "summary" : "Returns the list of recently completed executions, ordered by end date descendent.",
+-        "operationId" : "listRecentExecutions",
++        "summary" : "Returns a paged list of executions matching the given query.",
++        "operationId" : "listExecutions",
+         "parameters" : [ {
+-          "name" : "max",
++          "name" : "page",
++          "in" : "query",
++          "description" : "query conditions",
++          "schema" : {
++            "type" : "integer",
++            "format" : "int32",
++            "default" : 1
++          }
++        }, {
++          "name" : "size",
+           "in" : "query",
+-          "description" : "the maximum number of executions to return",
+           "schema" : {
+             "type" : "integer",
+             "format" : "int32",
+             "default" : 25
+           }
++        }, {
++          "name" : "orderby",
++          "in" : "query",
++          "schema" : {
++            "type" : "string"
++          }
++        }, {
++          "name" : "key",
++          "in" : "path",
++          "required" : true,
++          "schema" : {
++            "type" : "string"
++          }
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -12655,25 +12727,50 @@
+         }, {
+           "Bearer" : [ ]
+         } ]
+-      }
+-    },
+-    "/reports/executions/{executionKey}" : {
++      },
+       "delete" : {
+         "tags" : [ "Reports" ],
+-        "summary" : "Deletes the executable execution matching the provided key.",
+-        "operationId" : "deleteExecution",
++        "summary" : "Deletes the executions belonging matching the given query.",
++        "operationId" : "deleteExecutions",
+         "parameters" : [ {
+-          "name" : "executionKey",
++          "name" : "key",
+           "in" : "path",
+-          "description" : "key of executable execution to be deleted",
++          "description" : "query conditions",
+           "required" : true,
+           "schema" : {
+             "type" : "string"
+           }
++        }, {
++          "name" : "startedBefore",
++          "in" : "query",
++          "schema" : {
++            "type" : "string",
++            "format" : "date-time"
++          }
++        }, {
++          "name" : "startedAfter",
++          "in" : "query",
++          "schema" : {
++            "type" : "string",
++            "format" : "date-time"
++          }
++        }, {
++          "name" : "endedBefore",
++          "in" : "query",
++          "schema" : {
++            "type" : "string",
++            "format" : "date-time"
++          }
++        }, {
++          "name" : "endedAfter",
++          "in" : "query",
++          "schema" : {
++            "type" : "string",
++            "format" : "date-time"
++          }
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+-          "description" : "query conditions",
+           "required" : true,
+           "schema" : {
+             "type" : "string",
+@@ -12701,25 +12798,15 @@
+               }
+             },
+             "content" : {
+-              "application/json" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              },
+-              "application/yaml" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              },
+-              "application/xml" : {
++              "multipart/mixed" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+                 }
+               }
+             }
+           },
+-          "204" : {
+-            "description" : "Operation was successful"
++          "200" : {
++            "description" : "Batch results available, returned as Response entity"
+           }
+         },
+         "security" : [ {
+@@ -12729,12 +12816,21 @@
+         } ]
+       }
+     },
+-    "/reports/jobs" : {
++    "/reports/executions/recent" : {
+       "get" : {
+         "tags" : [ "Reports" ],
+-        "summary" : "List jobs (running and / or scheduled).",
+-        "operationId" : "listJobs",
++        "summary" : "Returns the list of recently completed executions, ordered by end date descendent.",
++        "operationId" : "listRecentExecutions",
+         "parameters" : [ {
++          "name" : "max",
++          "in" : "query",
++          "description" : "the maximum number of executions to return",
++          "schema" : {
++            "type" : "integer",
++            "format" : "int32",
++            "default" : 25
++          }
++        }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+           "required" : true,
+@@ -12789,15 +12885,15 @@
+         } ]
+       }
+     },
+-    "/reports/jobs/{key}" : {
+-      "get" : {
++    "/reports/executions/{executionKey}" : {
++      "delete" : {
+         "tags" : [ "Reports" ],
+-        "summary" : "Returns job (running or scheduled) for the executable matching the given key.",
+-        "operationId" : "getJob_1",
++        "summary" : "Deletes the executable execution matching the provided key.",
++        "operationId" : "deleteExecution",
+         "parameters" : [ {
+-          "name" : "key",
++          "name" : "executionKey",
+           "in" : "path",
+-          "description" : "executable key",
++          "description" : "key of executable execution to be deleted",
+           "required" : true,
+           "schema" : {
+             "type" : "string"
+@@ -12805,6 +12901,7 @@
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
++          "description" : "query conditions",
+           "required" : true,
+           "schema" : {
+             "type" : "string",
+@@ -12848,6 +12945,9 @@
+                 }
+               }
+             }
++          },
++          "204" : {
++            "description" : "Operation was successful"
+           }
+         },
+         "security" : [ {
+@@ -12855,28 +12955,14 @@
+         }, {
+           "Bearer" : [ ]
+         } ]
+-      },
+-      "post" : {
++      }
++    },
++    "/reports/jobs" : {
++      "get" : {
+         "tags" : [ "Reports" ],
+-        "summary" : "Executes an action on an existing executable's job.",
+-        "operationId" : "actionJob",
++        "summary" : "List jobs (running and / or scheduled).",
++        "operationId" : "listJobs",
+         "parameters" : [ {
+-          "name" : "key",
+-          "in" : "path",
+-          "description" : "executable key",
+-          "required" : true,
+-          "schema" : {
+-            "type" : "string"
+-          }
+-        }, {
+-          "name" : "action",
+-          "in" : "query",
+-          "description" : "action to execute",
+-          "schema" : {
+-            "type" : "string",
+-            "enum" : [ "START", "STOP", "DELETE" ]
+-          }
+-        }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+           "required" : true,
+@@ -12906,15 +12992,22 @@
+               }
+             },
+             "content" : {
+-              "*/*" : {
++              "application/json" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/ErrorTO"
++                }
++              },
++              "application/yaml" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/ErrorTO"
++                }
++              },
++              "application/xml" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+                 }
+               }
+             }
+-          },
+-          "204" : {
+-            "description" : "Operation was successful"
+           }
+         },
+         "security" : [ {
+@@ -14731,7 +14824,7 @@
        "get" : {
          "tags" : [ "Roles" ],
          "summary" : "Returns role with matching key.",
@@ -564,7 +1075,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -14797,7 +14861,7 @@
+@@ -14797,7 +14890,7 @@
        "put" : {
          "tags" : [ "Roles" ],
          "summary" : "Updates the role matching the provided key.",
@@ -573,7 +1084,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -14887,7 +14951,7 @@
+@@ -14887,7 +14980,7 @@
        "delete" : {
          "tags" : [ "Roles" ],
          "summary" : "Deletes the role matching the provided key.",
@@ -582,7 +1093,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -14959,7 +15023,7 @@
+@@ -14959,7 +15052,7 @@
        "get" : {
          "tags" : [ "Roles" ],
          "summary" : "Returns a list of all roles.",
@@ -591,7 +1102,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "X-Syncope-Domain",
            "in" : "header",
-@@ -15017,7 +15081,7 @@
+@@ -15017,7 +15110,7 @@
        "post" : {
          "tags" : [ "Roles" ],
          "summary" : "Creates a new role.",
@@ -600,145 +1111,19 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "X-Syncope-Domain",
            "in" : "header",
-@@ -15113,11 +15177,11 @@
+@@ -15519,28 +15612,15 @@
          } ]
        }
      },
--    "/saml2sp/identityProviders" : {
-+    "/saml2sp/identityProviders/actionsClasses" : {
-       "get" : {
-         "tags" : [ "SAML2IdP" ],
--        "summary" : "Returns a list of all defined SAML 2.0 Identity Providers.",
--        "operationId" : "list_25",
-+        "summary" : "Returns the list of available SAML2IdPActions implementations.",
-+        "operationId" : "getActionsClasses_1",
-         "parameters" : [ {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
-@@ -15152,16 +15216,6 @@
-                 "schema" : {
-                   "$ref" : "#/components/schemas/ErrorTO"
-                 }
--              },
--              "application/yaml" : {
--                "schema" : {
--                  "$ref" : "#/components/schemas/ErrorTO"
--                }
--              },
--              "application/xml" : {
--                "schema" : {
--                  "$ref" : "#/components/schemas/ErrorTO"
--                }
-               }
-             }
-           }
-@@ -15171,15 +15225,16 @@
-         }, {
-           "Bearer" : [ ]
-         } ]
--      },
--      "post" : {
-+      }
-+    },
-+    "/saml2sp/identityProviders" : {
-+      "get" : {
-         "tags" : [ "SAML2IdP" ],
--        "summary" : "Imports the SAML 2.0 Identity Provider definitions available in the provided XML metadata.",
--        "operationId" : "importFromMetadata",
-+        "summary" : "Returns a list of all defined SAML 2.0 Identity Providers.",
-+        "operationId" : "list_25",
-         "parameters" : [ {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
--          "description" : "XML metadata",
-           "required" : true,
-           "schema" : {
-             "type" : "string",
-@@ -15187,16 +15242,6 @@
-             "default" : "Master"
-           }
-         } ],
--        "requestBody" : {
--          "content" : {
--            "application/xml" : {
--              "schema" : {
--                "type" : "object"
--              }
--            }
--          },
--          "required" : true
--        },
-         "responses" : {
-           "400" : {
-             "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
-@@ -15240,16 +15285,15 @@
-         }, {
-           "Bearer" : [ ]
-         } ]
--      }
--    },
--    "/saml2sp/identityProviders/actionsClasses" : {
+-    "/saml2sp/serviceProvider" : {
 -      "get" : {
-+      },
++    "/saml2sp/serviceProvider/logoutResponse" : {
 +      "post" : {
-         "tags" : [ "SAML2IdP" ],
--        "summary" : "Returns the list of available SAML2IdPActions implementations.",
--        "operationId" : "getActionsClasses_1",
-+        "summary" : "Imports the SAML 2.0 Identity Provider definitions available in the provided XML metadata.",
-+        "operationId" : "importFromMetadata",
-         "parameters" : [ {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
-+          "description" : "XML metadata",
-           "required" : true,
-           "schema" : {
-             "type" : "string",
-@@ -15257,6 +15301,16 @@
-             "default" : "Master"
-           }
-         } ],
-+        "requestBody" : {
-+          "content" : {
-+            "application/xml" : {
-+              "schema" : {
-+                "type" : "object"
-+              }
-+            }
-+          },
-+          "required" : true
-+        },
-         "responses" : {
-           "400" : {
-             "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
-@@ -15281,6 +15335,16 @@
-                 "schema" : {
-                   "$ref" : "#/components/schemas/ErrorTO"
-                 }
-+              },
-+              "application/yaml" : {
-+                "schema" : {
-+                  "$ref" : "#/components/schemas/ErrorTO"
-+                }
-+              },
-+              "application/xml" : {
-+                "schema" : {
-+                  "$ref" : "#/components/schemas/ErrorTO"
-+                }
-               }
-             }
-           }
-@@ -15669,28 +15733,15 @@
-         } ]
-       }
-     },
--    "/saml2sp/serviceProvider/loginRequest" : {
-+    "/saml2sp/serviceProvider/loginResponse" : {
-       "post" : {
          "tags" : [ "SAML2SP" ],
--        "summary" : "Generates SAML 2.0 authentication request for the IdP matching the provided entity ID.",
--        "operationId" : "createLoginRequest_1",
-+        "summary" : "Validates the received SAML 2.0 authentication response and creates JWT for the matching user, if found.",
-+        "operationId" : "validateLoginResponse",
+-        "summary" : "Returns the XML metadata for the provided SAML 2.0 Service Provider.",
+-        "operationId" : "getMetadata",
++        "summary" : "Validates the received SAML 2.0 logout response.",
++        "operationId" : "validateLogoutResponse",
          "parameters" : [ {
 -          "name" : "spEntityID",
 -          "in" : "query",
@@ -747,9 +1132,9 @@ index 6e814e8..abd3bcf 100644
 -            "type" : "string"
 -          }
 -        }, {
--          "name" : "idpEntityID",
+-          "name" : "urlContext",
 -          "in" : "query",
--          "description" : "SAML 2.0 IdP entity ID.",
+-          "description" : "SAML 2.0 SP agent URL context",
 -          "schema" : {
 -            "type" : "string"
 -          }
@@ -760,7 +1145,7 @@ index 6e814e8..abd3bcf 100644
            "required" : true,
            "schema" : {
              "type" : "string",
-@@ -15698,17 +15749,36 @@
+@@ -15548,17 +15628,36 @@
              "default" : "Master"
            }
          } ],
@@ -808,18 +1193,128 @@ index 6e814e8..abd3bcf 100644
                "X-Application-Error-Info" : {
                  "description" : "Error message",
                  "style" : "simple",
-@@ -15743,15 +15813,28 @@
+@@ -15568,12 +15667,25 @@
+               }
+             },
+             "content" : {
++              "application/json" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/ErrorTO"
++                }
++              },
++              "application/yaml" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/ErrorTO"
++                }
++              },
+               "application/xml" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+                 }
+               }
+             }
++          },
++          "204" : {
++            "description" : "Operation was successful"
+           }
+         },
+         "security" : [ {
+@@ -15583,11 +15695,11 @@
+         } ]
+       }
+     },
+-    "/saml2sp/serviceProvider/loginRequest" : {
++    "/saml2sp/serviceProvider/logoutRequest" : {
+       "post" : {
+         "tags" : [ "SAML2SP" ],
+-        "summary" : "Generates SAML 2.0 authentication request for the IdP matching the provided entity ID.",
+-        "operationId" : "createLoginRequest_1",
++        "summary" : "Generates SAML 2.0 logout request for the IdP matching the requesting access token.",
++        "operationId" : "createLogoutRequest_1",
+         "parameters" : [ {
+           "name" : "spEntityID",
+           "in" : "query",
+@@ -15595,13 +15707,6 @@
+           "schema" : {
+             "type" : "string"
+           }
+-        }, {
+-          "name" : "idpEntityID",
+-          "in" : "query",
+-          "description" : "SAML 2.0 IdP entity ID.",
+-          "schema" : {
+-            "type" : "string"
+-          }
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -15657,11 +15762,11 @@
+         } ]
+       }
+     },
+-    "/saml2sp/serviceProvider/logoutResponse" : {
++    "/saml2sp/serviceProvider/loginResponse" : {
+       "post" : {
+         "tags" : [ "SAML2SP" ],
+-        "summary" : "Validates the received SAML 2.0 logout response.",
+-        "operationId" : "validateLogoutResponse",
++        "summary" : "Validates the received SAML 2.0 authentication response and creates JWT for the matching user, if found.",
++        "operationId" : "validateLoginResponse",
+         "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -15728,9 +15833,6 @@
+                 }
+               }
+             }
+-          },
+-          "204" : {
+-            "description" : "Operation was successful"
+           }
+         },
+         "security" : [ {
+@@ -15740,11 +15842,11 @@
+         } ]
+       }
+     },
+-    "/saml2sp/serviceProvider/logoutRequest" : {
++    "/saml2sp/serviceProvider/loginRequest" : {
+       "post" : {
+         "tags" : [ "SAML2SP" ],
+-        "summary" : "Generates SAML 2.0 logout request for the IdP matching the requesting access token.",
+-        "operationId" : "createLogoutRequest_1",
++        "summary" : "Generates SAML 2.0 authentication request for the IdP matching the provided entity ID.",
++        "operationId" : "createLoginRequest_1",
+         "parameters" : [ {
+           "name" : "spEntityID",
+           "in" : "query",
+@@ -15752,6 +15854,13 @@
+           "schema" : {
+             "type" : "string"
+           }
++        }, {
++          "name" : "idpEntityID",
++          "in" : "query",
++          "description" : "SAML 2.0 IdP entity ID.",
++          "schema" : {
++            "type" : "string"
++          }
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -15807,15 +15916,28 @@
          } ]
        }
      },
 -    "/saml2sp/serviceProvider/loginResponse" : {
-+    "/saml2sp/serviceProvider/loginRequest" : {
-       "post" : {
+-      "post" : {
++    "/saml2sp/serviceProvider" : {
++      "get" : {
          "tags" : [ "SAML2SP" ],
 -        "summary" : "Validates the received SAML 2.0 authentication response and creates JWT for the matching user, if found.",
 -        "operationId" : "validateLoginResponse",
-+        "summary" : "Generates SAML 2.0 authentication request for the IdP matching the provided entity ID.",
-+        "operationId" : "createLoginRequest_1",
++        "summary" : "Returns the XML metadata for the provided SAML 2.0 Service Provider.",
++        "operationId" : "getMetadata",
          "parameters" : [ {
 +          "name" : "spEntityID",
 +          "in" : "query",
@@ -828,9 +1323,9 @@ index 6e814e8..abd3bcf 100644
 +            "type" : "string"
 +          }
 +        }, {
-+          "name" : "idpEntityID",
++          "name" : "urlContext",
 +          "in" : "query",
-+          "description" : "SAML 2.0 IdP entity ID.",
++          "description" : "SAML 2.0 SP agent URL context",
 +          "schema" : {
 +            "type" : "string"
 +          }
@@ -841,7 +1336,7 @@ index 6e814e8..abd3bcf 100644
            "required" : true,
            "schema" : {
              "type" : "string",
-@@ -15759,25 +15842,6 @@
+@@ -15823,25 +15945,6 @@
              "default" : "Master"
            }
          } ],
@@ -867,7 +1362,24 @@ index 6e814e8..abd3bcf 100644
          "responses" : {
            "400" : {
              "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
-@@ -16033,7 +16097,7 @@
+@@ -15862,16 +15965,6 @@
+               }
+             },
+             "content" : {
+-              "application/json" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              },
+-              "application/yaml" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              },
+               "application/xml" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+@@ -16033,7 +16126,7 @@
        "get" : {
          "tags" : [ "Schemas" ],
          "summary" : "Returns schema matching the given type and key.",
@@ -876,7 +1388,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "type",
            "in" : "path",
-@@ -16109,7 +16173,7 @@
+@@ -16109,7 +16202,7 @@
        "put" : {
          "tags" : [ "Schemas" ],
          "summary" : "Updates the schema matching the given type and key.",
@@ -885,7 +1397,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "key",
            "in" : "path",
-@@ -16208,7 +16272,7 @@
+@@ -16208,7 +16301,7 @@
        "delete" : {
          "tags" : [ "Schemas" ],
          "summary" : "Deletes the schema matching the given type and key.",
@@ -894,7 +1406,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "type",
            "in" : "path",
-@@ -16288,7 +16352,7 @@
+@@ -16288,7 +16381,7 @@
        "get" : {
          "tags" : [ "Schemas" ],
          "summary" : "Returns a list of schemas matching the given query.",
@@ -903,7 +1415,7 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "type",
            "in" : "path",
-@@ -16371,7 +16435,7 @@
+@@ -16371,7 +16464,7 @@
        "post" : {
          "tags" : [ "Schemas" ],
          "summary" : "Creates a new schema.",
@@ -912,391 +1424,18 @@ index 6e814e8..abd3bcf 100644
          "parameters" : [ {
            "name" : "type",
            "in" : "path",
-@@ -16934,7 +16998,7 @@
-       "get" : {
-         "tags" : [ "Syncope" ],
-         "summary" : "Gets batch results, in case asynchronous was requested.",
--        "operationId" : "batch_1",
-+        "operationId" : "batch",
-         "parameters" : [ {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
-@@ -17007,7 +17071,7 @@
-       "post" : {
-         "tags" : [ "Syncope" ],
-         "summary" : "Requests for batch execution.",
--        "operationId" : "batch",
-+        "operationId" : "batch_1",
-         "parameters" : [ {
-           "name" : "Prefer",
-           "in" : "header",
-@@ -17093,11 +17157,11 @@
+@@ -17928,37 +18021,15 @@
          } ]
        }
      },
--    "/platform" : {
-+    "/numbers" : {
+-    "/tasks/{key}/executions" : {
++    "/tasks/jobs/{key}" : {
        "get" : {
-         "tags" : [ "Syncope" ],
--        "summary" : "Provides information summary about platform configuration (workflow adapters, provisioning managers, validators,\n actions, correlation rules, reportlets, ...).",
--        "operationId" : "platform",
-+        "summary" : "Provides some numbers about the managed entities (users, groups, any objects...).",
-+        "operationId" : "numbers",
-         "parameters" : [ {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
-@@ -17153,12 +17217,45 @@
-         } ]
-       }
-     },
--    "/numbers" : {
--      "get" : {
-+    "/assignableGroups/{realm}" : {
-+      "post" : {
-         "tags" : [ "Syncope" ],
--        "summary" : "Provides some numbers about the managed entities (users, groups, any objects...).",
--        "operationId" : "numbers",
-+        "summary" : "Returns the list of Groups, according to provided paging instructions, assignable to Users and Any Objects of\n the provided Realm.",
-+        "operationId" : "searchAssignableGroups",
-         "parameters" : [ {
-+          "name" : "realm",
-+          "in" : "path",
-+          "description" : "groups search term",
-+          "required" : true,
-+          "schema" : {
-+            "type" : "string"
-+          }
-+        }, {
-+          "name" : "term",
-+          "in" : "query",
-+          "description" : "of the User and Any Objects assignable to the returned Groups",
-+          "schema" : {
-+            "type" : "string"
-+          }
-+        }, {
-+          "name" : "page",
-+          "in" : "query",
-+          "description" : "search page",
-+          "schema" : {
-+            "type" : "integer",
-+            "format" : "int32",
-+            "default" : 1
-+          }
-+        }, {
-+          "name" : "size",
-+          "in" : "query",
-+          "description" : "search page size",
-+          "schema" : {
-+            "type" : "integer",
-+            "format" : "int32",
-+            "default" : 25
-+          }
-+        }, {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
-           "required" : true,
-@@ -17213,45 +17310,12 @@
-         } ]
-       }
-     },
--    "/assignableGroups/{realm}" : {
--      "post" : {
-+    "/platform" : {
-+      "get" : {
-         "tags" : [ "Syncope" ],
--        "summary" : "Returns the list of Groups, according to provided paging instructions, assignable to Users and Any Objects of\n the provided Realm.",
--        "operationId" : "searchAssignableGroups",
-+        "summary" : "Provides information summary about platform configuration (workflow adapters, provisioning managers, validators,\n actions, correlation rules, reportlets, ...).",
-+        "operationId" : "platform",
-         "parameters" : [ {
--          "name" : "realm",
--          "in" : "path",
--          "description" : "groups search term",
--          "required" : true,
--          "schema" : {
--            "type" : "string"
--          }
--        }, {
--          "name" : "term",
--          "in" : "query",
--          "description" : "of the User and Any Objects assignable to the returned Groups",
--          "schema" : {
--            "type" : "string"
--          }
--        }, {
--          "name" : "page",
--          "in" : "query",
--          "description" : "search page",
--          "schema" : {
--            "type" : "integer",
--            "format" : "int32",
--            "default" : 1
--          }
--        }, {
--          "name" : "size",
--          "in" : "query",
--          "description" : "search page size",
--          "schema" : {
--            "type" : "integer",
--            "format" : "int32",
--            "default" : 25
--          }
--        }, {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
-           "required" : true,
-@@ -19425,7 +19489,7 @@
-       "get" : {
-         "tags" : [ "Users" ],
-         "summary" : "Reads the any object matching the provided key.",
--        "operationId" : "read_31",
-+        "operationId" : "readUser",
-         "parameters" : [ {
-           "name" : "key",
-           "in" : "path",
-@@ -19491,6 +19555,23 @@
-                   "type" : "string"
-                 }
-               }
-+            },
-+            "content" : {
-+              "application/json" : {
-+                "schema" : {
-+                  "$ref" : "#/components/schemas/UserTO"
-+                }
-+              },
-+              "application/yaml" : {
-+                "schema" : {
-+                  "$ref" : "#/components/schemas/UserTO"
-+                }
-+              },
-+              "application/xml" : {
-+                "schema" : {
-+                  "$ref" : "#/components/schemas/UserTO"
-+                }
-+              }
-             }
-           }
-         },
-@@ -19503,7 +19584,7 @@
-       "put" : {
-         "tags" : [ "Users" ],
-         "summary" : "Updates user matching the provided key.",
--        "operationId" : "update_2",
-+        "operationId" : "updateUser",
-         "parameters" : [ {
-           "name" : "Prefer",
-           "in" : "header",
-@@ -19651,7 +19732,7 @@
-       "delete" : {
-         "tags" : [ "Users" ],
-         "summary" : "Deletes any object matching provided key.",
--        "operationId" : "delete_1",
-+        "operationId" : "deleteUser",
-         "parameters" : [ {
-           "name" : "Prefer",
-           "in" : "header",
-@@ -19778,7 +19859,7 @@
-       "patch" : {
-         "tags" : [ "Users" ],
-         "summary" : "Updates user matching the provided key.",
--        "operationId" : "update_3",
-+        "operationId" : "updateUser",
-         "parameters" : [ {
-           "name" : "Prefer",
-           "in" : "header",
-@@ -19928,7 +20009,7 @@
-       "get" : {
-         "tags" : [ "Users" ],
-         "summary" : "Returns a paged list of any objects matching the given query.",
--        "operationId" : "search_4",
-+        "operationId" : "searchUser",
-         "parameters" : [ {
-           "name" : "page",
-           "in" : "query",
-@@ -20029,7 +20110,7 @@
-       "post" : {
-         "tags" : [ "Users" ],
-         "summary" : "Creates a new user.",
--        "operationId" : "create_1",
-+        "operationId" : "createUser",
-         "parameters" : [ {
-           "name" : "Prefer",
-           "in" : "header",
-@@ -20178,7 +20259,7 @@
-       "post" : {
-         "tags" : [ "Users" ],
-         "summary" : "Performs a status update on given user.",
--        "operationId" : "status_2",
-+        "operationId" : "statusUpdate",
-         "parameters" : [ {
-           "name" : "Prefer",
-           "in" : "header",
-@@ -20328,7 +20409,7 @@
-       "post" : {
-         "tags" : [ "Users" ],
-         "summary" : "Executes resource-related operations on given entity.",
--        "operationId" : "associate_2",
-+        "operationId" : "associateUser",
-         "parameters" : [ {
-           "name" : "Prefer",
-           "in" : "header",
-@@ -20460,7 +20541,7 @@
-       "post" : {
-         "tags" : [ "Users" ],
-         "summary" : "Executes resource-related operations on given entity.",
--        "operationId" : "deassociate_2",
-+        "operationId" : "deassociateUser",
-         "parameters" : [ {
-           "name" : "Prefer",
-           "in" : "header",
-@@ -20592,7 +20673,7 @@
-       "get" : {
-         "tags" : [ "Users" ],
-         "summary" : "Reads the attribute, owned by the given any object, for the given schema type and schema.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
--        "operationId" : "read_30",
-+        "operationId" : "readUserAttribute",
-         "parameters" : [ {
-           "name" : "key",
-           "in" : "path",
-@@ -20675,7 +20756,7 @@
-       "put" : {
-         "tags" : [ "Users" ],
-         "summary" : "Adds or replaces the attribute, owned by the given any object, for the given schema type and schema.",
--        "operationId" : "update_2",
-+        "operationId" : "updateUserAttribute",
-         "parameters" : [ {
-           "name" : "schema",
-           "in" : "path",
-@@ -20778,7 +20859,7 @@
-       "delete" : {
-         "tags" : [ "Users" ],
-         "summary" : "Deletes the attribute, owned by the given any object, for the given schema type and schema.",
--        "operationId" : "delete_1",
-+        "operationId" : "deleteUserAttribute",
-         "parameters" : [ {
-           "name" : "key",
-           "in" : "path",
-@@ -20867,7 +20948,7 @@
-       "get" : {
-         "tags" : [ "Users" ],
-         "summary" : "Reads the list of attributes owned by the given any object for the given schema type.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
--        "operationId" : "read_32",
-+        "operationId" : "readUserAttributes",
-         "parameters" : [ {
-           "name" : "key",
-           "in" : "path",
-@@ -20940,15 +21021,15 @@
-         } ]
-       }
-     },
--    "/userworkflow/tasks/{taskId}/execute" : {
--      "post" : {
-+    "/userworkflow/forms/{userKey}" : {
-+      "get" : {
-         "tags" : [ "UserWorkflow" ],
--        "summary" : "Executes workflow task for matching id.",
--        "operationId" : "executeTask",
-+        "summary" : "Returns a list of available forms for the given user key.",
-+        "operationId" : "getFormForUser",
-         "parameters" : [ {
--          "name" : "taskId",
-+          "name" : "userKey",
-           "in" : "path",
--          "description" : "workflow task id",
-+          "description" : "user key",
-           "required" : true,
-           "schema" : {
-             "type" : "string"
-@@ -20956,7 +21037,6 @@
-         }, {
-           "name" : "X-Syncope-Domain",
-           "in" : "header",
--          "description" : "argument to be passed to workflow task",
-           "required" : true,
-           "schema" : {
-             "type" : "string",
-@@ -20964,26 +21044,6 @@
-             "default" : "Master"
-           }
-         } ],
--        "requestBody" : {
--          "content" : {
--            "application/json" : {
--              "schema" : {
--                "$ref" : "#/components/schemas/UserTO"
--              }
--            },
--            "application/yaml" : {
--              "schema" : {
--                "$ref" : "#/components/schemas/UserTO"
--              }
--            },
--            "application/xml" : {
--              "schema" : {
--                "$ref" : "#/components/schemas/UserTO"
--              }
--            }
--          },
--          "required" : true
--        },
-         "responses" : {
-           "400" : {
-             "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
-@@ -21029,16 +21089,31 @@
-         } ]
-       }
-     },
--    "/userworkflow/forms/{userKey}" : {
-+    "/userworkflow/forms" : {
-       "get" : {
-         "tags" : [ "UserWorkflow" ],
--        "summary" : "Returns a list of available forms for the given user key.",
--        "operationId" : "getFormForUser",
-+        "summary" : "Returns a list of all available workflow forms.",
-+        "operationId" : "getForms",
-         "parameters" : [ {
--          "name" : "userKey",
--          "in" : "path",
--          "description" : "user key",
--          "required" : true,
-+          "name" : "page",
-+          "in" : "query",
-+          "description" : "query conditions",
-+          "schema" : {
-+            "type" : "integer",
-+            "format" : "int32",
-+            "default" : 1
-+          }
-+        }, {
-+          "name" : "size",
-+          "in" : "query",
-+          "schema" : {
-+            "type" : "integer",
-+            "format" : "int32",
-+            "default" : 25
-+          }
-+        }, {
-+          "name" : "orderby",
-+          "in" : "query",
-           "schema" : {
-             "type" : "string"
-           }
-@@ -21095,39 +21170,15 @@
-         }, {
-           "Bearer" : [ ]
-         } ]
--      }
--    },
--    "/userworkflow/forms" : {
--      "get" : {
-+      },
-+      "post" : {
-         "tags" : [ "UserWorkflow" ],
--        "summary" : "Returns a list of all available workflow forms.",
--        "operationId" : "getForms",
-+        "summary" : "Submits a workflow form.",
-+        "operationId" : "submitForm",
+         "tags" : [ "Tasks" ],
+-        "summary" : "Returns a paged list of executions matching the given query.",
+-        "operationId" : "listExecutions_1",
++        "summary" : "Returns job (running or scheduled) for the executable matching the given key.",
++        "operationId" : "getJob_2",
          "parameters" : [ {
 -          "name" : "page",
 -          "in" : "query",
@@ -1321,13 +1460,705 @@ index 6e814e8..abd3bcf 100644
 -            "type" : "string"
 -          }
 -        }, {
+           "name" : "key",
+           "in" : "path",
++          "description" : "executable key",
+           "required" : true,
+           "schema" : {
+             "type" : "string"
+@@ -18017,45 +18088,25 @@
+           "Bearer" : [ ]
+         } ]
+       },
+-      "delete" : {
++      "post" : {
+         "tags" : [ "Tasks" ],
+-        "summary" : "Deletes the executions belonging matching the given query.",
+-        "operationId" : "deleteExecutions",
++        "summary" : "Executes an action on an existing executable's job.",
++        "operationId" : "actionJob",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+-          "description" : "query conditions",
++          "description" : "executable key",
+           "required" : true,
+           "schema" : {
+             "type" : "string"
+           }
+         }, {
+-          "name" : "startedBefore",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "string",
+-            "format" : "date-time"
+-          }
+-        }, {
+-          "name" : "startedAfter",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "string",
+-            "format" : "date-time"
+-          }
+-        }, {
+-          "name" : "endedBefore",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "string",
+-            "format" : "date-time"
+-          }
+-        }, {
+-          "name" : "endedAfter",
++          "name" : "action",
+           "in" : "query",
++          "description" : "action to execute",
+           "schema" : {
+             "type" : "string",
+-            "format" : "date-time"
++            "enum" : [ "START", "STOP", "DELETE" ]
+           }
+         }, {
+           "name" : "X-Syncope-Domain",
+@@ -18087,15 +18138,15 @@
+               }
+             },
+             "content" : {
+-              "multipart/mixed" : {
++              "*/*" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+                 }
+               }
+             }
+           },
+-          "200" : {
+-            "description" : "Batch results available, returned as Response entity"
++          "204" : {
++            "description" : "Operation was successful"
+           }
+         },
+         "security" : [ {
+@@ -18105,20 +18156,41 @@
+         } ]
+       }
+     },
+-    "/tasks/executions/recent" : {
++    "/tasks/{key}/executions" : {
+       "get" : {
+         "tags" : [ "Tasks" ],
+-        "summary" : "Returns the list of recently completed executions, ordered by end date descendent.",
+-        "operationId" : "listRecentExecutions_1",
++        "summary" : "Returns a paged list of executions matching the given query.",
++        "operationId" : "listExecutions_1",
+         "parameters" : [ {
+-          "name" : "max",
++          "name" : "page",
++          "in" : "query",
++          "description" : "query conditions",
++          "schema" : {
++            "type" : "integer",
++            "format" : "int32",
++            "default" : 1
++          }
++        }, {
++          "name" : "size",
+           "in" : "query",
+-          "description" : "the maximum number of executions to return",
+           "schema" : {
+             "type" : "integer",
+             "format" : "int32",
+             "default" : 25
+           }
++        }, {
++          "name" : "orderby",
++          "in" : "query",
++          "schema" : {
++            "type" : "string"
++          }
++        }, {
++          "name" : "key",
++          "in" : "path",
++          "required" : true,
++          "schema" : {
++            "type" : "string"
++          }
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+@@ -18172,25 +18244,50 @@
+         }, {
+           "Bearer" : [ ]
+         } ]
+-      }
+-    },
+-    "/tasks/executions/{executionKey}" : {
++      },
+       "delete" : {
+         "tags" : [ "Tasks" ],
+-        "summary" : "Deletes the executable execution matching the provided key.",
+-        "operationId" : "deleteExecution_1",
++        "summary" : "Deletes the executions belonging matching the given query.",
++        "operationId" : "deleteExecutions",
+         "parameters" : [ {
+-          "name" : "executionKey",
++          "name" : "key",
+           "in" : "path",
+-          "description" : "key of executable execution to be deleted",
++          "description" : "query conditions",
+           "required" : true,
+           "schema" : {
+             "type" : "string"
+           }
++        }, {
++          "name" : "startedBefore",
++          "in" : "query",
++          "schema" : {
++            "type" : "string",
++            "format" : "date-time"
++          }
++        }, {
++          "name" : "startedAfter",
++          "in" : "query",
++          "schema" : {
++            "type" : "string",
++            "format" : "date-time"
++          }
++        }, {
++          "name" : "endedBefore",
++          "in" : "query",
++          "schema" : {
++            "type" : "string",
++            "format" : "date-time"
++          }
++        }, {
++          "name" : "endedAfter",
++          "in" : "query",
++          "schema" : {
++            "type" : "string",
++            "format" : "date-time"
++          }
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+-          "description" : "query conditions",
+           "required" : true,
+           "schema" : {
+             "type" : "string",
+@@ -18218,25 +18315,15 @@
+               }
+             },
+             "content" : {
+-              "application/json" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              },
+-              "application/yaml" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              },
+-              "application/xml" : {
++              "multipart/mixed" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+                 }
+               }
+             }
+           },
+-          "204" : {
+-            "description" : "Operation was successful"
++          "200" : {
++            "description" : "Batch results available, returned as Response entity"
+           }
+         },
+         "security" : [ {
+@@ -18246,12 +18333,21 @@
+         } ]
+       }
+     },
+-    "/tasks/jobs" : {
++    "/tasks/executions/recent" : {
+       "get" : {
+         "tags" : [ "Tasks" ],
+-        "summary" : "List jobs (running and / or scheduled).",
+-        "operationId" : "listJobs_1",
++        "summary" : "Returns the list of recently completed executions, ordered by end date descendent.",
++        "operationId" : "listRecentExecutions_1",
+         "parameters" : [ {
++          "name" : "max",
++          "in" : "query",
++          "description" : "the maximum number of executions to return",
++          "schema" : {
++            "type" : "integer",
++            "format" : "int32",
++            "default" : 25
++          }
++        }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+           "required" : true,
+@@ -18306,15 +18402,15 @@
+         } ]
+       }
+     },
+-    "/tasks/jobs/{key}" : {
+-      "get" : {
++    "/tasks/executions/{executionKey}" : {
++      "delete" : {
+         "tags" : [ "Tasks" ],
+-        "summary" : "Returns job (running or scheduled) for the executable matching the given key.",
+-        "operationId" : "getJob_2",
++        "summary" : "Deletes the executable execution matching the provided key.",
++        "operationId" : "deleteExecution_1",
+         "parameters" : [ {
+-          "name" : "key",
++          "name" : "executionKey",
+           "in" : "path",
+-          "description" : "executable key",
++          "description" : "key of executable execution to be deleted",
+           "required" : true,
+           "schema" : {
+             "type" : "string"
+@@ -18322,6 +18418,7 @@
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
++          "description" : "query conditions",
+           "required" : true,
+           "schema" : {
+             "type" : "string",
+@@ -18365,6 +18462,9 @@
+                 }
+               }
+             }
++          },
++          "204" : {
++            "description" : "Operation was successful"
+           }
+         },
+         "security" : [ {
+@@ -18372,28 +18472,14 @@
+         }, {
+           "Bearer" : [ ]
+         } ]
+-      },
+-      "post" : {
++      }
++    },
++    "/tasks/jobs" : {
++      "get" : {
+         "tags" : [ "Tasks" ],
+-        "summary" : "Executes an action on an existing executable's job.",
+-        "operationId" : "actionJob",
++        "summary" : "List jobs (running and / or scheduled).",
++        "operationId" : "listJobs_1",
+         "parameters" : [ {
+-          "name" : "key",
+-          "in" : "path",
+-          "description" : "executable key",
+-          "required" : true,
+-          "schema" : {
+-            "type" : "string"
+-          }
+-        }, {
+-          "name" : "action",
+-          "in" : "query",
+-          "description" : "action to execute",
+-          "schema" : {
+-            "type" : "string",
+-            "enum" : [ "START", "STOP", "DELETE" ]
+-          }
+-        }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+           "required" : true,
+@@ -18423,15 +18509,22 @@
+               }
+             },
+             "content" : {
+-              "*/*" : {
++              "application/json" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/ErrorTO"
++                }
++              },
++              "application/yaml" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/ErrorTO"
++                }
++              },
++              "application/xml" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+                 }
+               }
+             }
+-          },
+-          "204" : {
+-            "description" : "Operation was successful"
+           }
+         },
+         "security" : [ {
+@@ -18523,23 +18616,15 @@
+         } ]
+       }
+     },
+-    "/users/self/requestPasswordReset" : {
+-      "post" : {
+-        "tags" : [ "UserSelf" ],
+-        "summary" : "Provides answer for the security question configured for user matching the given username, if any.\n If provided answer matches the one stored for that user, a password reset token is internally generated,\n otherwise an error is returned.",
+-        "operationId" : "requestPasswordReset",
+-        "parameters" : [ {
+-          "name" : "username",
+-          "in" : "query",
+-          "description" : "username for which the security answer is provided",
+-          "required" : true,
+-          "schema" : {
+-            "type" : "string"
+-          }
+-        }, {
++    "/users/self/mustChangePassword" : {
++      "post" : {
++        "tags" : [ "UserSelf" ],
++        "summary" : "Changes own password when change was forced by an administrator.",
++        "operationId" : "mustChangePassword",
++        "parameters" : [ {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+-          "description" : "actual answer text",
++          "description" : "the password value to update",
+           "required" : true,
+           "schema" : {
+             "type" : "string",
+@@ -18592,22 +18677,32 @@
+                 }
+               }
+             }
+-          },
+-          "204" : {
+-            "description" : "Operation was successful"
+           }
+-        }
++        },
++        "security" : [ {
++          "BasicAuthentication" : [ ]
++        }, {
++          "Bearer" : [ ]
++        } ]
+       }
+     },
+-    "/users/self/mustChangePassword" : {
++    "/users/self/requestPasswordReset" : {
+       "post" : {
+         "tags" : [ "UserSelf" ],
+-        "summary" : "Changes own password when change was forced by an administrator.",
+-        "operationId" : "mustChangePassword",
++        "summary" : "Provides answer for the security question configured for user matching the given username, if any.\n If provided answer matches the one stored for that user, a password reset token is internally generated,\n otherwise an error is returned.",
++        "operationId" : "requestPasswordReset",
+         "parameters" : [ {
++          "name" : "username",
++          "in" : "query",
++          "description" : "username for which the security answer is provided",
++          "required" : true,
++          "schema" : {
++            "type" : "string"
++          }
++        }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+-          "description" : "the password value to update",
++          "description" : "actual answer text",
+           "required" : true,
+           "schema" : {
+             "type" : "string",
+@@ -18660,13 +18755,11 @@
+                 }
+               }
+             }
++          },
++          "204" : {
++            "description" : "Operation was successful"
+           }
+-        },
+-        "security" : [ {
+-          "BasicAuthentication" : [ ]
+-        }, {
+-          "Bearer" : [ ]
+-        } ]
++        }
+       }
+     },
+     "/users/self/confirmPasswordReset" : {
+@@ -19425,7 +19518,7 @@
+       "get" : {
+         "tags" : [ "Users" ],
+         "summary" : "Reads the any object matching the provided key.",
+-        "operationId" : "read_31",
++        "operationId" : "readUser",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -19491,6 +19584,23 @@
+                   "type" : "string"
+                 }
+               }
++            },
++            "content" : {
++              "application/json" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/UserTO"
++                }
++              },
++              "application/yaml" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/UserTO"
++                }
++              },
++              "application/xml" : {
++                "schema" : {
++                  "$ref" : "#/components/schemas/UserTO"
++                }
++              }
+             }
+           }
+         },
+@@ -19503,7 +19613,7 @@
+       "put" : {
+         "tags" : [ "Users" ],
+         "summary" : "Updates user matching the provided key.",
+-        "operationId" : "update_2",
++        "operationId" : "updateUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -19651,7 +19761,7 @@
+       "delete" : {
+         "tags" : [ "Users" ],
+         "summary" : "Deletes any object matching provided key.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -19778,7 +19888,7 @@
+       "patch" : {
+         "tags" : [ "Users" ],
+         "summary" : "Updates user matching the provided key.",
+-        "operationId" : "update_3",
++        "operationId" : "updateUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -19928,7 +20038,7 @@
+       "get" : {
+         "tags" : [ "Users" ],
+         "summary" : "Returns a paged list of any objects matching the given query.",
+-        "operationId" : "search_4",
++        "operationId" : "searchUser",
+         "parameters" : [ {
+           "name" : "page",
+           "in" : "query",
+@@ -20029,7 +20139,7 @@
+       "post" : {
+         "tags" : [ "Users" ],
+         "summary" : "Creates a new user.",
+-        "operationId" : "create_1",
++        "operationId" : "createUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -20178,7 +20288,7 @@
+       "post" : {
+         "tags" : [ "Users" ],
+         "summary" : "Performs a status update on given user.",
+-        "operationId" : "status_2",
++        "operationId" : "statusUpdate",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -20328,7 +20438,7 @@
+       "post" : {
+         "tags" : [ "Users" ],
+         "summary" : "Executes resource-related operations on given entity.",
+-        "operationId" : "associate_2",
++        "operationId" : "associateUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -20460,7 +20570,7 @@
+       "post" : {
+         "tags" : [ "Users" ],
+         "summary" : "Executes resource-related operations on given entity.",
+-        "operationId" : "deassociate_2",
++        "operationId" : "deassociateUser",
+         "parameters" : [ {
+           "name" : "Prefer",
+           "in" : "header",
+@@ -20592,7 +20702,7 @@
+       "get" : {
+         "tags" : [ "Users" ],
+         "summary" : "Reads the attribute, owned by the given any object, for the given schema type and schema.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
+-        "operationId" : "read_30",
++        "operationId" : "readUserAttribute",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -20675,7 +20785,7 @@
+       "put" : {
+         "tags" : [ "Users" ],
+         "summary" : "Adds or replaces the attribute, owned by the given any object, for the given schema type and schema.",
+-        "operationId" : "update_2",
++        "operationId" : "updateUserAttribute",
+         "parameters" : [ {
+           "name" : "schema",
+           "in" : "path",
+@@ -20778,7 +20888,7 @@
+       "delete" : {
+         "tags" : [ "Users" ],
+         "summary" : "Deletes the attribute, owned by the given any object, for the given schema type and schema.",
+-        "operationId" : "delete_1",
++        "operationId" : "deleteUserAttribute",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -20867,7 +20977,7 @@
+       "get" : {
+         "tags" : [ "Users" ],
+         "summary" : "Reads the list of attributes owned by the given any object for the given schema type.\n\n Note that for the UserService, GroupService and AnyObjectService subclasses, if the key parameter\n looks like a UUID then it is interpreted as as key, otherwise as a (user)name.",
+-        "operationId" : "read_32",
++        "operationId" : "readUserAttributes",
+         "parameters" : [ {
+           "name" : "key",
+           "in" : "path",
+@@ -20940,15 +21050,15 @@
+         } ]
+       }
+     },
+-    "/userworkflow/tasks/{taskId}/execute" : {
+-      "post" : {
++    "/userworkflow/forms/{userKey}" : {
++      "get" : {
+         "tags" : [ "UserWorkflow" ],
+-        "summary" : "Executes workflow task for matching id.",
+-        "operationId" : "executeTask",
++        "summary" : "Returns a list of available forms for the given user key.",
++        "operationId" : "getFormForUser",
+         "parameters" : [ {
+-          "name" : "taskId",
++          "name" : "userKey",
+           "in" : "path",
+-          "description" : "workflow task id",
++          "description" : "user key",
+           "required" : true,
+           "schema" : {
+             "type" : "string"
+@@ -20956,7 +21066,6 @@
+         }, {
+           "name" : "X-Syncope-Domain",
+           "in" : "header",
+-          "description" : "argument to be passed to workflow task",
+           "required" : true,
+           "schema" : {
+             "type" : "string",
+@@ -20964,26 +21073,6 @@
+             "default" : "Master"
+           }
+         } ],
+-        "requestBody" : {
+-          "content" : {
+-            "application/json" : {
+-              "schema" : {
+-                "$ref" : "#/components/schemas/UserTO"
+-              }
+-            },
+-            "application/yaml" : {
+-              "schema" : {
+-                "$ref" : "#/components/schemas/UserTO"
+-              }
+-            },
+-            "application/xml" : {
+-              "schema" : {
+-                "$ref" : "#/components/schemas/UserTO"
+-              }
+-            }
+-          },
+-          "required" : true
+-        },
+         "responses" : {
+           "400" : {
+             "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
+@@ -21029,16 +21118,31 @@
+         } ]
+       }
+     },
+-    "/userworkflow/forms/{taskId}/claim" : {
+-      "post" : {
++    "/userworkflow/forms" : {
++      "get" : {
+         "tags" : [ "UserWorkflow" ],
+-        "summary" : "Claims the form for the given task id.",
+-        "operationId" : "claimForm",
++        "summary" : "Returns a list of all available workflow forms.",
++        "operationId" : "getForms",
+         "parameters" : [ {
+-          "name" : "taskId",
+-          "in" : "path",
+-          "description" : "workflow task id",
+-          "required" : true,
++          "name" : "page",
++          "in" : "query",
++          "description" : "query conditions",
++          "schema" : {
++            "type" : "integer",
++            "format" : "int32",
++            "default" : 1
++          }
++        }, {
++          "name" : "size",
++          "in" : "query",
++          "schema" : {
++            "type" : "integer",
++            "format" : "int32",
++            "default" : 25
++          }
++        }, {
++          "name" : "orderby",
++          "in" : "query",
+           "schema" : {
+             "type" : "string"
+           }
+@@ -21095,24 +21199,15 @@
+         }, {
+           "Bearer" : [ ]
+         } ]
+-      }
+-    },
+-    "/userworkflow/forms/{userKey}" : {
+-      "get" : {
++      },
++      "post" : {
+         "tags" : [ "UserWorkflow" ],
+-        "summary" : "Returns a list of available forms for the given user key.",
+-        "operationId" : "getFormForUser",
++        "summary" : "Submits a workflow form.",
++        "operationId" : "submitForm",
+         "parameters" : [ {
+-          "name" : "userKey",
+-          "in" : "path",
+-          "description" : "user key",
+-          "required" : true,
+-          "schema" : {
+-            "type" : "string"
+-          }
+-        }, {
            "name" : "X-Syncope-Domain",
            "in" : "header",
 +          "description" : "workflow form.",
            "required" : true,
            "schema" : {
              "type" : "string",
-@@ -21135,6 +21186,26 @@
+@@ -21120,6 +21215,26 @@
              "default" : "Master"
            }
          } ],
@@ -1354,25 +2185,82 @@ index 6e814e8..abd3bcf 100644
          "responses" : {
            "400" : {
              "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
-@@ -21178,15 +21249,24 @@
+@@ -21165,31 +21280,16 @@
+         } ]
+       }
+     },
+-    "/userworkflow/forms" : {
++    "/userworkflow/tasks/{userKey}" : {
+       "get" : {
+         "tags" : [ "UserWorkflow" ],
+-        "summary" : "Returns a list of all available workflow forms.",
+-        "operationId" : "getForms",
++        "summary" : "Returns a list of available tasks for the given user key.",
++        "operationId" : "getAvailableTasks",
+         "parameters" : [ {
+-          "name" : "page",
+-          "in" : "query",
+-          "description" : "query conditions",
+-          "schema" : {
+-            "type" : "integer",
+-            "format" : "int32",
+-            "default" : 1
+-          }
+-        }, {
+-          "name" : "size",
+-          "in" : "query",
+-          "schema" : {
+-            "type" : "integer",
+-            "format" : "int32",
+-            "default" : 25
+-          }
+-        }, {
+-          "name" : "orderby",
+-          "in" : "query",
++          "name" : "userKey",
++          "in" : "path",
++          "description" : "user key",
++          "required" : true,
+           "schema" : {
+             "type" : "string"
+           }
+@@ -21223,17 +21323,7 @@
+               }
+             },
+             "content" : {
+-              "application/json" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              },
+-              "application/yaml" : {
+-                "schema" : {
+-                  "$ref" : "#/components/schemas/ErrorTO"
+-                }
+-              },
+-              "application/xml" : {
++              "*/*" : {
+                 "schema" : {
+                   "$ref" : "#/components/schemas/ErrorTO"
+                 }
+@@ -21246,15 +21336,24 @@
          }, {
            "Bearer" : [ ]
          } ]
 -      },
--      "post" : {
 +      }
 +    },
-+    "/userworkflow/tasks/{userKey}" : {
-+      "get" : {
++    "/userworkflow/forms/{taskId}/claim" : {
+       "post" : {
          "tags" : [ "UserWorkflow" ],
 -        "summary" : "Submits a workflow form.",
 -        "operationId" : "submitForm",
-+        "summary" : "Returns a list of available tasks for the given user key.",
-+        "operationId" : "getAvailableTasks",
++        "summary" : "Claims the form for the given task id.",
++        "operationId" : "claimForm",
          "parameters" : [ {
-+          "name" : "userKey",
++          "name" : "taskId",
 +          "in" : "path",
-+          "description" : "user key",
++          "description" : "workflow task id",
 +          "required" : true,
 +          "schema" : {
 +            "type" : "string"
@@ -1384,7 +2272,7 @@ index 6e814e8..abd3bcf 100644
            "required" : true,
            "schema" : {
              "type" : "string",
-@@ -21194,26 +21274,6 @@
+@@ -21262,26 +21361,6 @@
              "default" : "Master"
            }
          } ],
@@ -1411,26 +2299,7 @@ index 6e814e8..abd3bcf 100644
          "responses" : {
            "400" : {
              "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
-@@ -21234,17 +21294,7 @@
-               }
-             },
-             "content" : {
--              "application/json" : {
--                "schema" : {
--                  "$ref" : "#/components/schemas/ErrorTO"
--                }
--              },
--              "application/yaml" : {
--                "schema" : {
--                  "$ref" : "#/components/schemas/ErrorTO"
--                }
--              },
--              "application/xml" : {
-+              "*/*" : {
-                 "schema" : {
-                   "$ref" : "#/components/schemas/ErrorTO"
-                 }
-@@ -21327,15 +21377,15 @@
+@@ -21327,15 +21406,15 @@
          } ]
        }
      },
@@ -1452,7 +2321,7 @@ index 6e814e8..abd3bcf 100644
            "required" : true,
            "schema" : {
              "type" : "string"
-@@ -21343,6 +21393,7 @@
+@@ -21343,6 +21422,7 @@
          }, {
            "name" : "X-Syncope-Domain",
            "in" : "header",
@@ -1460,7 +2329,7 @@ index 6e814e8..abd3bcf 100644
            "required" : true,
            "schema" : {
              "type" : "string",
-@@ -21350,6 +21401,26 @@
+@@ -21350,6 +21430,26 @@
              "default" : "Master"
            }
          } ],
@@ -1487,7 +2356,7 @@ index 6e814e8..abd3bcf 100644
          "responses" : {
            "400" : {
              "description" : "An error occurred; HTTP status code can vary depending on the actual error: 400, 403, 404, 409, 412",
-@@ -21370,7 +21441,17 @@
+@@ -21370,7 +21470,17 @@
                }
              },
              "content" : {
@@ -1506,7 +2375,7 @@ index 6e814e8..abd3bcf 100644
                  "schema" : {
                    "$ref" : "#/components/schemas/ErrorTO"
                  }
-@@ -22426,135 +22507,142 @@
+@@ -22426,135 +22536,142 @@
            "$ref" : "#/components/schemas/TaskTO"
          } ]
        },
@@ -1778,7 +2647,7 @@ index 6e814e8..abd3bcf 100644
        },
        "StringPatchItem" : {
          "required" : [ "value" ],
-@@ -24506,71 +24594,77 @@
+@@ -24506,71 +24623,77 @@
            "name" : "role"
          }
        },
@@ -1917,7 +2786,7 @@ index 6e814e8..abd3bcf 100644
        },
        "SecurityQuestionTO" : {
          "type" : "object",
-@@ -24795,7 +24889,7 @@
+@@ -24795,7 +24918,7 @@
              "additionalProperties" : {
                "type" : "string",
                "xml" : {
@@ -1926,7 +2795,7 @@ index 6e814e8..abd3bcf 100644
                }
              }
            }
-@@ -25083,7 +25177,7 @@
+@@ -25083,7 +25206,7 @@
              "items" : {
                "type" : "string",
                "xml" : {
@@ -1935,7 +2804,7 @@ index 6e814e8..abd3bcf 100644
                }
              }
            }
-@@ -25269,52 +25363,58 @@
+@@ -25269,52 +25392,58 @@
            "$ref" : "#/components/schemas/AnyPatch"
          } ]
        },
