@@ -4,14 +4,14 @@ workspace:
 
 services:
   web:
-    image: fpfis/httpd-php-dev:7.1
+    image: fpfis/httpd-php-ci:7.1
     environment:
      - DOCUMENT_ROOT=/test/syncope-php-client
 
 pipeline:
   composer-install:
     group: prepare
-    image: fpfis/httpd-php-dev:7.1
+    image: fpfis/httpd-php-ci:7.1
     volumes:
       - /cache:/cache
     commands:
@@ -20,12 +20,12 @@ pipeline:
 # Library is still not compliant with defined coding standards
 #  grumphp:
 #    group: test
-#    image: fpfis/httpd-php-dev:7.1
+#    image: fpfis/httpd-php-ci:7.1
 #    commands:
 #      - ./vendor/bin/grumphp run
 
   phpunit:
     group: test
-    image: fpfis/httpd-php-dev:7.1
+    image: fpfis/httpd-php-ci:7.1
     commands:
       - ./vendor/bin/phpunit
