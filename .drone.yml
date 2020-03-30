@@ -4,14 +4,14 @@ workspace:
 
 services:
   web:
-    image: fpfis/httpd-php-ci:7.1
+    image: fpfis/httpd-php-ci:${PHP_VERSION}
     environment:
       - DOCUMENT_ROOT=/test/syncope-php-client
 
 pipeline:
   composer-install:
     group: prepare
-    image: fpfis/httpd-php-ci:7.1
+    image: fpfis/httpd-php-ci:${PHP_VERSION}
     volumes:
       - /cache:/cache
     commands:
@@ -26,6 +26,11 @@ pipeline:
 
   phpunit:
     group: test
-    image: fpfis/httpd-php-ci:7.1
+    image: fpfis/httpd-php-ci:${PHP_VERSION}
     commands:
       - ./vendor/bin/phpunit
+
+matrix:
+  PHP_VERSION:
+    - 7.2
+    - 7.3
