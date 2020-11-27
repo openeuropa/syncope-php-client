@@ -1,17 +1,27 @@
+clone:
+  git:
+    image: registry.fpfis.eu/drone-plugins/git:next
+    when:
+      event: [ push, pull_request, tag ]
+  git:
+    image: registry.fpfis.eu/drone-plugins/git
+    when:
+      event: [ deployment ]
+
 workspace:
   base: /test
   path: syncope-php-client
 
 services:
   web:
-    image: fpfis/httpd-php-ci:${PHP_VERSION}
+    image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     environment:
       - DOCUMENT_ROOT=/test/syncope-php-client
 
 pipeline:
   composer-install:
     group: prepare
-    image: fpfis/httpd-php-ci:${PHP_VERSION}
+    image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     volumes:
       - /cache:/cache
     commands:
@@ -20,13 +30,13 @@ pipeline:
 # Library is still not compliant with defined coding standards
 #  grumphp:
 #    group: test
-#    image: fpfis/httpd-php-ci:7.1
+#    image: registry.fpfis.eu/fpfis/httpd-php:7.1
 #    commands:
 #      - ./vendor/bin/grumphp run
 
   phpunit:
     group: test
-    image: fpfis/httpd-php-ci:${PHP_VERSION}
+    image: registry.fpfis.eu/fpfis/httpd-php:${PHP_VERSION}-ci
     commands:
       - ./vendor/bin/phpunit
 
