@@ -32,6 +32,21 @@ use \OpenEuropa\SyncopePhpClient\Configuration;
 use \OpenEuropa\SyncopePhpClient\ApiException;
 use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
 
+use \OpenEuropa\SyncopePhpClient\Api\RolesApi;
+use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
+use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\RequestOptions;
+use OpenEuropa\SyncopePhpClient\HeaderSelector;
+
+use \OpenEuropa\SyncopePhpClient\Model\RoleTO;
+
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Response;
+
 /**
  * RolesApiTest Class Doc Comment.
  *
@@ -42,6 +57,20 @@ use \OpenEuropa\SyncopePhpClient\ObjectSerializer;
  */
 class RolesApiTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var ClientInterface
+     */
+    protected $client;
+
+    /**
+     * @var Configuration
+     */
+    protected $config;
+
+    /**
+     * @var HeaderSelector
+     */
+    protected $headerSelector;
 
     /**
      * Setup before running any test cases.
@@ -53,6 +82,9 @@ class RolesApiTest extends \PHPUnit_Framework_TestCase
      * Setup before running each test case.
      */
     public function setUp()  {
+      // Initialize some needed parameters for RoleApi instance.
+      $this->config = new Configuration();
+      $this->headerSelector = new HeaderSelector();
     }
 
     /**
@@ -73,7 +105,20 @@ class RolesApiTest extends \PHPUnit_Framework_TestCase
      * Creates a new role..
      *
      */
-    public function testCreateRole()  {
+    public function testCreateRole()  {      // Create a mock and queue two responses.
+
+      // Initialize mocked client.
+      $mock = new MockHandler([
+        new Response(200, []),
+      ]);
+      $handler = HandlerStack::create($mock);
+      $this->client = new Client(['handler' => $handler]);
+
+      $RoleApi = new RolesApi($this->client, $this->config, $this->headerSelector);
+      $roleTO = new RoleTO([]);
+      $result = $RoleApi->createRole('tester', $roleTO);
+
+      $this->assertEquals($result[1], 200);
     }
 
     /**
